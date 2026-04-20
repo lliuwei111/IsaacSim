@@ -1,0 +1,2937 @@
+#usda 1.0
+(
+    customLayerData = {
+        dictionary cameraSettings = {
+            dictionary Front = {
+                double3 position = (5, 0, 0)
+                double radius = 5
+            }
+            dictionary Perspective = {
+                double3 position = (1.3927591927415053, 2.06375998475339, 1.893747972880049)
+                double3 target = (0.8765551636261881, 1.501680221091377, 1.6703298701047937)
+            }
+            dictionary Right = {
+                double3 position = (0, -5, 0)
+                double radius = 5
+            }
+            dictionary Top = {
+                double3 position = (0, 0, 5)
+                double radius = 5
+            }
+            string boundCamera = "/OmniverseKit_Persp"
+        }
+        dictionary omni_layer = {
+            string authoring_layer = "./SurfaceGripper_gantry.usda"
+            dictionary locked = {
+            }
+            dictionary muteness = {
+            }
+        }
+        int refinementOverrideImplVersion = 0
+        dictionary renderSettings = {
+        }
+    }
+    defaultPrim = "World"
+    endTimeCode = 1000000
+    metersPerUnit = 1
+    startTimeCode = 0
+    timeCodesPerSecond = 60
+    upAxis = "Z"
+)
+
+def Xform "World"
+{
+    def Xform "GroundPlane"
+    {
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Mesh "CollisionMesh"
+        {
+            uniform bool doubleSided = 0
+            int[] faceVertexCounts = [4]
+            int[] faceVertexIndices = [0, 1, 2, 3]
+            normal3f[] normals = [(0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1)]
+            point3f[] points = [(-25, -25, 0), (25, -25, 0), (25, 25, 0), (-25, 25, 0)]
+            color3f[] primvars:displayColor = [(0.5, 0.5, 0.5)]
+            texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1)] (
+                interpolation = "varying"
+            )
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (0, 0.2929758970503582, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Plane "CollisionPlane" (
+            prepend apiSchemas = ["PhysicsCollisionAPI"]
+        )
+        {
+            uniform token axis = "Z"
+            uniform token purpose = "guide"
+        }
+    }
+
+    def Scope "Looks"
+    {
+        def Material "OmniGlass"
+        {
+            token outputs:mdl:displacement.connect = </World/Looks/OmniGlass/Shader.outputs:out>
+            token outputs:mdl:surface.connect = </World/Looks/OmniGlass/Shader.outputs:out>
+            token outputs:mdl:volume.connect = </World/Looks/OmniGlass/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniGlass.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniGlass"
+                token outputs:out (
+                    renderType = "material"
+                )
+            }
+        }
+
+        def Material "OmniPBR"
+        {
+            token outputs:mdl:displacement.connect = </World/Looks/OmniPBR/Shader.outputs:out>
+            token outputs:mdl:surface.connect = </World/Looks/OmniPBR/Shader.outputs:out>
+            token outputs:mdl:volume.connect = </World/Looks/OmniPBR/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniPBR.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniPBR"
+                float inputs:metallic_constant = 1
+                float inputs:reflection_roughness_constant = 0.19999999
+                token outputs:out (
+                    renderType = "material"
+                )
+            }
+        }
+
+        def Material "OmniPBR_01"
+        {
+            token outputs:mdl:displacement.connect = </World/Looks/OmniPBR_01/Shader.outputs:out>
+            token outputs:mdl:surface.connect = </World/Looks/OmniPBR_01/Shader.outputs:out>
+            token outputs:mdl:volume.connect = </World/Looks/OmniPBR_01/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniPBR.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniPBR"
+                color3f inputs:diffuse_color_constant = (0.28957528, 0.25538623, 0.12857589)
+                float inputs:metallic_constant = 1
+                float inputs:reflection_roughness_constant = 0.07
+                token outputs:out (
+                    renderType = "material"
+                )
+            }
+        }
+
+        def Material "OmniPBR_02"
+        {
+            token outputs:mdl:displacement.connect = </World/Looks/OmniPBR_02/Shader.outputs:out>
+            token outputs:mdl:surface.connect = </World/Looks/OmniPBR_02/Shader.outputs:out>
+            token outputs:mdl:volume.connect = </World/Looks/OmniPBR_02/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniPBR.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniPBR"
+                color3f inputs:diffuse_color_constant = (0.23552126, 0.5661067, 1)
+                token outputs:out (
+                    renderType = "material"
+                )
+            }
+        }
+    }
+
+    def Xform "Claw_base" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysxRigidBodyAPI", "PhysicsArticulationRootAPI", "PhysxArticulationAPI"]
+    )
+    {
+        vector3f physics:angularVelocity = (-0.0016412268, 0.000105526895, -0.0011057453)
+        bool physics:kinematicEnabled = 0
+        bool physics:rigidBodyEnabled = 1
+        rel physics:simulationOwner
+        vector3f physics:velocity = (0.000045644756, 0.000059707607, -0.00007357819)
+        token visibility = "inherited"
+        quatd xformOp:orient = (0.99999999999996, 2.0703979640599868e-7, -7.179088915625962e-8, 1.7865231235930296e-7)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0.0000010058283805847168, 0.0000011473894119262695, 4.76837158203125e-7)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Xform "Xform" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/OmniPBR> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            quatd xformOp:orient = (1, 0, 0, 0)
+            double3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def Cube "Cube" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                bool physics:collisionEnabled = 1
+                rel physics:simulationOwner
+                double size = 1
+                quatd xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:scale = (1, 0.5, 1)
+                double3 xformOp:translate = (0, -0.25, 0.5)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Cube "Cube_01" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                bool physics:collisionEnabled = 1
+                rel physics:simulationOwner
+                double size = 1
+                quatd xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:scale = (0.6000000238418579, 1, 1)
+                double3 xformOp:translate = (-0.2, 0, 0.5)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Cube "Cube_02" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                bool physics:collisionEnabled = 1
+                rel physics:simulationOwner
+                double size = 1
+                quatd xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:scale = (1, 1, 0.5)
+                double3 xformOp:translate = (0, 0, 0.25)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Cube "Cube_03" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                bool physics:collisionEnabled = 1
+                rel physics:simulationOwner
+                double size = 1
+                quatd xformOp:orient = (0.9238795325112867, -0.38268343236508984, 0, 0)
+                double3 xformOp:scale = (0.550000011920929, 0.550000011920929, 0.550000011920929)
+                double3 xformOp:translate = (0.225, 0, 0.5)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Cube "Cube_04" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                bool physics:collisionEnabled = 1
+                rel physics:simulationOwner
+                double size = 1
+                quatd xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:scale = (1, 1, 0.1)
+                double3 xformOp:translate = (0, 0, 2.05)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Cube "Cube_08" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "MaterialBindingAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </World/Looks/OmniPBR> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                bool physics:collisionEnabled = 1
+                rel physics:simulationOwner
+                double size = 1
+                quatd xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:scale = (0.003000000026077032, 1, 1)
+                double3 xformOp:translate = (0.4985, 0, 0.5)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+        }
+
+        def Xform "Xform_01" (
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </World/Looks/OmniGlass> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            token visibility = "inherited"
+            quatd xformOp:orient = (1, 0, 0, 0)
+            double3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def Cube "Cube_04" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                bool physics:collisionEnabled = 1
+                rel physics:simulationOwner
+                double size = 1
+                token visibility = "inherited"
+                quatd xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:scale = (0.003000000026077032, 1, 1)
+                double3 xformOp:translate = (-0.4985, 0, 1.5)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Cube "Cube_05" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "MaterialBindingAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = </World/Looks/OmniPBR> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                bool physics:collisionEnabled = 1
+                rel physics:simulationOwner
+                double size = 1
+                token visibility = "inherited"
+                quatd xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:scale = (1, 0.003000000026077032, 1)
+                double3 xformOp:translate = (0, -0.49866645813371135, 1.4999999999999998)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Cube "Cube_06" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                bool physics:collisionEnabled = 1
+                rel physics:simulationOwner
+                double size = 1
+                token visibility = "inherited"
+                quatd xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:scale = (1, 0.003000000026077032, 1)
+                double3 xformOp:translate = (0, 0.4985, 1.4999999999999998)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Cube "Cube_07" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                bool physics:collisionEnabled = 1
+                rel physics:simulationOwner
+                double size = 1
+                token visibility = "inherited"
+                quatd xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:scale = (0.003000000026077032, 1, 1)
+                double3 xformOp:translate = (0.4985, 0, 1.4999999999999998)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Cube "Cube_10" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "MaterialBindingAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = None (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                bool physics:collisionEnabled = 1
+                rel physics:simulationOwner
+                double size = 1
+                quatd xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:scale = (0.402, 0.003, 0.2)
+                double3 xformOp:translate = (0.2980616918643073, -0.00013084456489625968, 1.0999999999999999)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Cube "Cube_09" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "MaterialBindingAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                rel material:binding = None (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                bool physics:collisionEnabled = 1
+                rel physics:simulationOwner
+                double size = 1
+                quatd xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:scale = (0.003000000026077032, 0.5, 0.2)
+                double3 xformOp:translate = (0.0985, 0.25, 1.1)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+        }
+
+        def PhysicsFixedJoint "FixedJoint"
+        {
+            rel physics:body1 = </World/Claw_base>
+            float physics:breakForce = inf
+            float physics:breakTorque = inf
+            point3f physics:localPos0 = (0, 0, 0)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (1, 0, 0, 0)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+        }
+
+        def Xform "Lights"
+        {
+            quatd xformOp:orient = (0.7071067811865476, 0, 0, 0.7071067811865476)
+            double3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (0, 0, 2.05)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def RectLight "RectLight" (
+                prepend apiSchemas = ["ShapingAPI"]
+            )
+            {
+                float3[] extent = [(-50, -50, -0), (50, 50, 0)]
+                float inputs:height = 0.1
+                float inputs:intensity = 1500000
+                float inputs:shaping:cone:angle = 180
+                float inputs:shaping:cone:softness = 6.3
+                float inputs:shaping:focus
+                color3f inputs:shaping:focusTint
+                asset inputs:shaping:ies:file
+                float inputs:width = 1
+                token visibility = "inherited"
+                bool visibleInPrimaryRay = 1
+                quatd xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, -0.25, -0.05112769457572819)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def RectLight "RectLight_01" (
+                prepend apiSchemas = ["ShapingAPI"]
+            )
+            {
+                float3[] extent = [(-50, -50, -0), (50, 50, 0)]
+                float inputs:height = 0.1
+                float inputs:intensity = 1500000
+                float inputs:shaping:cone:angle = 180
+                float inputs:shaping:cone:softness = 6.3
+                float inputs:shaping:focus
+                color3f inputs:shaping:focusTint
+                asset inputs:shaping:ies:file
+                float inputs:width = 1
+                token visibility = "inherited"
+                bool visibleInPrimaryRay = 1
+                quatd xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0.25, -0.05112769457572819)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+        }
+    }
+
+    def Xform "Gantry_x" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysxRigidBodyAPI", "PhysicsFilteredPairsAPI"]
+    )
+    {
+        vector3f physics:angularVelocity = (-0.0016412268, 0.000105526895, -0.0011057453)
+        rel physics:filteredPairs = None
+        bool physics:kinematicEnabled = 0
+        bool physics:rigidBodyEnabled = 1
+        rel physics:simulationOwner
+        vector3f physics:velocity = (-0.18639246, -0.6331017, 0.20466563)
+        bool physxRigidBody:disableGravity = 1
+        quatd xformOp:orient = (0.9999999999999555, 2.1097762232252715e-7, -8.066150792044831e-8, 1.9499243727403408e-7)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0.06705494970083237, 0.18731136620044708, 1.4355047941207886)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Cube "Cube" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI", "PhysxCollisionAPI"]
+        )
+        {
+            float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+            rel material:binding = </World/Looks/OmniPBR_01> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            bool physics:collisionEnabled = 1
+            rel physics:simulationOwner
+            double size = 1
+            quatd xformOp:orient = (1, 0, 0, 0)
+            double3 xformOp:scale = (0.07, 0.07, 0.07)
+            double3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cylinder "Cylinder_01" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI", "PhysxCollisionAPI"]
+        )
+        {
+            uniform token axis = "Z"
+            float3[] extent = [(-0.02, -0.02, -0.05), (0.02, 0.02, 0.05)]
+            double height = 0.1
+            rel material:binding = </World/Looks/OmniPBR> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            bool physics:collisionEnabled = 1
+            rel physics:simulationOwner
+            double radius = 0.02
+            custom bool refinementEnableOverride = 1
+            custom int refinementLevel = 2
+            quatd xformOp:orient = (1, 0, 0, 0)
+            double3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (0, 0, -0.08)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "Cube_01" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI", "PhysxCollisionAPI"]
+        )
+        {
+            float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+            rel material:binding = </World/Looks/OmniPBR_01> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            bool physics:collisionEnabled = 1
+            rel physics:simulationOwner
+            double size = 1
+            quatd xformOp:orient = (1, 0, 0, 0)
+            double3 xformOp:scale = (0.07, 0.07, 0.02)
+            double3 xformOp:translate = (0, 0, -0.13743054514647257)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def PhysicsFixedJoint "FixedJoint"
+        {
+            rel physics:body0 = </World/Gantry_x>
+            rel physics:body1 = </World/Gripper_Cones>
+            float physics:breakForce = 3.4028235e38
+            float physics:breakTorque = 3.4028235e38
+            point3f physics:localPos0 = (-9.926167e-24, 0, 4.440892e-16)
+            point3f physics:localPos1 = (-2.5143647e-9, 2.7209184e-8, 0.15007496)
+            quatf physics:localRot0 = (1, 6.027262e-16, -2.083734e-15, 9.708783e-16)
+            quatf physics:localRot1 = (1, 6.027262e-16, -2.083734e-15, 9.708783e-16)
+        }
+    }
+
+    def Xform "Gantry_y" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysxRigidBodyAPI"]
+    )
+    {
+        vector3f physics:angularVelocity = (-0.0016412268, 0.000105526895, -0.0011057453)
+        bool physics:kinematicEnabled = 0
+        bool physics:rigidBodyEnabled = 1
+        rel physics:simulationOwner
+        vector3f physics:velocity = (0.00005232356, -0.63309914, 0.20466578)
+        bool physxRigidBody:disableGravity = 1
+        quatd xformOp:orient = (0.9999999999999555, 2.1097762232252715e-7, -8.066150792044831e-8, 1.9499243727403408e-7)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (7.533736265941116e-7, 0.1873113214969635, 1.4355047941207886)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Cylinder "Cylinder" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI", "PhysxCollisionAPI"]
+        )
+        {
+            uniform token axis = "X"
+            float3[] extent = [(-0.475, -0.02, -0.02), (0.475, 0.02, 0.02)]
+            double height = 0.95
+            rel material:binding = </World/Looks/OmniPBR> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            bool physics:collisionEnabled = 1
+            rel physics:simulationOwner
+            double radius = 0.02
+            custom bool refinementEnableOverride = 1
+            custom int refinementLevel = 2
+            quatd xformOp:orient = (1, 0, 0, 0)
+            double3 xformOp:scale = (1, 1, 1)
+            double3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+    }
+
+    def Xform "Gantry_z" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysxRigidBodyAPI"]
+    )
+    {
+        vector3f physics:angularVelocity = (-0.0016412268, 0.000105526895, -0.0011057453)
+        bool physics:kinematicEnabled = 0
+        bool physics:rigidBodyEnabled = 1
+        rel physics:simulationOwner
+        vector3f physics:velocity = (0.00004376765, 0.00008494403, 0.20467852)
+        bool physxRigidBody:disableGravity = 1
+        quatd xformOp:orient = (0.999999999999954, 2.1083317313159886e-7, -8.060628340554031e-8, 2.0243138744218452e-7)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (8.01227599822596e-7, 5.513429641723633e-7, 1.435504674911499)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Mesh "Cube" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI"]
+        )
+        {
+            float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+            int[] faceVertexCounts = [4, 4, 4, 4, 4, 4]
+            int[] faceVertexIndices = [0, 1, 3, 2, 4, 6, 7, 5, 6, 2, 3, 7, 4, 5, 1, 0, 4, 0, 2, 6, 5, 7, 3, 1]
+            rel material:binding = </World/Looks/OmniPBR_01> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            normal3f[] normals = [(0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 1, 0), (0, 1, 0), (0, 1, 0), (0, 1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0)] (
+                interpolation = "faceVarying"
+            )
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            rel physics:simulationOwner
+            point3f[] points = [(-0.5, -0.5, 0.5), (0.5, -0.5, 0.5), (-0.5, 0.5, 0.5), (0.5, 0.5, 0.5), (-0.5, -0.5, -0.5), (0.5, -0.5, -0.5), (-0.5, 0.5, -0.5), (0.5, 0.5, -0.5)]
+            texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1), (1, 0), (1, 1), (0, 1), (0, 0), (0, 1), (0, 0), (1, 0), (1, 1), (0, 0), (1, 0), (1, 1), (0, 1), (0, 0), (1, 0), (1, 1), (0, 1), (1, 0), (1, 1), (0, 1), (0, 0)] (
+                interpolation = "faceVarying"
+            )
+            uniform token subdivisionScheme = "none"
+            quatd xformOp:orient = (1, 0, 0, 0)
+            double3 xformOp:scale = (0.02, 1, 0.05)
+            double3 xformOp:translate = (0.48, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Mesh "Cube_01" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI"]
+        )
+        {
+            float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+            int[] faceVertexCounts = [4, 4, 4, 4, 4, 4]
+            int[] faceVertexIndices = [0, 1, 3, 2, 4, 6, 7, 5, 6, 2, 3, 7, 4, 5, 1, 0, 4, 0, 2, 6, 5, 7, 3, 1]
+            rel material:binding = </World/Looks/OmniPBR_01> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            normal3f[] normals = [(0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 1, 0), (0, 1, 0), (0, 1, 0), (0, 1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0)] (
+                interpolation = "faceVarying"
+            )
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            rel physics:simulationOwner
+            point3f[] points = [(-0.5, -0.5, 0.5), (0.5, -0.5, 0.5), (-0.5, 0.5, 0.5), (0.5, 0.5, 0.5), (-0.5, -0.5, -0.5), (0.5, -0.5, -0.5), (-0.5, 0.5, -0.5), (0.5, 0.5, -0.5)]
+            texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1), (1, 0), (1, 1), (0, 1), (0, 0), (0, 1), (0, 0), (1, 0), (1, 1), (0, 0), (1, 0), (1, 1), (0, 1), (0, 0), (1, 0), (1, 1), (0, 1), (1, 0), (1, 1), (0, 1), (0, 0)] (
+                interpolation = "faceVarying"
+            )
+            uniform token subdivisionScheme = "none"
+            quatd xformOp:orient = (1, 0, 0, 0)
+            double3 xformOp:scale = (1, 0.03, 0.07)
+            double3 xformOp:translate = (0, -0.48349527221073907, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Mesh "Cube_02" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysxConvexHullCollisionAPI", "PhysicsMeshCollisionAPI"]
+        )
+        {
+            float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+            int[] faceVertexCounts = [4, 4, 4, 4, 4, 4]
+            int[] faceVertexIndices = [0, 1, 3, 2, 4, 6, 7, 5, 6, 2, 3, 7, 4, 5, 1, 0, 4, 0, 2, 6, 5, 7, 3, 1]
+            rel material:binding = </World/Looks/OmniPBR_01> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            normal3f[] normals = [(0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 1, 0), (0, 1, 0), (0, 1, 0), (0, 1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0)] (
+                interpolation = "faceVarying"
+            )
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            rel physics:simulationOwner
+            point3f[] points = [(-0.5, -0.5, 0.5), (0.5, -0.5, 0.5), (-0.5, 0.5, 0.5), (0.5, 0.5, 0.5), (-0.5, -0.5, -0.5), (0.5, -0.5, -0.5), (-0.5, 0.5, -0.5), (0.5, 0.5, -0.5)]
+            texCoord2f[] primvars:st = [(0, 0), (1, 0), (1, 1), (0, 1), (1, 0), (1, 1), (0, 1), (0, 0), (0, 1), (0, 0), (1, 0), (1, 1), (0, 0), (1, 0), (1, 1), (0, 1), (0, 0), (1, 0), (1, 1), (0, 1), (1, 0), (1, 1), (0, 1), (0, 0)] (
+                interpolation = "faceVarying"
+            )
+            uniform token subdivisionScheme = "none"
+            quatd xformOp:orient = (1, 0, 0, 0)
+            double3 xformOp:scale = (0.02, 1, 0.05)
+            double3 xformOp:translate = (-0.48, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+    }
+
+    def DomeLight "DomeLight" (
+        prepend apiSchemas = ["ShapingAPI"]
+    )
+    {
+        float inputs:intensity = 1000
+        float inputs:shaping:cone:angle = 180
+        float inputs:shaping:cone:softness
+        float inputs:shaping:focus
+        color3f inputs:shaping:focusTint
+        asset inputs:shaping:ies:file
+        token inputs:texture:format = "latlong"
+        quatd xformOp:orient = (1, 0, 0, 0)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def Scope "Joints"
+    {
+        def PhysicsPrismaticJoint "x_joint" (
+            prepend apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+        )
+        {
+            float drive:linear:physics:damping = 100
+            float drive:linear:physics:stiffness = 800
+            float drive:linear:physics:targetPosition = 0.1
+            uniform token drive:linear:physics:type = "acceleration"
+            uniform token physics:axis = "Y"
+            rel physics:body0 = </World/Gantry_z>
+            rel physics:body1 = </World/Gantry_y>
+            float physics:breakForce = inf
+            float physics:breakTorque = inf
+            point3f physics:localPos0 = (0, 0, 0)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (1, 0, 0, 0)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+            float physics:lowerLimit = -0.45
+            float physics:upperLimit = 0.45
+            float state:linear:physics:position = 0.18731092
+            float state:linear:physics:velocity = -0.63318425
+        }
+
+        def PhysicsPrismaticJoint "y_joint" (
+            prepend apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+        )
+        {
+            float drive:linear:physics:damping = 100
+            float drive:linear:physics:stiffness = 800
+            float drive:linear:physics:targetPosition = 0.028
+            uniform token drive:linear:physics:type = "acceleration"
+            uniform token physics:axis = "X"
+            rel physics:body0 = </World/Gantry_y>
+            rel physics:body1 = </World/Gantry_x>
+            float physics:breakForce = inf
+            float physics:breakTorque = inf
+            point3f physics:localPos0 = (0, 0, 0)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (1, 0, 0, 0)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+            float physics:lowerLimit = -0.45
+            float physics:upperLimit = 0.45
+            float state:linear:physics:position = 0.06705421
+            float state:linear:physics:velocity = -0.18644474
+        }
+
+        def PhysicsPrismaticJoint "z_joint" (
+            prepend apiSchemas = ["PhysicsDriveAPI:linear", "PhysicsJointStateAPI:linear"]
+        )
+        {
+            float drive:linear:physics:damping = 500
+            float drive:linear:physics:maxForce = 30
+            float drive:linear:physics:stiffness = 800
+            float drive:linear:physics:targetPosition = -0.063
+            uniform token drive:linear:physics:type = "acceleration"
+            uniform token physics:axis = "Z"
+            rel physics:body0 = </World/Claw_base>
+            rel physics:body1 = </World/Gantry_z>
+            float physics:breakForce = inf
+            float physics:breakTorque = inf
+            point3f physics:localPos0 = (0, 0, 1.5)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (6.123234e-17, 0, 1, 0)
+            quatf physics:localRot1 = (6.123234e-17, 0, 1, 0)
+            float physics:lowerLimit = -0.45742372
+            float physics:upperLimit = 0.2578865
+            float state:linear:physics:position = 0.06449559
+            float state:linear:physics:velocity = -0.20474699
+        }
+    }
+
+    def Scope "Boxes"
+    {
+        def Cube "Cube" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsRigidBodyAPI", "PhysxRigidBodyAPI", "PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMassAPI"]
+        )
+        {
+            float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+            rel material:binding = None (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            vector3f physics:angularVelocity = (-1.0378416, 1.9499731, -0.081078045)
+            bool physics:collisionEnabled = 1
+            bool physics:kinematicEnabled = 0
+            float physics:mass = 0.2
+            bool physics:rigidBodyEnabled = 1
+            vector3f physics:velocity = (0.0015536327, 0.0011924802, -0.001506174)
+            double size = 1
+            quatd xformOp:orient = (0.9999999989956866, 0.00002905957140096226, -0.00003377458484427259, -0.000004842060306052306)
+            double3 xformOp:scale = (0.1, 0.1, 0.1)
+            double3 xformOp:translate = (-0.000004228445504850242, -6.031274324413971e-8, 1.0500024557113647)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "Cube_01" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsRigidBodyAPI", "PhysxRigidBodyAPI", "PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMassAPI"]
+        )
+        {
+            float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+            rel material:binding = None (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            vector3f physics:angularVelocity = (-0.47348756, -0.2392138, -0.05675739)
+            bool physics:collisionEnabled = 1
+            bool physics:kinematicEnabled = 0
+            float physics:mass = 0.2
+            bool physics:rigidBodyEnabled = 1
+            vector3f physics:velocity = (0.0001315554, 0.0016695815, -0.00016388489)
+            double size = 1
+            quatd xformOp:orient = (0.9999999999872008, 0.000003227801234409839, -0.0000022611891994791165, 0.000003172811824536672)
+            double3 xformOp:scale = (0.1, 0.1, 0.1)
+            double3 xformOp:translate = (-0.10776131600141525, -2.0311017578933388e-7, 1.0500000715255737)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "Cube_02" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsRigidBodyAPI", "PhysxRigidBodyAPI", "PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMassAPI"]
+        )
+        {
+            float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+            rel material:binding = None (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            vector3f physics:angularVelocity = (-0.12575427, 0.23750529, -0.063216716)
+            bool physics:collisionEnabled = 1
+            bool physics:kinematicEnabled = 0
+            float physics:mass = 0.2
+            bool physics:rigidBodyEnabled = 1
+            vector3f physics:velocity = (0.0005678146, 0.0008363187, -0.00027674576)
+            double size = 1
+            quatd xformOp:orient = (0.9999999999862031, 0.0000026782308866599865, -0.000003953325198834682, -0.000002189064706318065)
+            double3 xformOp:scale = (0.1, 0.1, 0.1)
+            double3 xformOp:translate = (-0.2159239947795868, -0.0000018850072365239612, 1.0500006675720215)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "Cube_03" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsRigidBodyAPI", "PhysxRigidBodyAPI", "PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMassAPI"]
+        )
+        {
+            float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+            rel material:binding = None (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            vector3f physics:angularVelocity = (-0.46566603, 0.22087438, -0.033358116)
+            bool physics:collisionEnabled = 1
+            bool physics:kinematicEnabled = 0
+            float physics:mass = 0.2
+            bool physics:rigidBodyEnabled = 1
+            vector3f physics:velocity = (0.00043173897, 0.001425299, -0.00053946883)
+            double size = 1
+            quatd xformOp:orient = (0.9999999998354634, 0.000016823144345310788, 0.000004972494661276689, -0.000004618368140014987)
+            double3 xformOp:scale = (0.1, 0.1, 0.1)
+            double3 xformOp:translate = (-0.3241421580314636, -0.0000036131693832430756, 1.0500009059906006)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "Cube_04" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsRigidBodyAPI", "PhysxRigidBodyAPI", "PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMassAPI"]
+        )
+        {
+            float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+            rel material:binding = None (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            vector3f physics:angularVelocity = (-1.1237671, 1.3439527, 0.0026978978)
+            bool physics:collisionEnabled = 1
+            bool physics:kinematicEnabled = 0
+            float physics:mass = 0.2
+            bool physics:rigidBodyEnabled = 1
+            vector3f physics:velocity = (-0.00033820418, 0.00026873712, -0.00024520617)
+            double size = 1
+            quatd xformOp:orient = (0.9999999989845082, -0.000015333202275381504, -0.000029296396286024356, 0.0000306202167712999)
+            double3 xformOp:scale = (0.1, 0.1, 0.1)
+            double3 xformOp:translate = (0.000041034945752471685, 0.1177854910492897, 1.0499858856201172)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "Cube_05" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsRigidBodyAPI", "PhysxRigidBodyAPI", "PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMassAPI"]
+        )
+        {
+            float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+            rel material:binding = None (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            vector3f physics:angularVelocity = (3.8401847, 0.724748, 0.057353992)
+            bool physics:collisionEnabled = 1
+            bool physics:kinematicEnabled = 0
+            float physics:mass = 0.2
+            bool physics:rigidBodyEnabled = 1
+            vector3f physics:velocity = (0.0042387694, -0.0011723223, 0.0012029628)
+            double size = 1
+            quatd xformOp:orient = (0.9999999989004869, 0.00004183257215610348, -0.00002048330657801332, -0.0000054310543744468195)
+            double3 xformOp:scale = (0.1, 0.1, 0.1)
+            double3 xformOp:translate = (-0.1077713891863823, 0.11769847571849823, 1.0500094890594482)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "Cube_06" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsRigidBodyAPI", "PhysxRigidBodyAPI", "PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMassAPI"]
+        )
+        {
+            float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+            rel material:binding = None (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            vector3f physics:angularVelocity = (-2.413222, 0.9470055, -0.06646101)
+            bool physics:collisionEnabled = 1
+            bool physics:kinematicEnabled = 0
+            float physics:mass = 0.2
+            bool physics:rigidBodyEnabled = 1
+            vector3f physics:velocity = (0.00027141784, -0.00025965995, -0.00039616984)
+            double size = 1
+            quatd xformOp:orient = (0.9999999980942854, 0.00003358268252729179, -0.0000359721650815498, 0.000037277821050305756)
+            double3 xformOp:scale = (0.1, 0.1, 0.1)
+            double3 xformOp:translate = (-0.21589814126491547, 0.11776226758956909, 1.049986481666565)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "Cube_07" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsRigidBodyAPI", "PhysxRigidBodyAPI", "PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMassAPI"]
+        )
+        {
+            float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+            rel material:binding = None (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            vector3f physics:angularVelocity = (-2.4153745, 0.94771117, -0.066724025)
+            bool physics:collisionEnabled = 1
+            bool physics:kinematicEnabled = 0
+            float physics:mass = 0.2
+            bool physics:rigidBodyEnabled = 1
+            vector3f physics:velocity = (0.00027299422, -0.00026014616, -0.00039705448)
+            double size = 1
+            quatd xformOp:orient = (0.999999998084645, 0.00003362353152801619, -0.00003591848132952054, 0.00003755037675376591)
+            double3 xformOp:scale = (0.1, 0.1, 0.1)
+            double3 xformOp:translate = (-0.3241174519062042, 0.11776231974363327, 1.049986481666565)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "Cube_08" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsRigidBodyAPI", "PhysxRigidBodyAPI", "PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMassAPI"]
+        )
+        {
+            float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+            rel material:binding = None (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            vector3f physics:angularVelocity = (2.6670642, 0.5840298, -0.011546474)
+            bool physics:collisionEnabled = 1
+            bool physics:kinematicEnabled = 0
+            float physics:mass = 0.2
+            bool physics:rigidBodyEnabled = 1
+            vector3f physics:velocity = (0.0032716664, -0.0051170187, 0.0005723955)
+            double size = 1
+            quatd xformOp:orient = (0.9999999992728225, 0.00003252204784300498, -0.000008737227652888033, -0.000017897830519927517)
+            double3 xformOp:scale = (0.1, 0.1, 0.1)
+            double3 xformOp:translate = (0.000009662428055889904, 0.23153793811798096, 1.0500108003616333)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "Cube_09" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsRigidBodyAPI", "PhysxRigidBodyAPI", "PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMassAPI"]
+        )
+        {
+            float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+            rel material:binding = None (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            vector3f physics:angularVelocity = (2.6627536, 0.5808465, -0.011719587)
+            bool physics:collisionEnabled = 1
+            bool physics:kinematicEnabled = 0
+            float physics:mass = 0.2
+            bool physics:rigidBodyEnabled = 1
+            vector3f physics:velocity = (0.0032766908, -0.0051086266, 0.00056893704)
+            double size = 1
+            quatd xformOp:orient = (0.9999999992779587, 0.00003265246821649131, -0.000008358123634724475, -0.000017551088838263757)
+            double3 xformOp:scale = (0.1, 0.1, 0.1)
+            double3 xformOp:translate = (-0.10775063931941986, 0.23153866827487946, 1.0500108003616333)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "Cube_10" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsRigidBodyAPI", "PhysxRigidBodyAPI", "PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMassAPI"]
+        )
+        {
+            float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+            rel material:binding = None (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            vector3f physics:angularVelocity = (2.6624446, 0.58401954, -0.012431635)
+            bool physics:collisionEnabled = 1
+            bool physics:kinematicEnabled = 0
+            float physics:mass = 0.2
+            bool physics:rigidBodyEnabled = 1
+            vector3f physics:velocity = (0.003281008, -0.00511091, 0.00057010585)
+            double size = 1
+            quatd xformOp:orient = (0.9999999992845293, 0.000032805839948539163, -0.000008639263481879213, -0.000016735631348969464)
+            double3 xformOp:scale = (0.1, 0.1, 0.1)
+            double3 xformOp:translate = (-0.21591754257678986, 0.23153825104236603, 1.0500108003616333)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "Cube_11" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsRigidBodyAPI", "PhysxRigidBodyAPI", "PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMassAPI"]
+        )
+        {
+            float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+            rel material:binding = None (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            vector3f physics:angularVelocity = (2.661765, 0.5897328, -0.011692347)
+            bool physics:collisionEnabled = 1
+            bool physics:kinematicEnabled = 0
+            float physics:mass = 0.2
+            bool physics:rigidBodyEnabled = 1
+            vector3f physics:velocity = (0.0032896972, -0.005110087, 0.00057137804)
+            double size = 1
+            quatd xformOp:orient = (0.9999999992905543, 0.00003249122845986212, -0.000008987792952720296, -0.000016805686516286706)
+            double3 xformOp:scale = (0.1, 0.1, 0.1)
+            double3 xformOp:translate = (-0.32413655519485474, 0.23153811693191528, 1.0500108003616333)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "Cube_12" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsRigidBodyAPI", "PhysxRigidBodyAPI", "PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMassAPI"]
+        )
+        {
+            float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+            rel material:binding = None (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            vector3f physics:angularVelocity = (-5.781592, 1.3238462, 0.07734427)
+            bool physics:collisionEnabled = 1
+            bool physics:kinematicEnabled = 0
+            float physics:mass = 0.2
+            bool physics:rigidBodyEnabled = 1
+            vector3f physics:velocity = (-0.0006731312, 0.0017162334, -0.0073428443)
+            double size = 1
+            quatd xformOp:orient = (0.9999999849592621, -0.00016769227708190863, 0.00004029995598753017, -0.00001834909488361066)
+            double3 xformOp:scale = (0.1, 0.1, 0.1)
+            double3 xformOp:translate = (-0.000013074296475679148, 0.34910672903060913, 1.050002932548523)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "Cube_13" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsRigidBodyAPI", "PhysxRigidBodyAPI", "PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMassAPI"]
+        )
+        {
+            float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+            rel material:binding = None (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            vector3f physics:angularVelocity = (-6.2752566, 1.1526711, 0.005263715)
+            bool physics:collisionEnabled = 1
+            bool physics:kinematicEnabled = 0
+            float physics:mass = 0.2
+            bool physics:rigidBodyEnabled = 1
+            vector3f physics:velocity = (0.0014856395, 0.0040078117, -0.008506092)
+            double size = 1
+            quatd xformOp:orient = (0.9999999889434747, -0.00014720517440356188, 0.0000028089192392096986, -0.00002087575103063361)
+            double3 xformOp:scale = (0.1, 0.1, 0.1)
+            double3 xformOp:translate = (-0.10778652131557465, 0.34911036491394043, 1.0500013828277588)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "Cube_14" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsRigidBodyAPI", "PhysxRigidBodyAPI", "PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMassAPI"]
+        )
+        {
+            float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+            rel material:binding = None (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            vector3f physics:angularVelocity = (-0.5474298, -0.31465122, -0.053893156)
+            bool physics:collisionEnabled = 1
+            bool physics:kinematicEnabled = 0
+            float physics:mass = 0.2
+            bool physics:rigidBodyEnabled = 1
+            vector3f physics:velocity = (0.001668814, 0.0010118413, -0.00031824686)
+            double size = 1
+            quatd xformOp:orient = (0.9999999986721131, 0.000020155608699864987, -0.00003421683216047696, -0.000032844080991186786)
+            double3 xformOp:scale = (0.1, 0.1, 0.1)
+            double3 xformOp:translate = (-0.21593841910362244, 0.3490915298461914, 1.0499863624572754)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "Cube_15" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsRigidBodyAPI", "PhysxRigidBodyAPI", "PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMassAPI"]
+        )
+        {
+            float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+            rel material:binding = None (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            vector3f physics:angularVelocity = (-0.8287797, 1.2630881, 0.056040995)
+            bool physics:collisionEnabled = 1
+            bool physics:kinematicEnabled = 0
+            float physics:mass = 0.2
+            bool physics:rigidBodyEnabled = 1
+            vector3f physics:velocity = (0.0004329048, 0.0010614041, -0.00038411995)
+            double size = 1
+            quatd xformOp:orient = (0.9999999997084023, 0.000009166177494886164, -0.000007539609018203028, -0.00002103166607282305)
+            double3 xformOp:scale = (0.1, 0.1, 0.1)
+            double3 xformOp:translate = (-0.32412388920783997, 0.34909766912460327, 1.049986481666565)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "Cube_16" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsRigidBodyAPI", "PhysxRigidBodyAPI", "PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMassAPI"]
+        )
+        {
+            float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+            rel material:binding = None (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            vector3f physics:angularVelocity = (-5.5170736, 1.0028514, 0.18903282)
+            bool physics:collisionEnabled = 1
+            bool physics:kinematicEnabled = 0
+            float physics:mass = 0.2
+            bool physics:rigidBodyEnabled = 1
+            vector3f physics:velocity = (-0.0050344616, 0.007968026, -0.009032799)
+            double size = 1
+            quatd xformOp:orient = (0.9999999628147882, -0.00026282364834520383, 0.00006749832237581064, -0.000027168521518228777)
+            double3 xformOp:scale = (0.1, 0.1, 0.1)
+            double3 xformOp:translate = (-0.0000049232912715524435, 0.35178491473197937, 1.1500036716461182)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "Cube_17" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsRigidBodyAPI", "PhysxRigidBodyAPI", "PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMassAPI"]
+        )
+        {
+            float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+            rel material:binding = None (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            vector3f physics:angularVelocity = (-5.4743185, 1.4002512, 0.008999969)
+            bool physics:collisionEnabled = 1
+            bool physics:kinematicEnabled = 0
+            float physics:mass = 0.2
+            bool physics:rigidBodyEnabled = 1
+            vector3f physics:velocity = (0.005591077, 0.010042185, -0.00973476)
+            double size = 1
+            quatd xformOp:orient = (0.9999999775367897, -0.00020759739689946415, 0.00001050920908185848, -0.00004146441129667127)
+            double3 xformOp:scale = (0.1, 0.1, 0.1)
+            double3 xformOp:translate = (-0.10777977108955383, 0.3517848551273346, 1.1500002145767212)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "Cube_18" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsRigidBodyAPI", "PhysxRigidBodyAPI", "PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMassAPI"]
+        )
+        {
+            float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+            rel material:binding = None (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            vector3f physics:angularVelocity = (-1.4839176, 0.69156, -0.13501675)
+            bool physics:collisionEnabled = 1
+            bool physics:kinematicEnabled = 0
+            float physics:mass = 0.2
+            bool physics:rigidBodyEnabled = 1
+            vector3f physics:velocity = (0.002178621, 0.0030027996, -0.00058558874)
+            double size = 1
+            quatd xformOp:orient = (0.9999999979828339, 0.000025171129814487403, -0.000008260063001104371, -0.000057727963593497994)
+            double3 xformOp:scale = (0.1, 0.1, 0.1)
+            double3 xformOp:translate = (-0.21589051187038422, 0.35170280933380127, 1.149972677230835)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "Cube_19" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsRigidBodyAPI", "PhysxRigidBodyAPI", "PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMassAPI"]
+        )
+        {
+            float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+            rel material:binding = None (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            vector3f physics:angularVelocity = (-0.9380871, 1.2392079, 0.120877594)
+            bool physics:collisionEnabled = 1
+            bool physics:kinematicEnabled = 0
+            float physics:mass = 0.2
+            bool physics:rigidBodyEnabled = 1
+            vector3f physics:velocity = (0.0027852447, 0.0023258375, -0.00078498694)
+            double size = 1
+            quatd xformOp:orient = (0.9999999985520086, 0.000019180456669476397, -0.000028567440231542917, -0.00004137625194940994)
+            double3 xformOp:scale = (0.1, 0.1, 0.1)
+            double3 xformOp:translate = (-0.324115127325058, 0.3516508936882019, 1.149972677230835)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "Cube_20" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsRigidBodyAPI", "PhysxRigidBodyAPI", "PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMassAPI"]
+        )
+        {
+            float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+            rel material:binding = None (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            vector3f physics:angularVelocity = (2.5824964, -0.45024112, -0.11841325)
+            bool physics:collisionEnabled = 1
+            bool physics:kinematicEnabled = 0
+            float physics:mass = 0.2
+            bool physics:rigidBodyEnabled = 1
+            vector3f physics:velocity = (0.0023303137, -0.008746195, -0.0006092675)
+            double size = 1
+            quatd xformOp:orient = (0.9999999975155638, 0.000024186176731310557, -0.00003460888721889053, -0.00005644578105621473)
+            double3 xformOp:scale = (0.1, 0.1, 0.1)
+            double3 xformOp:translate = (0.00000838540836411994, 0.22038212418556213, 1.1500204801559448)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "Cube_21" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsRigidBodyAPI", "PhysxRigidBodyAPI", "PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMassAPI"]
+        )
+        {
+            float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+            rel material:binding = None (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            vector3f physics:angularVelocity = (2.575636, -0.45646736, -0.11871226)
+            bool physics:collisionEnabled = 1
+            bool physics:kinematicEnabled = 0
+            float physics:mass = 0.2
+            bool physics:rigidBodyEnabled = 1
+            vector3f physics:velocity = (0.0023222617, -0.008723003, -0.00061374437)
+            double size = 1
+            quatd xformOp:orient = (0.9999999974766595, 0.000024962585020981094, -0.000034879780909753795, -0.00005662995055119213)
+            double3 xformOp:scale = (0.1, 0.1, 0.1)
+            double3 xformOp:translate = (-0.10775184631347656, 0.22038429975509644, 1.1500204801559448)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "Cube_22" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsRigidBodyAPI", "PhysxRigidBodyAPI", "PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMassAPI"]
+        )
+        {
+            float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+            rel material:binding = None (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            vector3f physics:angularVelocity = (2.5741634, -0.4534117, -0.12028802)
+            bool physics:collisionEnabled = 1
+            bool physics:kinematicEnabled = 0
+            float physics:mass = 0.2
+            bool physics:rigidBodyEnabled = 1
+            vector3f physics:velocity = (0.0023335835, -0.008721591, -0.0006112135)
+            double size = 1
+            quatd xformOp:orient = (0.999999997544797, 0.000024902344193426293, -0.0000345039274042763, -0.00005567547326312509)
+            double3 xformOp:scale = (0.1, 0.1, 0.1)
+            double3 xformOp:translate = (-0.21591898798942566, 0.22038467228412628, 1.1500205993652344)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "Cube_23" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsRigidBodyAPI", "PhysxRigidBodyAPI", "PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMassAPI"]
+        )
+        {
+            float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+            rel material:binding = None (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            vector3f physics:angularVelocity = (2.5726218, -0.4476546, -0.11882966)
+            bool physics:collisionEnabled = 1
+            bool physics:kinematicEnabled = 0
+            float physics:mass = 0.2
+            bool physics:rigidBodyEnabled = 1
+            vector3f physics:velocity = (0.002355139, -0.008716684, -0.0006091851)
+            double size = 1
+            quatd xformOp:orient = (0.9999999975269995, 0.00002521753291775349, -0.000034743371469458874, -0.000055704354484208914)
+            double3 xformOp:scale = (0.1, 0.1, 0.1)
+            double3 xformOp:translate = (-0.3241381049156189, 0.22038498520851135, 1.1500205993652344)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "Cube_24" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsRigidBodyAPI", "PhysxRigidBodyAPI", "PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMassAPI"]
+        )
+        {
+            float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+            rel material:binding = None (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            vector3f physics:angularVelocity = (-1.2403367, 1.2385836, -0.003719397)
+            bool physics:collisionEnabled = 1
+            bool physics:kinematicEnabled = 0
+            float physics:mass = 0.2
+            bool physics:rigidBodyEnabled = 1
+            vector3f physics:velocity = (0.003226723, 0.00024742045, -0.00055389677)
+            double size = 1
+            quatd xformOp:orient = (0.9999999943247116, -0.000047777846272586066, -0.00006850205359478526, 0.00006614622232149913)
+            double3 xformOp:scale = (0.1, 0.1, 0.1)
+            double3 xformOp:translate = (0.00004389434616314247, 0.11388387531042099, 1.1499723196029663)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "Cube_25" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsRigidBodyAPI", "PhysxRigidBodyAPI", "PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMassAPI"]
+        )
+        {
+            float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+            rel material:binding = None (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            vector3f physics:angularVelocity = (7.0513268, -0.041400142, 0.035833143)
+            bool physics:collisionEnabled = 1
+            bool physics:kinematicEnabled = 0
+            float physics:mass = 0.2
+            bool physics:rigidBodyEnabled = 1
+            vector3f physics:velocity = (0.0038160144, -0.013563547, 0.0011584908)
+            double size = 1
+            quatd xformOp:orient = (0.9999999974666179, 0.000047438327696588454, -0.000042872508131534, -0.00003127806299663577)
+            double3 xformOp:scale = (0.1, 0.1, 0.1)
+            double3 xformOp:translate = (-0.10776612162590027, 0.1139170378446579, 1.1500171422958374)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "Cube_26" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsRigidBodyAPI", "PhysxRigidBodyAPI", "PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMassAPI"]
+        )
+        {
+            float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+            rel material:binding = None (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            vector3f physics:angularVelocity = (-2.405462, 0.90771496, -0.1579763)
+            bool physics:collisionEnabled = 1
+            bool physics:kinematicEnabled = 0
+            float physics:mass = 0.2
+            bool physics:rigidBodyEnabled = 1
+            vector3f physics:velocity = (0.0034866983, 0.0058825198, -0.00058099965)
+            double size = 1
+            quatd xformOp:orient = (0.9999999938977573, 0.00008420255501003017, -0.00007021721855243431, -0.000013563087169916325)
+            double3 xformOp:scale = (0.1, 0.1, 0.1)
+            double3 xformOp:translate = (-0.21597492694854736, 0.11397188156843185, 1.1499724388122559)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "Cube_27" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsRigidBodyAPI", "PhysxRigidBodyAPI", "PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMassAPI"]
+        )
+        {
+            float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+            rel material:binding = None (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            vector3f physics:angularVelocity = (-2.4068406, 0.90770453, -0.15855914)
+            bool physics:collisionEnabled = 1
+            bool physics:kinematicEnabled = 0
+            float physics:mass = 0.2
+            bool physics:rigidBodyEnabled = 1
+            vector3f physics:velocity = (0.0034857746, 0.0058819065, -0.00058266753)
+            double size = 1
+            quatd xformOp:orient = (0.9999999939718258, 0.00008346139020134872, -0.00006996616215071523, -0.000013974291657075522)
+            double3 xformOp:scale = (0.1, 0.1, 0.1)
+            double3 xformOp:translate = (-0.3241950273513794, 0.11397188156843185, 1.1499724388122559)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "Cube_28" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsRigidBodyAPI", "PhysxRigidBodyAPI", "PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMassAPI"]
+        )
+        {
+            float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+            rel material:binding = None (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            vector3f physics:angularVelocity = (-1.4286398, 1.5772889, 0.071959175)
+            bool physics:collisionEnabled = 1
+            bool physics:kinematicEnabled = 0
+            float physics:mass = 0.2
+            bool physics:rigidBodyEnabled = 1
+            vector3f physics:velocity = (0.006092181, 0.0064028744, -0.0014930533)
+            double size = 1
+            quatd xformOp:orient = (0.9999999989803147, 0.000032772355662591836, -0.00003025451038200249, -0.000007071631860152529)
+            double3 xformOp:scale = (0.1, 0.1, 0.1)
+            double3 xformOp:translate = (0.000007616548828082159, -0.002819930436089635, 1.150002121925354)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "Cube_29" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsRigidBodyAPI", "PhysxRigidBodyAPI", "PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMassAPI"]
+        )
+        {
+            float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+            rel material:binding = None (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            vector3f physics:angularVelocity = (-2.2989206, 0.52244794, -0.121983394)
+            bool physics:collisionEnabled = 1
+            bool physics:kinematicEnabled = 0
+            float physics:mass = 0.2
+            bool physics:rigidBodyEnabled = 1
+            vector3f physics:velocity = (0.002780638, 0.011551498, -0.0014029915)
+            double size = 1
+            quatd xformOp:orient = (0.9999999990787434, 0.000019700039302849747, -0.00003760109078628483, 0.000006370217843987112)
+            double3 xformOp:scale = (0.1, 0.1, 0.1)
+            double3 xformOp:translate = (-0.107782281935215, -0.0028231379110366106, 1.1500009298324585)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "Cube_30" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsRigidBodyAPI", "PhysxRigidBodyAPI", "PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMassAPI"]
+        )
+        {
+            float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+            rel material:binding = None (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            vector3f physics:angularVelocity = (-2.558085, 1.1857388, -0.12122071)
+            bool physics:collisionEnabled = 1
+            bool physics:kinematicEnabled = 0
+            float physics:mass = 0.2
+            bool physics:rigidBodyEnabled = 1
+            vector3f physics:velocity = (0.0043730424, 0.006828362, -0.0011826279)
+            double size = 1
+            quatd xformOp:orient = (0.9999999979107279, 0.000051991404105357274, -0.00003838980865376318, 0.0000012886673936605657)
+            double3 xformOp:scale = (0.1, 0.1, 0.1)
+            double3 xformOp:translate = (-0.21591351926326752, -0.0028224573470652103, 1.1500004529953003)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cube "Cube_31" (
+            prepend apiSchemas = ["MaterialBindingAPI", "PhysicsRigidBodyAPI", "PhysxRigidBodyAPI", "PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsMassAPI"]
+        )
+        {
+            float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+            rel material:binding = None (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            vector3f physics:angularVelocity = (-2.8253815, -0.18009412, -0.14778243)
+            bool physics:collisionEnabled = 1
+            bool physics:kinematicEnabled = 0
+            float physics:mass = 0.2
+            bool physics:rigidBodyEnabled = 1
+            vector3f physics:velocity = (0.0022734737, 0.010479013, -0.002932292)
+            double size = 1
+            quatd xformOp:orient = (0.9999999961172842, 0.00008808967935755985, 0.000002317047221061407, -5.208635515394953e-7)
+            double3 xformOp:scale = (0.1, 0.1, 0.1)
+            double3 xformOp:translate = (-0.3241198658943176, -0.00283443252556026, 1.1500024795532227)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+    }
+
+    def Xform "Gripper_Cones" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysxRigidBodyAPI", "PhysicsFilteredPairsAPI"]
+    )
+    {
+        vector3f physics:angularVelocity = (-0.0016412268, 0.000105526895, -0.0011057453)
+        custom rel physics:filteredPairs = None
+        bool physics:kinematicEnabled = 0
+        bool physics:rigidBodyEnabled = 1
+        rel physics:simulationOwner
+        vector3f physics:velocity = (-0.18639266, -0.6331049, 0.20466563)
+        quatd xformOp:orient = (0.9999999999999584, 2.1129547282466972e-7, -8.078302934302447e-8, 1.791509201228068e-7)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0.06705497205257416, 0.18731138110160828, 1.2854299545288086)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Cone "Cone" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "MaterialBindingAPI"]
+        )
+        {
+            uniform token axis = "Z"
+            float3[] extent = [(-0.125, -0.125, -0.125), (0.125, 0.125, 0.125)]
+            double height = 0.25
+            rel material:binding = </World/Looks/OmniPBR_02> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            bool physics:collisionEnabled = 1
+            rel physics:simulationOwner
+            double radius = 0.125
+            custom bool refinementEnableOverride = 1
+            custom int refinementLevel = 2
+            quatd xformOp:orient = (1, 0, 0, 0)
+            double3 xformOp:scale = (0.07000000029802322, 0.07000000029802322, 0.07000000029802322)
+            double3 xformOp:translate = (0.02449999758994352, 2.7209183634902232e-8, 2.009303168293286e-9)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cone "Cone_01" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "MaterialBindingAPI"]
+        )
+        {
+            uniform token axis = "Z"
+            float3[] extent = [(-0.125, -0.125, -0.125), (0.125, 0.125, 0.125)]
+            double height = 0.25
+            rel material:binding = </World/Looks/OmniPBR_02> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            bool physics:collisionEnabled = 1
+            rel physics:simulationOwner
+            double radius = 0.125
+            custom bool refinementEnableOverride = 1
+            custom int refinementLevel = 2
+            quatd xformOp:orient = (1, 0, 0, 0)
+            double3 xformOp:scale = (0.07000000029802322, 0.07000000029802322, 0.07000000029802322)
+            double3 xformOp:translate = (-2.514364616332955e-9, 2.7209183634915017e-8, 2.0093025021594713e-9)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cone "Cone_02" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "MaterialBindingAPI"]
+        )
+        {
+            uniform token axis = "Z"
+            float3[] extent = [(-0.125, -0.125, -0.125), (0.125, 0.125, 0.125)]
+            double height = 0.25
+            rel material:binding = </World/Looks/OmniPBR_02> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            bool physics:collisionEnabled = 1
+            rel physics:simulationOwner
+            double radius = 0.125
+            custom bool refinementEnableOverride = 1
+            custom int refinementLevel = 2
+            quatd xformOp:orient = (1, 0, 0, 0)
+            double3 xformOp:scale = (0.07000000029802322, 0.07000000029802322, 0.07000000029802322)
+            double3 xformOp:translate = (-0.024500002618672752, 2.720918363492783e-8, 2.0093025021594713e-9)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cone "Cone_03" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "MaterialBindingAPI"]
+        )
+        {
+            uniform token axis = "Z"
+            float3[] extent = [(-0.125, -0.125, -0.125), (0.125, 0.125, 0.125)]
+            double height = 0.25
+            rel material:binding = </World/Looks/OmniPBR_02> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            bool physics:collisionEnabled = 1
+            rel physics:simulationOwner
+            double radius = 0.125
+            custom bool refinementEnableOverride = 1
+            custom int refinementLevel = 2
+            quatd xformOp:orient = (1, 0, 0, 0)
+            double3 xformOp:scale = (0.07000000029802322, 0.07000000029802322, 0.07000000029802322)
+            double3 xformOp:translate = (-0.024500002618672755, 0.02450002731349176, 2.009302724204076e-9)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cone "Cone_04" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "MaterialBindingAPI"]
+        )
+        {
+            uniform token axis = "Z"
+            float3[] extent = [(-0.125, -0.125, -0.125), (0.125, 0.125, 0.125)]
+            double height = 0.25
+            rel material:binding = </World/Looks/OmniPBR_02> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            bool physics:collisionEnabled = 1
+            rel physics:simulationOwner
+            double radius = 0.125
+            custom bool refinementEnableOverride = 1
+            custom int refinementLevel = 2
+            quatd xformOp:orient = (1, 0, 0, 0)
+            double3 xformOp:scale = (0.07000000029802322, 0.07000000029802322, 0.07000000029802322)
+            double3 xformOp:translate = (0.02449999758994352, 0.02450002731349177, 2.009302946248681e-9)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cone "Cone_05" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "MaterialBindingAPI"]
+        )
+        {
+            uniform token axis = "Z"
+            float3[] extent = [(-0.125, -0.125, -0.125), (0.125, 0.125, 0.125)]
+            double height = 0.25
+            rel material:binding = </World/Looks/OmniPBR_02> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            bool physics:collisionEnabled = 1
+            rel physics:simulationOwner
+            double radius = 0.125
+            custom bool refinementEnableOverride = 1
+            custom int refinementLevel = 2
+            quatd xformOp:orient = (1, 0, 0, 0)
+            double3 xformOp:scale = (0.07000000029802322, 0.07000000029802322, 0.07000000029802322)
+            double3 xformOp:translate = (-2.514364616332849e-9, 0.02450002731349177, 2.0093022801148663e-9)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cone "Cone_06" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "MaterialBindingAPI"]
+        )
+        {
+            uniform token axis = "Z"
+            float3[] extent = [(-0.125, -0.125, -0.125), (0.125, 0.125, 0.125)]
+            double height = 0.25
+            rel material:binding = </World/Looks/OmniPBR_02> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            bool physics:collisionEnabled = 1
+            rel physics:simulationOwner
+            double radius = 0.125
+            custom bool refinementEnableOverride = 1
+            custom int refinementLevel = 2
+            quatd xformOp:orient = (1, 0, 0, 0)
+            double3 xformOp:scale = (0.07000000029802322, 0.07000000029802322, 0.07000000029802322)
+            double3 xformOp:translate = (-0.024500002618672752, -0.0244999728951245, 2.0093025021594713e-9)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cone "Cone_07" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "MaterialBindingAPI"]
+        )
+        {
+            uniform token axis = "Z"
+            float3[] extent = [(-0.125, -0.125, -0.125), (0.125, 0.125, 0.125)]
+            double height = 0.25
+            rel material:binding = </World/Looks/OmniPBR_02> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            bool physics:collisionEnabled = 1
+            rel physics:simulationOwner
+            double radius = 0.125
+            custom bool refinementEnableOverride = 1
+            custom int refinementLevel = 2
+            quatd xformOp:orient = (1, 0, 0, 0)
+            double3 xformOp:scale = (0.07000000029802322, 0.07000000029802322, 0.07000000029802322)
+            double3 xformOp:translate = (0.024499997589943524, -0.024499972895124497, 2.009302946248681e-9)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Cone "Cone_08" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "MaterialBindingAPI"]
+        )
+        {
+            uniform token axis = "Z"
+            float3[] extent = [(-0.125, -0.125, -0.125), (0.125, 0.125, 0.125)]
+            double height = 0.25
+            rel material:binding = </World/Looks/OmniPBR_02> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            bool physics:collisionEnabled = 1
+            rel physics:simulationOwner
+            double radius = 0.125
+            custom bool refinementEnableOverride = 1
+            custom int refinementLevel = 2
+            quatd xformOp:orient = (1, 0, 0, 0)
+            double3 xformOp:scale = (0.07000000029802322, 0.07000000029802322, 0.07000000029802322)
+            double3 xformOp:translate = (-2.514364616332849e-9, -0.0244999728951245, 2.0093025021594713e-9)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+    }
+
+    def OmniGraph "ActionGraph"
+    {
+        bool allowAutoInstancing = 0
+        token evaluationMode = "Automatic"
+        token evaluator:type = "execution"
+        token fabricCacheBacking = "Shared"
+        int2 fileFormatVersion = (1, 9)
+        token pipelineStage = "pipelineStageSimulation"
+
+        def OmniGraphNode "read_gamepad_state" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom float inputs:deadzone
+            custom token inputs:gamepadElement = "Right Stick Y Axis" (
+                allowedTokens = ["Left Stick X Axis", "Left Stick Y Axis", "Right Stick X Axis", "Right Stick Y Axis", "Left Trigger", "Right Trigger", "Face Button Bottom", "Face Button Right", "Face Button Left", "Face Button Top", "Left Shoulder", "Right Shoulder", "Special Left", "Special Right", "Left Stick Button", "Right Stick Button", "D-Pad Up", "D-Pad Right", "D-Pad Down", "D-Pad Left"]
+            )
+            custom uint inputs:gamepadId
+            token node:type = "omni.graph.nodes.ReadGamepadState"
+            int node:typeVersion = 1
+            custom bool outputs:isPressed
+            custom float outputs:value
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (308.9415, 1638.237)
+        }
+
+        def OmniGraphNode "on_gamepad_input" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom token inputs:gamepadElementIn (
+                allowedTokens = ["Face Button Bottom", "Face Button Right", "Face Button Left", "Face Button Top", "Left Shoulder", "Right Shoulder", "Special Left", "Special Right", "Left Stick Button", "Right Stick Button", "D-Pad Up", "D-Pad Right", "D-Pad Down", "D-Pad Left"]
+            )
+            custom uint inputs:gamepadId
+            custom bool inputs:onlyPlayback
+            token node:type = "omni.graph.action.OnGamepadInput"
+            int node:typeVersion = 2
+            custom bool outputs:isPressed
+            custom uint outputs:pressed (
+                customData = {
+                    bool isExecution = 1
+                }
+            )
+            custom uint outputs:released (
+                customData = {
+                    bool isExecution = 1
+                }
+            )
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (76.79882, -294.30063)
+        }
+
+        def OmniGraphNode "read_gamepad_state_01" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom float inputs:deadzone
+            custom token inputs:gamepadElement = "Left Stick X Axis" (
+                allowedTokens = ["Left Stick X Axis", "Left Stick Y Axis", "Right Stick X Axis", "Right Stick Y Axis", "Left Trigger", "Right Trigger", "Face Button Bottom", "Face Button Right", "Face Button Left", "Face Button Top", "Left Shoulder", "Right Shoulder", "Special Left", "Special Right", "Left Stick Button", "Right Stick Button", "D-Pad Up", "D-Pad Right", "D-Pad Down", "D-Pad Left"]
+            )
+            custom uint inputs:gamepadId
+            token node:type = "omni.graph.nodes.ReadGamepadState"
+            int node:typeVersion = 1
+            custom bool outputs:isPressed
+            custom float outputs:value
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (471.89484, 898.08386)
+        }
+
+        def OmniGraphNode "read_gamepad_state_02" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom float inputs:deadzone
+            custom token inputs:gamepadElement = "Left Stick Y Axis" (
+                allowedTokens = ["Left Stick X Axis", "Left Stick Y Axis", "Right Stick X Axis", "Right Stick Y Axis", "Left Trigger", "Right Trigger", "Face Button Bottom", "Face Button Right", "Face Button Left", "Face Button Top", "Left Shoulder", "Right Shoulder", "Special Left", "Special Right", "Left Stick Button", "Right Stick Button", "D-Pad Up", "D-Pad Right", "D-Pad Down", "D-Pad Left"]
+            )
+            custom uint inputs:gamepadId
+            token node:type = "omni.graph.nodes.ReadGamepadState"
+            int node:typeVersion = 1
+            custom bool outputs:isPressed
+            custom float outputs:value
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (436.77072, 344.0432)
+        }
+
+        def OmniGraphNode "read_prim_attribute" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom token inputs:name = "drive:linear:physics:targetPosition"
+            custom rel inputs:prim = </World/Joints/x_joint> (
+                customData = {
+                    dictionary omni = {
+                        dictionary graph = {
+                            string relType = "target"
+                        }
+                    }
+                }
+            )
+            custom token inputs:primPath
+            custom timecode inputs:usdTimecode = nan
+            custom bool inputs:usePath
+            token node:type = "omni.graph.nodes.ReadPrimAttribute"
+            int node:typeVersion = 3
+            custom token outputs:value
+            custom bool state:correctlySetup
+            custom uint64 state:importPath
+            custom bool state:reimportAtTime
+            custom uint64 state:srcAttrib
+            custom uint64 state:srcPath
+            custom uint64 state:srcPathAsToken
+            custom double state:time
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (875.81006, 283.41055)
+        }
+
+        def OmniGraphNode "write_prim_attribute" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom uint inputs:execIn (
+                customData = {
+                    bool isExecution = 1
+                }
+            )
+            prepend uint inputs:execIn.connect = </World/ActionGraph/on_tick.outputs:tick>
+            custom token inputs:layerIdentifier = ""
+            custom token inputs:name = "drive:linear:physics:targetPosition"
+            custom rel inputs:prim = </World/Joints/x_joint> (
+                customData = {
+                    dictionary omni = {
+                        dictionary graph = {
+                            string relType = "target"
+                        }
+                    }
+                }
+            )
+            custom token inputs:primPath
+            custom bool inputs:usdWriteBack = 0
+            custom bool inputs:usePath
+            custom token inputs:value
+            delete token inputs:value.connect = </World/ActionGraph/add.outputs:sum>
+            prepend token inputs:value.connect = </World/ActionGraph/maximum.outputs:maximum>
+            token node:type = "omni.graph.nodes.WritePrimAttribute"
+            int node:typeVersion = 3
+            custom uint outputs:execOut (
+                customData = {
+                    bool isExecution = 1
+                }
+            )
+            custom bool state:correctlySetup
+            custom uint64 state:destAttrib
+            custom uint64 state:destPath
+            custom uint64 state:destPathToken
+            custom token state:layerIdentifier
+            custom token state:resolvedLayerIdentifier
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (1863.1328, 447.41263)
+        }
+
+        def OmniGraphNode "multiply_01" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom token inputs:a
+            delete token inputs:a.connect = </World/ActionGraph/read_gamepad_state_03.outputs:value>
+            prepend token inputs:a.connect = </World/ActionGraph/read_gamepad_state_02.outputs:value>
+            custom token inputs:b
+            delete token inputs:b.connect = </World/ActionGraph/constant_float.inputs:value>
+            prepend token inputs:b.connect = </World/ActionGraph/constant_float_01.inputs:value>
+            token node:type = "omni.graph.nodes.Multiply"
+            int node:typeVersion = 2
+            custom token outputs:product
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (855.82806, 485.43423)
+        }
+
+        def OmniGraphNode "constant_float_01" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom float inputs:value = -0.05
+            token node:type = "omni.graph.nodes.ConstantFloat"
+            int node:typeVersion = 1
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (440.64462, 530.4536)
+        }
+
+        def OmniGraphNode "add" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom token inputs:a
+            prepend token inputs:a.connect = </World/ActionGraph/read_prim_attribute.outputs:value>
+            custom token inputs:b
+            prepend token inputs:b.connect = </World/ActionGraph/multiply_01.outputs:product>
+            token node:type = "omni.graph.nodes.Add"
+            int node:typeVersion = 2
+            custom token outputs:sum
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (1136.0259, 510.0765)
+        }
+
+        def OmniGraphNode "on_tick" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom uint inputs:framePeriod
+            custom bool inputs:onlyPlayback
+            token node:type = "omni.graph.action.OnTick"
+            int node:typeVersion = 2
+            custom double outputs:absoluteSimTime
+            custom double outputs:deltaSeconds
+            custom double outputs:frame
+            custom bool outputs:isPlaying
+            custom uint outputs:tick (
+                customData = {
+                    bool isExecution = 1
+                }
+            )
+            custom double outputs:time
+            custom double outputs:timeSinceStart
+            custom double state:accumulatedSeconds
+            custom uint state:frameCount
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (870.53455, 72.79808)
+        }
+
+        def OmniGraphNode "write_prim_attribute_01" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom uint inputs:execIn (
+                customData = {
+                    bool isExecution = 1
+                }
+            )
+            prepend uint inputs:execIn.connect = </World/ActionGraph/on_tick.outputs:tick>
+            custom token inputs:layerIdentifier = ""
+            custom token inputs:name = "drive:linear:physics:targetPosition"
+            custom rel inputs:prim = </World/Joints/y_joint> (
+                customData = {
+                    dictionary omni = {
+                        dictionary graph = {
+                            string relType = "target"
+                        }
+                    }
+                }
+            )
+            custom token inputs:primPath
+            custom bool inputs:usdWriteBack = 0
+            custom bool inputs:usePath
+            custom token inputs:value
+            delete token inputs:value.connect = [
+                </World/ActionGraph/add.outputs:sum>,
+                </World/ActionGraph/add_01.outputs:sum>,
+            ]
+            prepend token inputs:value.connect = </World/ActionGraph/maximum_01.outputs:maximum>
+            token node:type = "omni.graph.nodes.WritePrimAttribute"
+            int node:typeVersion = 3
+            custom uint outputs:execOut (
+                customData = {
+                    bool isExecution = 1
+                }
+            )
+            custom bool state:correctlySetup
+            custom uint64 state:destAttrib
+            custom uint64 state:destPath
+            custom uint64 state:destPathToken
+            custom token state:layerIdentifier
+            custom token state:resolvedLayerIdentifier
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (1926.6476, 1018.911)
+        }
+
+        def OmniGraphNode "read_prim_attribute_01" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom token inputs:name = "drive:linear:physics:targetPosition"
+            custom rel inputs:prim = </World/Joints/y_joint> (
+                customData = {
+                    dictionary omni = {
+                        dictionary graph = {
+                            string relType = "target"
+                        }
+                    }
+                }
+            )
+            custom token inputs:primPath
+            custom timecode inputs:usdTimecode = nan
+            custom bool inputs:usePath
+            token node:type = "omni.graph.nodes.ReadPrimAttribute"
+            int node:typeVersion = 3
+            custom token outputs:value
+            custom bool state:correctlySetup
+            custom uint64 state:importPath
+            custom bool state:reimportAtTime
+            custom uint64 state:srcAttrib
+            custom uint64 state:srcPath
+            custom uint64 state:srcPathAsToken
+            custom double state:time
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (900.99036, 887.92706)
+        }
+
+        def OmniGraphNode "write_prim_attribute_02" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom uint inputs:execIn (
+                customData = {
+                    bool isExecution = 1
+                }
+            )
+            prepend uint inputs:execIn.connect = </World/ActionGraph/on_tick.outputs:tick>
+            custom token inputs:layerIdentifier = ""
+            custom token inputs:name = "drive:linear:physics:targetPosition"
+            custom rel inputs:prim = </World/Joints/z_joint> (
+                customData = {
+                    dictionary omni = {
+                        dictionary graph = {
+                            string relType = "target"
+                        }
+                    }
+                }
+            )
+            custom token inputs:primPath
+            custom bool inputs:usdWriteBack = 0
+            custom bool inputs:usePath
+            custom token inputs:value
+            delete token inputs:value.connect = </World/ActionGraph/add_02.outputs:sum>
+            prepend token inputs:value.connect = </World/ActionGraph/maximum_02.outputs:maximum>
+            token node:type = "omni.graph.nodes.WritePrimAttribute"
+            int node:typeVersion = 3
+            custom uint outputs:execOut (
+                customData = {
+                    bool isExecution = 1
+                }
+            )
+            custom bool state:correctlySetup
+            custom uint64 state:destAttrib
+            custom uint64 state:destPath
+            custom uint64 state:destPathToken
+            custom token state:layerIdentifier
+            custom token state:resolvedLayerIdentifier
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (1915.6951, 1670.1456)
+        }
+
+        def OmniGraphNode "read_prim_attribute_02" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom token inputs:name = "drive:linear:physics:targetPosition"
+            custom rel inputs:prim = </World/Joints/z_joint> (
+                customData = {
+                    dictionary omni = {
+                        dictionary graph = {
+                            string relType = "target"
+                        }
+                    }
+                }
+            )
+            custom token inputs:primPath
+            custom timecode inputs:usdTimecode = nan
+            custom bool inputs:usePath
+            token node:type = "omni.graph.nodes.ReadPrimAttribute"
+            int node:typeVersion = 3
+            custom token outputs:value
+            custom bool state:correctlySetup
+            custom uint64 state:importPath
+            custom bool state:reimportAtTime
+            custom uint64 state:srcAttrib
+            custom uint64 state:srcPath
+            custom uint64 state:srcPathAsToken
+            custom double state:time
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (914.08466, 1503.8462)
+        }
+
+        def OmniGraphNode "multiply_02" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom token inputs:a
+            delete token inputs:a.connect = [
+                </World/ActionGraph/read_gamepad_state_03.outputs:value>,
+                </World/ActionGraph/read_gamepad_state_02.outputs:value>,
+                </World/ActionGraph/read_gamepad_state_01.outputs:value>,
+            ]
+            prepend token inputs:a.connect = </World/ActionGraph/constant_float_01.inputs:value>
+            custom token inputs:b
+            delete token inputs:b.connect = [
+                </World/ActionGraph/constant_float.inputs:value>,
+                </World/ActionGraph/constant_float_01.inputs:value>,
+            ]
+            prepend token inputs:b.connect = </World/ActionGraph/read_gamepad_state_01.outputs:value>
+            token node:type = "omni.graph.nodes.Multiply"
+            int node:typeVersion = 2
+            custom token outputs:product
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (899.431, 1079.8533)
+        }
+
+        def OmniGraphNode "add_01" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom token inputs:a
+            delete token inputs:a.connect = </World/ActionGraph/read_prim_attribute.outputs:value>
+            prepend token inputs:a.connect = </World/ActionGraph/read_prim_attribute_01.outputs:value>
+            custom token inputs:b
+            delete token inputs:b.connect = </World/ActionGraph/multiply_01.outputs:product>
+            prepend token inputs:b.connect = </World/ActionGraph/multiply_02.outputs:product>
+            token node:type = "omni.graph.nodes.Add"
+            int node:typeVersion = 2
+            custom token outputs:sum
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (1145.719, 1029.7185)
+        }
+
+        def OmniGraphNode "add_02" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom token inputs:a
+            delete token inputs:a.connect = [
+                </World/ActionGraph/read_prim_attribute.outputs:value>,
+                </World/ActionGraph/read_prim_attribute_01.outputs:value>,
+            ]
+            prepend token inputs:a.connect = </World/ActionGraph/read_prim_attribute_02.outputs:value>
+            custom token inputs:b
+            prepend token inputs:b.connect = </World/ActionGraph/subtract.outputs:difference>
+            token node:type = "omni.graph.nodes.Add"
+            int node:typeVersion = 2
+            custom token outputs:sum
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (1175.2273, 1692.0624)
+        }
+
+        def OmniGraphNode "constant_float_02" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom float inputs:value = 0.1
+            token node:type = "omni.graph.nodes.ConstantFloat"
+            int node:typeVersion = 1
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (305.64484, 1813.7872)
+        }
+
+        def OmniGraphNode "read_gamepad_state_03" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom float inputs:deadzone
+            custom token inputs:gamepadElement = "Right Shoulder" (
+                allowedTokens = ["Left Stick X Axis", "Left Stick Y Axis", "Right Stick X Axis", "Right Stick Y Axis", "Left Trigger", "Right Trigger", "Face Button Bottom", "Face Button Right", "Face Button Left", "Face Button Top", "Left Shoulder", "Right Shoulder", "Special Left", "Special Right", "Left Stick Button", "Right Stick Button", "D-Pad Up", "D-Pad Right", "D-Pad Down", "D-Pad Left"]
+            )
+            custom uint inputs:gamepadId
+            token node:type = "omni.graph.nodes.ReadGamepadState"
+            int node:typeVersion = 1
+            custom bool outputs:isPressed
+            custom float outputs:value
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (307.95743, 1918.7631)
+        }
+
+        def OmniGraphNode "multiply_03" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom token inputs:a
+            delete token inputs:a.connect = [
+                </World/ActionGraph/read_gamepad_state_03.outputs:value>,
+                </World/ActionGraph/read_gamepad_state_02.outputs:value>,
+                </World/ActionGraph/read_gamepad_state_01.outputs:value>,
+                </World/ActionGraph/constant_float_01.inputs:value>,
+            ]
+            prepend token inputs:a.connect = </World/ActionGraph/read_gamepad_state.outputs:value>
+            custom token inputs:b
+            delete token inputs:b.connect = [
+                </World/ActionGraph/constant_float.inputs:value>,
+                </World/ActionGraph/constant_float_01.inputs:value>,
+                </World/ActionGraph/read_gamepad_state_01.outputs:value>,
+            ]
+            prepend token inputs:b.connect = </World/ActionGraph/constant_float_02.inputs:value>
+            token node:type = "omni.graph.nodes.Multiply"
+            int node:typeVersion = 2
+            custom token outputs:product
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (687.76447, 1699.8538)
+        }
+
+        def OmniGraphNode "multiply_04" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom token inputs:a
+            delete token inputs:a.connect = [
+                </World/ActionGraph/read_gamepad_state_03.outputs:value>,
+                </World/ActionGraph/read_gamepad_state_02.outputs:value>,
+                </World/ActionGraph/read_gamepad_state_01.outputs:value>,
+                </World/ActionGraph/constant_float_01.inputs:value>,
+            ]
+            prepend token inputs:a.connect = </World/ActionGraph/constant_float_02.inputs:value>
+            custom token inputs:b
+            delete token inputs:b.connect = [
+                </World/ActionGraph/constant_float.inputs:value>,
+                </World/ActionGraph/constant_float_01.inputs:value>,
+                </World/ActionGraph/read_gamepad_state_01.outputs:value>,
+            ]
+            prepend token inputs:b.connect = </World/ActionGraph/read_gamepad_state_03.outputs:value>
+            token node:type = "omni.graph.nodes.Multiply"
+            int node:typeVersion = 2
+            custom token outputs:product
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (689.43115, 1848.187)
+        }
+
+        def OmniGraphNode "subtract" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom token inputs:a
+            prepend token inputs:a.connect = </World/ActionGraph/multiply_03.outputs:product>
+            custom token inputs:b
+            prepend token inputs:b.connect = </World/ActionGraph/multiply_04.outputs:product>
+            token node:type = "omni.graph.nodes.Subtract"
+            int node:typeVersion = 2
+            custom token outputs:difference
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (935.60974, 1820.6453)
+        }
+
+        def OmniGraphNode "minimum" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom token inputs:a
+            delete token inputs:a.connect = </World/ActionGraph/read_prim_attribute_03.outputs:value>
+            prepend token inputs:a.connect = </World/ActionGraph/read_prim_attribute_08.outputs:value>
+            custom token inputs:b
+            prepend token inputs:b.connect = </World/ActionGraph/add.outputs:sum>
+            token node:type = "omni.graph.nodes.Minimum"
+            int node:typeVersion = 1
+            custom token outputs:minimum
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (1361.1798, 408.52475)
+        }
+
+        def OmniGraphNode "read_prim_attribute_03" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom token inputs:name = "physics:lowerLimit"
+            custom rel inputs:prim = </World/Joints/x_joint> (
+                customData = {
+                    dictionary omni = {
+                        dictionary graph = {
+                            string relType = "target"
+                        }
+                    }
+                }
+            )
+            custom token inputs:primPath
+            custom timecode inputs:usdTimecode = nan
+            custom bool inputs:usePath
+            token node:type = "omni.graph.nodes.ReadPrimAttribute"
+            int node:typeVersion = 3
+            custom token outputs:value
+            custom bool state:correctlySetup
+            custom uint64 state:importPath
+            custom bool state:reimportAtTime
+            custom uint64 state:srcAttrib
+            custom uint64 state:srcPath
+            custom uint64 state:srcPathAsToken
+            custom double state:time
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (1358.6823, 584.0885)
+        }
+
+        def OmniGraphNode "read_prim_attribute_04" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom token inputs:name = "physics:upperLimit"
+            custom rel inputs:prim = </World/Joints/z_joint> (
+                customData = {
+                    dictionary omni = {
+                        dictionary graph = {
+                            string relType = "target"
+                        }
+                    }
+                }
+            )
+            custom token inputs:primPath
+            custom timecode inputs:usdTimecode = nan
+            custom bool inputs:usePath
+            token node:type = "omni.graph.nodes.ReadPrimAttribute"
+            int node:typeVersion = 3
+            custom token outputs:value
+            custom bool state:correctlySetup
+            custom uint64 state:importPath
+            custom bool state:reimportAtTime
+            custom uint64 state:srcAttrib
+            custom uint64 state:srcPath
+            custom uint64 state:srcPathAsToken
+            custom double state:time
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (1177.4863, 1476.6115)
+        }
+
+        def OmniGraphNode "read_prim_attribute_05" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom token inputs:name = "physics:lowerLimit"
+            custom rel inputs:prim = </World/Joints/z_joint> (
+                customData = {
+                    dictionary omni = {
+                        dictionary graph = {
+                            string relType = "target"
+                        }
+                    }
+                }
+            )
+            custom token inputs:primPath
+            custom timecode inputs:usdTimecode = nan
+            custom bool inputs:usePath
+            token node:type = "omni.graph.nodes.ReadPrimAttribute"
+            int node:typeVersion = 3
+            custom token outputs:value
+            custom bool state:correctlySetup
+            custom uint64 state:importPath
+            custom bool state:reimportAtTime
+            custom uint64 state:srcAttrib
+            custom uint64 state:srcPath
+            custom uint64 state:srcPathAsToken
+            custom double state:time
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (1453.7854, 1773.0865)
+        }
+
+        def OmniGraphNode "read_prim_attribute_06" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom token inputs:name = "physics:upperLimit"
+            custom rel inputs:prim = </World/Joints/y_joint> (
+                customData = {
+                    dictionary omni = {
+                        dictionary graph = {
+                            string relType = "target"
+                        }
+                    }
+                }
+            )
+            custom token inputs:primPath
+            custom timecode inputs:usdTimecode = nan
+            custom bool inputs:usePath
+            token node:type = "omni.graph.nodes.ReadPrimAttribute"
+            int node:typeVersion = 3
+            custom token outputs:value
+            custom bool state:correctlySetup
+            custom uint64 state:importPath
+            custom bool state:reimportAtTime
+            custom uint64 state:srcAttrib
+            custom uint64 state:srcPath
+            custom uint64 state:srcPathAsToken
+            custom double state:time
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (1131.3745, 837.02563)
+        }
+
+        def OmniGraphNode "read_prim_attribute_07" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom token inputs:name = "physics:lowerLimit"
+            custom rel inputs:prim = </World/Joints/y_joint> (
+                customData = {
+                    dictionary omni = {
+                        dictionary graph = {
+                            string relType = "target"
+                        }
+                    }
+                }
+            )
+            custom token inputs:primPath
+            custom timecode inputs:usdTimecode = nan
+            custom bool inputs:usePath
+            token node:type = "omni.graph.nodes.ReadPrimAttribute"
+            int node:typeVersion = 3
+            custom token outputs:value
+            custom bool state:correctlySetup
+            custom uint64 state:importPath
+            custom bool state:reimportAtTime
+            custom uint64 state:srcAttrib
+            custom uint64 state:srcPath
+            custom uint64 state:srcPathAsToken
+            custom double state:time
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (1145.503, 1164.2783)
+        }
+
+        def OmniGraphNode "read_prim_attribute_08" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom token inputs:name = "physics:upperLimit"
+            custom rel inputs:prim = </World/Joints/x_joint> (
+                customData = {
+                    dictionary omni = {
+                        dictionary graph = {
+                            string relType = "target"
+                        }
+                    }
+                }
+            )
+            custom token inputs:primPath
+            custom timecode inputs:usdTimecode = nan
+            custom bool inputs:usePath
+            token node:type = "omni.graph.nodes.ReadPrimAttribute"
+            int node:typeVersion = 3
+            custom token outputs:value
+            custom bool state:correctlySetup
+            custom uint64 state:importPath
+            custom bool state:reimportAtTime
+            custom uint64 state:srcAttrib
+            custom uint64 state:srcPath
+            custom uint64 state:srcPathAsToken
+            custom double state:time
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (1118.5754, 258.98407)
+        }
+
+        def OmniGraphNode "maximum" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom token inputs:a
+            prepend token inputs:a.connect = </World/ActionGraph/minimum.outputs:minimum>
+            custom token inputs:b
+            delete token inputs:b.connect = </World/ActionGraph/read_prim_attribute_08.outputs:value>
+            prepend token inputs:b.connect = </World/ActionGraph/read_prim_attribute_03.outputs:value>
+            token node:type = "omni.graph.nodes.Maximum"
+            int node:typeVersion = 1
+            custom token outputs:maximum
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (1605.0734, 559.927)
+        }
+
+        def OmniGraphNode "minimum_01" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom token inputs:a
+            delete token inputs:a.connect = [
+                </World/ActionGraph/read_prim_attribute_03.outputs:value>,
+                </World/ActionGraph/add_01.outputs:sum>,
+            ]
+            prepend token inputs:a.connect = </World/ActionGraph/read_prim_attribute_06.outputs:value>
+            custom token inputs:b
+            delete token inputs:b.connect = </World/ActionGraph/add.outputs:sum>
+            prepend token inputs:b.connect = </World/ActionGraph/add_01.outputs:sum>
+            token node:type = "omni.graph.nodes.Minimum"
+            int node:typeVersion = 1
+            custom token outputs:minimum
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (1427.2157, 1017.8946)
+        }
+
+        def OmniGraphNode "maximum_01" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom token inputs:a
+            delete token inputs:a.connect = </World/ActionGraph/minimum.outputs:minimum>
+            prepend token inputs:a.connect = </World/ActionGraph/minimum_01.outputs:minimum>
+            custom token inputs:b
+            delete token inputs:b.connect = </World/ActionGraph/read_prim_attribute_08.outputs:value>
+            prepend token inputs:b.connect = </World/ActionGraph/read_prim_attribute_07.outputs:value>
+            token node:type = "omni.graph.nodes.Maximum"
+            int node:typeVersion = 1
+            custom token outputs:maximum
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (1675.0734, 1173.2609)
+        }
+
+        def OmniGraphNode "minimum_02" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom token inputs:a
+            delete token inputs:a.connect = [
+                </World/ActionGraph/read_prim_attribute_03.outputs:value>,
+                </World/ActionGraph/add_01.outputs:sum>,
+                </World/ActionGraph/read_prim_attribute_06.outputs:value>,
+            ]
+            prepend token inputs:a.connect = </World/ActionGraph/read_prim_attribute_04.outputs:value>
+            custom token inputs:b
+            delete token inputs:b.connect = [
+                </World/ActionGraph/add.outputs:sum>,
+                </World/ActionGraph/add_01.outputs:sum>,
+            ]
+            prepend token inputs:b.connect = </World/ActionGraph/add_02.outputs:sum>
+            token node:type = "omni.graph.nodes.Minimum"
+            int node:typeVersion = 1
+            custom token outputs:minimum
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (1447.3958, 1537.5425)
+        }
+
+        def OmniGraphNode "maximum_02" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom token inputs:a
+            delete token inputs:a.connect = [
+                </World/ActionGraph/minimum.outputs:minimum>,
+                </World/ActionGraph/minimum_01.outputs:minimum>,
+            ]
+            prepend token inputs:a.connect = </World/ActionGraph/minimum_02.outputs:minimum>
+            custom token inputs:b
+            delete token inputs:b.connect = [
+                </World/ActionGraph/read_prim_attribute_08.outputs:value>,
+                </World/ActionGraph/read_prim_attribute_07.outputs:value>,
+            ]
+            prepend token inputs:b.connect = </World/ActionGraph/read_prim_attribute_05.outputs:value>
+            token node:type = "omni.graph.nodes.Maximum"
+            int node:typeVersion = 1
+            custom token outputs:maximum
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (1695.2534, 1692.9088)
+        }
+
+        def OmniGraphNode "draw_screen_space_text_beta_" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom color4f inputs:backgroundColor
+            custom int inputs:boxWidth
+            custom uint inputs:execIn (
+                customData = {
+                    bool isExecution = 1
+                }
+            )
+            prepend uint inputs:execIn.connect = </World/ActionGraph/on_tick.outputs:tick>
+            custom double2 inputs:position = (51.10000076144934, 92.20000137388706)
+            custom float inputs:size
+            custom string inputs:text = "Use Gamepad to control Gantry (left stick: X/Y, Right Stick: Up/down; Face down button: Open/Close)"
+            custom color4f inputs:textColor
+            token node:type = "omni.graph.visualization.nodes.DrawScreenSpaceText"
+            int node:typeVersion = 1
+            custom uint outputs:execOut (
+                customData = {
+                    bool isExecution = 1
+                }
+            )
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (1326.2429, -112.03989)
+        }
+
+        def OmniGraphNode "surface_gripper" (
+            prepend apiSchemas = ["NodeGraphNodeAPI"]
+        )
+        {
+            custom bool inputs:enabled
+            custom rel inputs:SurfaceGripper = </World/SurfaceGripper> (
+                customData = {
+                    dictionary omni = {
+                        dictionary graph = {
+                            string relType = "target"
+                        }
+                    }
+                }
+            )
+            custom uint inputs:Toggle (
+                customData = {
+                    bool isExecution = 1
+                }
+            )
+            prepend uint inputs:Toggle.connect = </World/ActionGraph/on_gamepad_input.outputs:pressed>
+            token node:type = "isaacsim.robot.surface_gripper.SurfaceGripper"
+            int node:typeVersion = 2
+            uniform token ui:nodegraph:node:expansionState = "open"
+            uniform float2 ui:nodegraph:node:pos = (503.358, -232.31427)
+        }
+    }
+
+    def Scope "Surface_Gripper_Joints"
+    {
+        def PhysicsJoint "D6Joint" (
+            delete apiSchemas = ["PhysicsLimitAPI:transX", "PhysicsLimitAPI:transY"]
+            prepend apiSchemas = ["IsaacAttachmentPointAPI", "PhysicsLimitAPI:transZ", "PhysicsLimitAPI:rotX", "PhysicsLimitAPI:rotY", "PhysicsLimitAPI:rotZ", "PhysicsDriveAPI:rotX", "PhysicsDriveAPI:rotY", "PhysicsDriveAPI:rotZ", "PhysicsDriveAPI:transZ", "PhysicsLimitAPI:transX", "PhysxLimitAPI:transX", "PhysicsLimitAPI:transY", "PhysxLimitAPI:transY"]
+        )
+        {
+            float drive:rotX:physics:stiffness = 100
+            float drive:rotY:physics:stiffness = 100
+            float drive:rotZ:physics:stiffness = 10000
+            float drive:transZ:physics:damping = 100
+            float drive:transZ:physics:stiffness = 5000
+            float isaac:clearanceOffset = 0.008
+            token isaac:forwardAxis = "Z"
+            float limit:rotX:physics:high = 3
+            float limit:rotX:physics:low = -3
+            float limit:rotY:physics:high = 3
+            float limit:rotY:physics:low = -3
+            float limit:rotZ:physics:high = 3
+            float limit:rotZ:physics:low = -3
+            float limit:transX:physics:high = -1
+            float limit:transX:physics:low = 1
+            float limit:transY:physics:high = -1
+            float limit:transY:physics:low = 1
+            float limit:transZ:physics:high = 0.01
+            float limit:transZ:physics:low = 0
+            rel physics:body0 = </World/Gripper_Cones>
+            rel physics:body1 = </World/Gantry_x>
+            float physics:breakForce = 3.4028235e38
+            float physics:breakTorque = 3.4028235e38
+            uniform bool physics:excludeFromArticulation = 1
+            bool physics:jointEnabled = 1
+            point3f physics:localPos0 = (0.024500012, 0, -3.6219938e-10)
+            point3f physics:localPos1 = (0.024500012, 0, -0.15007496)
+            quatf physics:localRot0 = (6.123234e-17, 1, 0, 0)
+            quatf physics:localRot1 = (6.123234e-17, 1, 0, 0)
+        }
+
+        def PhysicsJoint "D6Joint_01" (
+            delete apiSchemas = ["PhysicsLimitAPI:transX", "PhysicsLimitAPI:transY"]
+            prepend apiSchemas = ["IsaacAttachmentPointAPI", "PhysicsLimitAPI:transZ", "PhysicsLimitAPI:rotX", "PhysicsLimitAPI:rotY", "PhysicsLimitAPI:rotZ", "PhysicsDriveAPI:rotX", "PhysicsDriveAPI:rotY", "PhysicsDriveAPI:rotZ", "PhysicsDriveAPI:transZ", "PhysicsLimitAPI:transX", "PhysxLimitAPI:transX", "PhysicsLimitAPI:transY", "PhysxLimitAPI:transY"]
+        )
+        {
+            float drive:rotX:physics:stiffness = 100
+            float drive:rotY:physics:stiffness = 100
+            float drive:rotZ:physics:stiffness = 10000
+            float drive:transZ:physics:damping = 100
+            float drive:transZ:physics:stiffness = 5000
+            float isaac:clearanceOffset = 0.008
+            token isaac:forwardAxis = "Z"
+            float limit:rotX:physics:high = 3
+            float limit:rotX:physics:low = -3
+            float limit:rotY:physics:high = 3
+            float limit:rotY:physics:low = -3
+            float limit:rotZ:physics:high = 3
+            float limit:rotZ:physics:low = -3
+            float limit:transX:physics:high = -1
+            float limit:transX:physics:low = 1
+            float limit:transY:physics:high = -1
+            float limit:transY:physics:low = 1
+            float limit:transZ:physics:high = 0.01
+            float limit:transZ:physics:low = 0
+            rel physics:body0 = </World/Gripper_Cones>
+            rel physics:body1 = </World/Gantry_x>
+            float physics:breakForce = 3.4028235e38
+            float physics:breakTorque = 3.4028235e38
+            uniform bool physics:excludeFromArticulation = 1
+            bool physics:jointEnabled = 1
+            point3f physics:localPos0 = (0, 0, 3.4547234e-9)
+            point3f physics:localPos1 = (0, 0, -0.15007496)
+            quatf physics:localRot0 = (-6.03592e-16, 1, 9.708773e-16, 2.085471e-15)
+            quatf physics:localRot1 = (6.123234e-17, 1, -6.57387e-25, -6.617445e-24)
+        }
+
+        def PhysicsJoint "D6Joint_02" (
+            delete apiSchemas = ["PhysicsLimitAPI:transX", "PhysicsLimitAPI:transY"]
+            prepend apiSchemas = ["IsaacAttachmentPointAPI", "PhysicsLimitAPI:transZ", "PhysicsLimitAPI:rotX", "PhysicsLimitAPI:rotY", "PhysicsLimitAPI:rotZ", "PhysicsDriveAPI:rotX", "PhysicsDriveAPI:rotY", "PhysicsDriveAPI:rotZ", "PhysicsDriveAPI:transZ", "PhysicsLimitAPI:transX", "PhysxLimitAPI:transX", "PhysicsLimitAPI:transY", "PhysxLimitAPI:transY"]
+        )
+        {
+            float drive:rotX:physics:stiffness = 100
+            float drive:rotY:physics:stiffness = 100
+            float drive:rotZ:physics:stiffness = 10000
+            float drive:transZ:physics:damping = 100
+            float drive:transZ:physics:stiffness = 5000
+            float isaac:clearanceOffset = 0.008
+            token isaac:forwardAxis = "Z"
+            float limit:rotX:physics:high = 3
+            float limit:rotX:physics:low = -3
+            float limit:rotY:physics:high = 3
+            float limit:rotY:physics:low = -3
+            float limit:rotZ:physics:high = 3
+            float limit:rotZ:physics:low = -3
+            float limit:transX:physics:high = -1
+            float limit:transX:physics:low = 1
+            float limit:transY:physics:high = -1
+            float limit:transY:physics:low = 1
+            float limit:transZ:physics:high = 0.01
+            float limit:transZ:physics:low = 0
+            rel physics:body0 = </World/Gripper_Cones>
+            rel physics:body1 = </World/Gantry_x>
+            float physics:breakForce = 3.4028235e38
+            float physics:breakTorque = 3.4028235e38
+            uniform bool physics:excludeFromArticulation = 1
+            bool physics:jointEnabled = 1
+            point3f physics:localPos0 = (-0.0245, 0, -1.6963255e-9)
+            point3f physics:localPos1 = (-0.0245, 0, -0.15007496)
+            quatf physics:localRot0 = (-6.03592e-16, 1, 9.708773e-16, 2.085471e-15)
+            quatf physics:localRot1 = (6.123234e-17, 1, -6.57387e-25, -6.617445e-24)
+        }
+
+        def PhysicsJoint "D6Joint_03" (
+            delete apiSchemas = ["PhysicsLimitAPI:transX", "PhysicsLimitAPI:transY"]
+            prepend apiSchemas = ["IsaacAttachmentPointAPI", "PhysicsLimitAPI:transZ", "PhysicsLimitAPI:rotX", "PhysicsLimitAPI:rotY", "PhysicsLimitAPI:rotZ", "PhysicsDriveAPI:rotX", "PhysicsDriveAPI:rotY", "PhysicsDriveAPI:rotZ", "PhysicsDriveAPI:transZ", "PhysicsLimitAPI:transX", "PhysxLimitAPI:transX", "PhysicsLimitAPI:transY", "PhysxLimitAPI:transY"]
+        )
+        {
+            float drive:rotX:physics:stiffness = 100
+            float drive:rotY:physics:stiffness = 100
+            float drive:rotZ:physics:stiffness = 10000
+            float drive:transZ:physics:damping = 100
+            float drive:transZ:physics:stiffness = 5000
+            float isaac:clearanceOffset = 0.008
+            token isaac:forwardAxis = "Z"
+            float limit:rotX:physics:high = 3
+            float limit:rotX:physics:low = -3
+            float limit:rotY:physics:high = 3
+            float limit:rotY:physics:low = -3
+            float limit:rotZ:physics:high = 3
+            float limit:rotZ:physics:low = -3
+            float limit:transX:physics:high = -1
+            float limit:transX:physics:low = 1
+            float limit:transY:physics:high = -1
+            float limit:transY:physics:low = 1
+            float limit:transZ:physics:high = 0.01
+            float limit:transZ:physics:low = 0
+            rel physics:body0 = </World/Gripper_Cones>
+            rel physics:body1 = </World/Gantry_x>
+            float physics:breakForce = 3.4028235e38
+            float physics:breakTorque = 3.4028235e38
+            uniform bool physics:excludeFromArticulation = 1
+            bool physics:jointEnabled = 1
+            point3f physics:localPos0 = (-0.0245, 0.0245, 4.9353197e-8)
+            point3f physics:localPos1 = (-0.0245, 0.0245, -0.15007496)
+            quatf physics:localRot0 = (-6.03592e-16, 1, 9.708773e-16, 2.085471e-15)
+            quatf physics:localRot1 = (6.123234e-17, 1, -6.57387e-25, -6.617445e-24)
+        }
+
+        def PhysicsJoint "D6Joint_04" (
+            delete apiSchemas = ["PhysicsLimitAPI:transX", "PhysicsLimitAPI:transY"]
+            prepend apiSchemas = ["IsaacAttachmentPointAPI", "PhysicsLimitAPI:transZ", "PhysicsLimitAPI:rotX", "PhysicsLimitAPI:rotY", "PhysicsLimitAPI:rotZ", "PhysicsDriveAPI:rotX", "PhysicsDriveAPI:rotY", "PhysicsDriveAPI:rotZ", "PhysicsDriveAPI:transZ", "PhysicsLimitAPI:transX", "PhysxLimitAPI:transX", "PhysicsLimitAPI:transY", "PhysxLimitAPI:transY"]
+        )
+        {
+            float drive:rotX:physics:stiffness = 100
+            float drive:rotY:physics:stiffness = 100
+            float drive:rotZ:physics:stiffness = 10000
+            float drive:transZ:physics:damping = 100
+            float drive:transZ:physics:stiffness = 5000
+            float isaac:clearanceOffset = 0.008
+            token isaac:forwardAxis = "Z"
+            float limit:rotX:physics:high = 3
+            float limit:rotX:physics:low = -3
+            float limit:rotY:physics:high = 3
+            float limit:rotY:physics:low = -3
+            float limit:rotZ:physics:high = 3
+            float limit:rotZ:physics:low = -3
+            float limit:transX:physics:high = -1
+            float limit:transX:physics:low = 1
+            float limit:transY:physics:high = -1
+            float limit:transY:physics:low = 1
+            float limit:transZ:physics:high = 0.01
+            float limit:transZ:physics:low = 0
+            rel physics:body0 = </World/Gripper_Cones>
+            rel physics:body1 = </World/Gantry_x>
+            float physics:breakForce = 3.4028235e38
+            float physics:breakTorque = 3.4028235e38
+            uniform bool physics:excludeFromArticulation = 1
+            bool physics:jointEnabled = 1
+            point3f physics:localPos0 = (0.0245, 0.0245, 4.9353197e-8)
+            point3f physics:localPos1 = (0.024500012, 0.0245, -0.15007496)
+            quatf physics:localRot0 = (-6.03592e-16, 1, 9.708773e-16, 2.085471e-15)
+            quatf physics:localRot1 = (6.123234e-17, 1, -6.57387e-25, -6.617445e-24)
+        }
+
+        def PhysicsJoint "D6Joint_05" (
+            delete apiSchemas = ["PhysicsLimitAPI:transX", "PhysicsLimitAPI:transY"]
+            prepend apiSchemas = ["IsaacAttachmentPointAPI", "PhysicsLimitAPI:transZ", "PhysicsLimitAPI:rotX", "PhysicsLimitAPI:rotY", "PhysicsLimitAPI:rotZ", "PhysicsDriveAPI:rotX", "PhysicsDriveAPI:rotY", "PhysicsDriveAPI:rotZ", "PhysicsDriveAPI:transZ", "PhysicsLimitAPI:transX", "PhysxLimitAPI:transX", "PhysicsLimitAPI:transY", "PhysxLimitAPI:transY"]
+        )
+        {
+            float drive:rotX:physics:stiffness = 100
+            float drive:rotY:physics:stiffness = 100
+            float drive:rotZ:physics:stiffness = 10000
+            float drive:transZ:physics:damping = 100
+            float drive:transZ:physics:stiffness = 5000
+            float isaac:clearanceOffset = 0.008
+            token isaac:forwardAxis = "Z"
+            float limit:rotX:physics:high = 3
+            float limit:rotX:physics:low = -3
+            float limit:rotY:physics:high = 3
+            float limit:rotY:physics:low = -3
+            float limit:rotZ:physics:high = 3
+            float limit:rotZ:physics:low = -3
+            float limit:transX:physics:high = -1
+            float limit:transX:physics:low = 1
+            float limit:transY:physics:high = -1
+            float limit:transY:physics:low = 1
+            float limit:transZ:physics:high = 0.01
+            float limit:transZ:physics:low = 0
+            rel physics:body0 = </World/Gripper_Cones>
+            rel physics:body1 = </World/Gantry_x>
+            float physics:breakForce = 3.4028235e38
+            float physics:breakTorque = 3.4028235e38
+            uniform bool physics:excludeFromArticulation = 1
+            bool physics:jointEnabled = 1
+            point3f physics:localPos0 = (0, 0.0245, 4.9353197e-8)
+            point3f physics:localPos1 = (0, 0.0245, -0.15007496)
+            quatf physics:localRot0 = (-6.03592e-16, 1, 9.708773e-16, 2.085471e-15)
+            quatf physics:localRot1 = (6.123234e-17, 1, -6.57387e-25, -6.617445e-24)
+        }
+
+        def PhysicsJoint "D6Joint_06" (
+            delete apiSchemas = ["PhysicsLimitAPI:transX", "PhysicsLimitAPI:transY"]
+            prepend apiSchemas = ["IsaacAttachmentPointAPI", "PhysicsLimitAPI:transZ", "PhysicsLimitAPI:rotX", "PhysicsLimitAPI:rotY", "PhysicsLimitAPI:rotZ", "PhysicsDriveAPI:rotX", "PhysicsDriveAPI:rotY", "PhysicsDriveAPI:rotZ", "PhysicsDriveAPI:transZ", "PhysicsLimitAPI:transX", "PhysxLimitAPI:transX", "PhysicsLimitAPI:transY", "PhysxLimitAPI:transY"]
+        )
+        {
+            float drive:rotX:physics:stiffness = 100
+            float drive:rotY:physics:stiffness = 100
+            float drive:rotZ:physics:stiffness = 10000
+            float drive:transZ:physics:damping = 100
+            float drive:transZ:physics:stiffness = 5000
+            float isaac:clearanceOffset = 0.008
+            token isaac:forwardAxis = "Z"
+            float limit:rotX:physics:high = 3
+            float limit:rotX:physics:low = -3
+            float limit:rotY:physics:high = 3
+            float limit:rotY:physics:low = -3
+            float limit:rotZ:physics:high = 3
+            float limit:rotZ:physics:low = -3
+            float limit:transX:physics:high = -1
+            float limit:transX:physics:low = 1
+            float limit:transY:physics:high = -1
+            float limit:transY:physics:low = 1
+            float limit:transZ:physics:high = 0.01
+            float limit:transZ:physics:low = 0
+            rel physics:body0 = </World/Gripper_Cones>
+            rel physics:body1 = </World/Gantry_x>
+            float physics:breakForce = 3.4028235e38
+            float physics:breakTorque = 3.4028235e38
+            uniform bool physics:excludeFromArticulation = 1
+            bool physics:jointEnabled = 1
+            point3f physics:localPos0 = (-0.0245, -0.0245, 4.9353197e-8)
+            point3f physics:localPos1 = (-0.0245, -0.0245, -0.15007496)
+            quatf physics:localRot0 = (-6.03592e-16, 1, 9.708773e-16, 2.085471e-15)
+            quatf physics:localRot1 = (6.123234e-17, 1, -6.57387e-25, -6.617445e-24)
+        }
+
+        def PhysicsJoint "D6Joint_07" (
+            delete apiSchemas = ["PhysicsLimitAPI:transX", "PhysicsLimitAPI:transY"]
+            prepend apiSchemas = ["IsaacAttachmentPointAPI", "PhysicsLimitAPI:transZ", "PhysicsLimitAPI:rotX", "PhysicsLimitAPI:rotY", "PhysicsLimitAPI:rotZ", "PhysicsDriveAPI:rotX", "PhysicsDriveAPI:rotY", "PhysicsDriveAPI:rotZ", "PhysicsDriveAPI:transZ", "PhysicsLimitAPI:transX", "PhysxLimitAPI:transX", "PhysicsLimitAPI:transY", "PhysxLimitAPI:transY"]
+        )
+        {
+            float drive:rotX:physics:stiffness = 100
+            float drive:rotY:physics:stiffness = 100
+            float drive:rotZ:physics:stiffness = 10000
+            float drive:transZ:physics:damping = 100
+            float drive:transZ:physics:stiffness = 5000
+            float isaac:clearanceOffset = 0.008
+            token isaac:forwardAxis = "Z"
+            float limit:rotX:physics:high = 3
+            float limit:rotX:physics:low = -3
+            float limit:rotY:physics:high = 3
+            float limit:rotY:physics:low = -3
+            float limit:rotZ:physics:high = 3
+            float limit:rotZ:physics:low = -3
+            float limit:transX:physics:high = -1
+            float limit:transX:physics:low = 1
+            float limit:transY:physics:high = -1
+            float limit:transY:physics:low = 1
+            float limit:transZ:physics:high = 0.01
+            float limit:transZ:physics:low = 0
+            rel physics:body0 = </World/Gripper_Cones>
+            rel physics:body1 = </World/Gantry_x>
+            float physics:breakForce = 3.4028235e38
+            float physics:breakTorque = 3.4028235e38
+            uniform bool physics:excludeFromArticulation = 1
+            bool physics:jointEnabled = 1
+            point3f physics:localPos0 = (0.0245, -0.0245, 4.9353197e-8)
+            point3f physics:localPos1 = (0.024500012, -0.0245, -0.15007496)
+            quatf physics:localRot0 = (-6.03592e-16, 1, 9.708773e-16, 2.085471e-15)
+            quatf physics:localRot1 = (6.123234e-17, 1, -6.57387e-25, -6.617445e-24)
+        }
+
+        def PhysicsJoint "D6Joint_08" (
+            delete apiSchemas = ["PhysicsLimitAPI:transX", "PhysicsLimitAPI:transY"]
+            prepend apiSchemas = ["IsaacAttachmentPointAPI", "PhysicsLimitAPI:transZ", "PhysicsLimitAPI:rotX", "PhysicsLimitAPI:rotY", "PhysicsLimitAPI:rotZ", "PhysicsDriveAPI:rotX", "PhysicsDriveAPI:rotY", "PhysicsDriveAPI:rotZ", "PhysicsDriveAPI:transZ", "PhysicsLimitAPI:transX", "PhysxLimitAPI:transX", "PhysicsLimitAPI:transY", "PhysxLimitAPI:transY"]
+        )
+        {
+            float drive:rotX:physics:stiffness = 100
+            float drive:rotY:physics:stiffness = 100
+            float drive:rotZ:physics:stiffness = 10000
+            float drive:transZ:physics:damping = 100
+            float drive:transZ:physics:stiffness = 5000
+            float isaac:clearanceOffset = 0.008
+            token isaac:forwardAxis = "Z"
+            float limit:rotX:physics:high = 3
+            float limit:rotX:physics:low = -3
+            float limit:rotY:physics:high = 3
+            float limit:rotY:physics:low = -3
+            float limit:rotZ:physics:high = 3
+            float limit:rotZ:physics:low = -3
+            float limit:transX:physics:high = -1
+            float limit:transX:physics:low = 1
+            float limit:transY:physics:high = -1
+            float limit:transY:physics:low = 1
+            float limit:transZ:physics:high = 0.01
+            float limit:transZ:physics:low = 0
+            rel physics:body0 = </World/Gripper_Cones>
+            rel physics:body1 = </World/Gantry_x>
+            float physics:breakForce = 3.4028235e38
+            float physics:breakTorque = 3.4028235e38
+            uniform bool physics:excludeFromArticulation = 1
+            bool physics:jointEnabled = 1
+            point3f physics:localPos0 = (0, -0.0245, 4.9353197e-8)
+            point3f physics:localPos1 = (0, -0.0245, -0.15007496)
+            quatf physics:localRot0 = (-6.03592e-16, 1, 9.708773e-16, 2.085471e-15)
+            quatf physics:localRot1 = (6.123234e-17, 1, -6.57387e-25, -6.617445e-24)
+        }
+    }
+}
+
+def Xform "Environment"
+{
+    quatd xformOp:orient = (1, 0, 0, 0)
+    double3 xformOp:scale = (1, 1, 1)
+    double3 xformOp:translate = (0, 0, 0)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+    def DistantLight "defaultLight" (
+        prepend apiSchemas = ["ShapingAPI"]
+    )
+    {
+        float inputs:angle = 1
+        float inputs:intensity = 3000
+        float inputs:shaping:cone:angle = 180
+        float inputs:shaping:cone:softness
+        float inputs:shaping:focus
+        color3f inputs:shaping:focusTint
+        asset inputs:shaping:ies:file
+        quatd xformOp:orient = (0.6532814824381883, 0.27059805007309856, 0.27059805007309856, 0.6532814824381883)
+        double3 xformOp:scale = (1, 1, 1)
+        double3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+}
+
+def "Render" (
+    hide_in_stage_window = true
+    no_delete = true
+)
+{
+    def "OmniverseKit"
+    {
+        def "HydraTextures" (
+            hide_in_stage_window = true
+            no_delete = true
+        )
+        {
+            def RenderProduct "omni_kit_widget_viewport_ViewportTexture_0" (
+                prepend apiSchemas = ["OmniRtxSettingsCommonAdvancedAPI_1", "OmniRtxSettingsRtAdvancedAPI_1", "OmniRtxSettingsPtAdvancedAPI_1", "OmniRtxPostColorGradingAPI_1", "OmniRtxPostChromaticAberrationAPI_1", "OmniRtxPostBloomPhysicalAPI_1", "OmniRtxPostMatteObjectAPI_1", "OmniRtxPostCompositingAPI_1", "OmniRtxPostDofAPI_1", "OmniRtxPostMotionBlurAPI_1", "OmniRtxPostTvNoiseAPI_1", "OmniRtxPostTonemapIrayReinhardAPI_1", "OmniRtxPostDebugSettingsAPI_1", "OmniRtxDebugSettingsAPI_1"]
+                hide_in_stage_window = true
+                no_delete = true
+            )
+            {
+                rel camera = </OmniverseKit_Persp>
+                token omni:rtx:background:source:texture:textureMode = "repeatMirrored"
+                token omni:rtx:background:source:type = "domeLight"
+                bool omni:rtx:dlss:frameGeneration = 0
+                string omni:rtx:material:db:rtSensorNameToIdMap = "DefaultMaterial:0;AsphaltStandardMaterial:1;AsphaltWeatheredMaterial:2;VegetationGrassMaterial:3;WaterStandardMaterial:4;GlassStandardMaterial:5;FiberGlassMaterial:6;MetalAlloyMaterial:7;MetalAluminumMaterial:8;MetalAluminumOxidizedMaterial:9;PlasticStandardMaterial:10;RetroMarkingsMaterial:11;RetroSignMaterial:12;RubberStandardMaterial:13;SoilClayMaterial:14;ConcreteRoughMaterial:15;ConcreteSmoothMaterial:16;OakTreeBarkMaterial:17;FabricStandardMaterial:18;PlexiGlassStandardMaterial:19;MetalSilverMaterial:20"
+                bool omni:rtx:material:db:syncLoads = 1
+                bool omni:rtx:post:registeredCompositing:invertColorCorrection = 1
+                bool omni:rtx:post:registeredCompositing:invertToneMap = 1
+                bool omni:rtx:pt:lightcache:cached:dontResolveConflicts = 1
+                int omni:rtx:pt:maxSamplesPerLaunch = 2073600
+                int omni:rtx:pt:mgpu:maxPixelsPerRegionExponent = 12
+                color3f omni:rtx:rt:ambientLight:color = (0.1, 0.1, 0.1)
+                bool omni:rtx:rt:demoire = 0
+                bool omni:rtx:rt:lightcache:spatialCache:dontResolveConflicts = 1
+                bool omni:rtx:scene:hydra:materialSyncLoads = 1
+                bool omni:rtx:scene:hydra:mdlMaterialWarmup = 1
+                uint omni:rtx:viewTile:limit = 4294967295
+                rel orderedVars = </Render/Vars/LdrColor>
+                custom bool overrideClipRange = 0
+                uniform int2 resolution = (1280, 720)
+            }
+        }
+    }
+
+    def RenderSettings "OmniverseGlobalRenderSettings" (
+        prepend apiSchemas = ["OmniRtxSettingsGlobalRtAdvancedAPI_1", "OmniRtxSettingsGlobalPtAdvancedAPI_1"]
+        no_delete = true
+    )
+    {
+        rel products = </Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0>
+    }
+
+    def "Vars"
+    {
+        def RenderVar "LdrColor" (
+            hide_in_stage_window = true
+            no_delete = true
+        )
+        {
+            uniform string sourceName = "LdrColor"
+        }
+    }
+}
+

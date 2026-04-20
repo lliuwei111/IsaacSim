@@ -1,0 +1,42 @@
+[2026-03-13 08:37:17,422][INFO][omni.repo.man.python_exec.process_python_executable_config:59] Install Packman package python with version 3.11.11+nv3-linux-x86_64 from repo.toml definition.
+[2026-03-13 08:37:21,916][INFO][omni.repo.man.python_exec._exec:166] Reloading with interpreter _repo/python/python3.
+[2026-03-13 08:37:29,183][INFO][omni.repo.man.python_exec._exec:161] Custom Executable _repo/python/python3 requested and currently active. Python version: 3.11.11 (tags/v3.11.11-dirty:d03b868, Feb  7 2025, 19:34:23) [GCC 7.3.1 20180303 (Red Hat 7.3.1-5)]
+[2026-03-13 08:37:29,183][INFO][omni.repo.man.entry.run:133] Running repo tool: repo_build@1.16.0. args: ['build']
+[2026-03-13 08:37:29,194][INFO][omni.repo.man.utils.set_niceness:1013] set IO niceness to 3 (idle)
+[2026-03-13 08:37:29,195][INFO][omni.repo.man.utils.set_niceness:1027] set process niceness to 19 (max)
+[2026-03-13 08:37:29,195][INFO][omni.repo.man.configuration.set_token:231] Token: 'platform_target' set to 'linux-x86_64'
+[2026-03-13 08:37:29,195][INFO][omni.repo.man.configuration.set_token:231] Token: 'platform_target_abi' set to 'manylinux_2_35_x86_64'
+[2026-03-13 08:37:29,195][INFO][omni.repo.build.dependencies.pull_files:288] Skipping project file (doesn't exist): /home/w/liuwei/code/robot_sim/IsaacSim/deps/host-deps.packman.xml
+[2026-03-13 11:07:44,175][INFO][omni.repo.man.python_exec._exec:166] Reloading with interpreter _repo/python/python3.
+[2026-03-13 11:07:44,909][INFO][omni.repo.man.python_exec._exec:161] Custom Executable _repo/python/python3 requested and currently active. Python version: 3.11.11 (tags/v3.11.11-dirty:d03b868, Feb  7 2025, 19:34:23) [GCC 7.3.1 20180303 (Red Hat 7.3.1-5)]
+[2026-03-13 11:07:44,909][INFO][omni.repo.man.entry.run:133] Running repo tool: repo_build@1.16.0. args: ['build']
+[2026-03-13 11:07:44,911][INFO][omni.repo.man.utils.set_niceness:1013] set IO niceness to 3 (idle)
+[2026-03-13 11:07:44,912][INFO][omni.repo.man.utils.set_niceness:1027] set process niceness to 19 (max)
+[2026-03-13 11:07:44,913][INFO][omni.repo.man.configuration.set_token:231] Token: 'platform_target' set to 'linux-x86_64'
+[2026-03-13 11:07:44,913][INFO][omni.repo.man.configuration.set_token:231] Token: 'platform_target_abi' set to 'manylinux_2_35_x86_64'
+[2026-03-13 11:07:44,913][INFO][omni.repo.build.dependencies.pull_files:288] Skipping project file (doesn't exist): /home/w/liuwei/code/robot_sim/IsaacSim/deps/host-deps.packman.xml
+[2026-03-13 11:08:35,577][INFO][omni.repo.man.utils.run_process_return_output:301] running process: gcc --version
+[2026-03-13 11:08:35,583][WARNING][omni.repo.man.version.get_tool_version:312] Retrieving repo_build version via VERSION file.
+[2026-03-13 11:08:35,587][ERROR][omni.repo.man.exceptions_utils.print_log:182] BuildError exception stack trace dumped to logfile /home/w/liuwei/code/robot_sim/IsaacSim/_repo/repo.log. Stacks dumped to console via `--verbose` or `--tracebacks`. 
+BuildError: GCC version check failed: expected 11.*.* but found 13.3.0
+
+[2026-03-13 11:08:35,589][ERROR][omni.repo.emit_stack_to_logfile:156] BuildError encountered while running repo_build via ['/home/w/liuwei/code/robot_sim/IsaacSim/tools/repoman/repoman.py', 'build']:
+Traceback (most recent call last):
+  File "/home/w/liuwei/code/robot_sim/IsaacSim/_repo/deps/repo_man/omni/repo/man/entry.py", line 138, in run
+    options.func(options)
+  File "/home/w/liuwei/code/robot_sim/IsaacSim/_repo/deps/repo_man/omni/repo/man/entry.py", line 90, in <lambda>
+    func=lambda args, func=func, config=self.merged_tool_config: func(args, config),
+                                                                 ^^^^^^^^^^^^^^^^^^
+  File "/home/w/liuwei/code/robot_sim/IsaacSim/_repo/deps/repo_build/omni/repo/build/main.py", line 1594, in run_repo_tool
+    run_build(options, repo_folders, None, config)
+  File "/home/w/liuwei/code/robot_sim/IsaacSim/_repo/deps/repo_build/omni/repo/build/utils.py", line 49, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/w/liuwei/code/robot_sim/IsaacSim/_repo/deps/repo_build/omni/repo/build/main.py", line 1115, in run_build
+    check_compiler_version(settings, options)
+  File "/home/w/liuwei/code/robot_sim/IsaacSim/_repo/deps/repo_build/omni/repo/build/dependencies.py", line 488, in check_compiler_version
+    check_compiler_version_linux(settings, options)
+  File "/home/w/liuwei/code/robot_sim/IsaacSim/_repo/deps/repo_build/omni/repo/build/dependencies.py", line 470, in check_compiler_version_linux
+    raise BuildError(
+omni.repo.build.exceptions.BuildError: GCC version check failed: expected 11.*.* but found 13.3.0
+
