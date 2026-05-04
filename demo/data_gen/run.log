@@ -1,0 +1,674 @@
+输入资产: sample_tremos (/workspace/IsaacSim/demo/asset/data_gen/sample_tremos.glb)
+USD 路径: /workspace/IsaacSim/sample_tremos.usd
+============================================================
+数据泛化任务启动
+  输入资产: sample_tremos
+  总轮次: 30
+  每轮帧数: 150
+  输出目录: /workspace/IsaacSim/data_gen_output
+============================================================
+
+============================================================
+Epoch 1/30
+============================================================
+  资产: sample_tremos
+  环境: /Isaac/Environments/Simple_Room/simple_room.usd
+  物体: scale=1.61, rot=(162,248,226), mass=0.40kg
+  相机: radius=2.77m, height=1.11m, speed=0.0141
+  灯光: dome=953, fill=1067
+  物理稳定中 (60 帧)...
+  开始采集 150 帧...
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0000/pointcloud/pointcloud_0000.ply (点数: 786432)
+    帧 0/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0000/pointcloud/pointcloud_0030.ply (点数: 786432)
+    帧 30/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0000/pointcloud/pointcloud_0060.ply (点数: 786432)
+    帧 60/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0000/pointcloud/pointcloud_0090.ply (点数: 786432)
+    帧 90/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0000/pointcloud/pointcloud_0120.ply (点数: 786432)
+    帧 120/150
+  Epoch 1 完成 -> /workspace/IsaacSim/data_gen_output/epoch_0000
+
+============================================================
+Epoch 2/30
+============================================================
+  资产: sample_tremos
+  环境: /Isaac/Environments/Simple_Warehouse/warehouse.usd
+  物体: scale=1.90, rot=(206,158,110), mass=0.66kg
+  相机: radius=3.04m, height=2.46m, speed=0.0175
+  灯光: dome=719, fill=1695
+  物理稳定中 (60 帧)...
+  开始采集 150 帧...
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0001/pointcloud/pointcloud_0000.ply (点数: 786432)
+    帧 0/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0001/pointcloud/pointcloud_0030.ply (点数: 786432)
+    帧 30/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0001/pointcloud/pointcloud_0060.ply (点数: 786432)
+    帧 60/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0001/pointcloud/pointcloud_0090.ply (点数: 786432)
+    帧 90/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0001/pointcloud/pointcloud_0120.ply (点数: 786432)
+    帧 120/150
+  Epoch 2 完成 -> /workspace/IsaacSim/data_gen_output/epoch_0001
+
+============================================================
+Epoch 3/30
+============================================================
+  资产: sample_tremos
+  环境: /Isaac/Environments/Simple_Warehouse/warehouse.usd
+  物体: scale=1.26, rot=(186,172,221), mass=1.14kg
+  相机: radius=2.50m, height=1.69m, speed=0.0069
+  灯光: dome=1046, fill=397
+  物理稳定中 (60 帧)...
+  开始采集 150 帧...
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0002/pointcloud/pointcloud_0000.ply (点数: 786432)
+    帧 0/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0002/pointcloud/pointcloud_0030.ply (点数: 786432)
+    帧 30/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0002/pointcloud/pointcloud_0060.ply (点数: 786432)
+    帧 60/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0002/pointcloud/pointcloud_0090.ply (点数: 786432)
+    帧 90/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0002/pointcloud/pointcloud_0120.ply (点数: 786432)
+    帧 120/150
+  Epoch 3 完成 -> /workspace/IsaacSim/data_gen_output/epoch_0002
+
+============================================================
+Epoch 4/30
+============================================================
+  资产: sample_tremos
+  环境: /Isaac/Environments/Simple_Warehouse/warehouse.usd
+  物体: scale=0.64, rot=(221,68,306), mass=0.98kg
+  相机: radius=4.74m, height=0.77m, speed=0.0116
+  灯光: dome=910, fill=1359
+  物理稳定中 (60 帧)...
+  开始采集 150 帧...
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0003/pointcloud/pointcloud_0000.ply (点数: 786432)
+    帧 0/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0003/pointcloud/pointcloud_0030.ply (点数: 786432)
+    帧 30/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0003/pointcloud/pointcloud_0060.ply (点数: 786432)
+    帧 60/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0003/pointcloud/pointcloud_0090.ply (点数: 786432)
+    帧 90/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0003/pointcloud/pointcloud_0120.ply (点数: 786432)
+    帧 120/150
+  Epoch 4 完成 -> /workspace/IsaacSim/data_gen_output/epoch_0003
+
+============================================================
+Epoch 5/30
+============================================================
+  资产: sample_tremos
+  环境: /Isaac/Environments/Simple_Warehouse/warehouse.usd
+  物体: scale=0.83, rot=(26,114,267), mass=1.40kg
+  相机: radius=4.31m, height=1.04m, speed=0.0138
+  灯光: dome=1465, fill=1150
+  物理稳定中 (60 帧)...
+  开始采集 150 帧...
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0004/pointcloud/pointcloud_0000.ply (点数: 786432)
+    帧 0/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0004/pointcloud/pointcloud_0030.ply (点数: 786432)
+    帧 30/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0004/pointcloud/pointcloud_0060.ply (点数: 786432)
+    帧 60/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0004/pointcloud/pointcloud_0090.ply (点数: 786432)
+    帧 90/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0004/pointcloud/pointcloud_0120.ply (点数: 786432)
+    帧 120/150
+  Epoch 5 完成 -> /workspace/IsaacSim/data_gen_output/epoch_0004
+
+============================================================
+Epoch 6/30
+============================================================
+  资产: sample_tremos
+  环境: /Isaac/Environments/Simple_Room/simple_room.usd
+  物体: scale=1.80, rot=(321,73,342), mass=0.56kg
+  相机: radius=5.91m, height=1.50m, speed=0.0176
+  灯光: dome=1083, fill=1830
+  物理稳定中 (60 帧)...
+  开始采集 150 帧...
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0005/pointcloud/pointcloud_0000.ply (点数: 786432)
+    帧 0/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0005/pointcloud/pointcloud_0030.ply (点数: 786432)
+    帧 30/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0005/pointcloud/pointcloud_0060.ply (点数: 786432)
+    帧 60/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0005/pointcloud/pointcloud_0090.ply (点数: 786432)
+    帧 90/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0005/pointcloud/pointcloud_0120.ply (点数: 786432)
+    帧 120/150
+  Epoch 6 完成 -> /workspace/IsaacSim/data_gen_output/epoch_0005
+
+============================================================
+Epoch 7/30
+============================================================
+  资产: sample_tremos
+  环境: /Isaac/Environments/Simple_Warehouse/warehouse.usd
+  物体: scale=1.65, rot=(66,289,29), mass=0.34kg
+  相机: radius=4.89m, height=1.90m, speed=0.0141
+  灯光: dome=941, fill=957
+  物理稳定中 (60 帧)...
+  开始采集 150 帧...
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0006/pointcloud/pointcloud_0000.ply (点数: 786432)
+    帧 0/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0006/pointcloud/pointcloud_0030.ply (点数: 786432)
+    帧 30/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0006/pointcloud/pointcloud_0060.ply (点数: 786432)
+    帧 60/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0006/pointcloud/pointcloud_0090.ply (点数: 786432)
+    帧 90/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0006/pointcloud/pointcloud_0120.ply (点数: 786432)
+    帧 120/150
+  Epoch 7 完成 -> /workspace/IsaacSim/data_gen_output/epoch_0006
+
+============================================================
+Epoch 8/30
+============================================================
+  资产: sample_tremos
+  环境: /Isaac/Environments/Simple_Warehouse/warehouse.usd
+  物体: scale=0.74, rot=(12,301,314), mass=0.88kg
+  相机: radius=4.60m, height=1.28m, speed=0.0199
+  灯光: dome=1068, fill=873
+  物理稳定中 (60 帧)...
+  开始采集 150 帧...
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0007/pointcloud/pointcloud_0000.ply (点数: 786432)
+    帧 0/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0007/pointcloud/pointcloud_0030.ply (点数: 786432)
+    帧 30/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0007/pointcloud/pointcloud_0060.ply (点数: 786432)
+    帧 60/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0007/pointcloud/pointcloud_0090.ply (点数: 786432)
+    帧 90/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0007/pointcloud/pointcloud_0120.ply (点数: 786432)
+    帧 120/150
+  Epoch 8 完成 -> /workspace/IsaacSim/data_gen_output/epoch_0007
+
+============================================================
+Epoch 9/30
+============================================================
+  资产: sample_tremos
+  环境: /Isaac/Environments/Simple_Room/simple_room.usd
+  物体: scale=0.55, rot=(281,203,225), mass=0.78kg
+  相机: radius=2.59m, height=1.35m, speed=0.0085
+  灯光: dome=1794, fill=1085
+  物理稳定中 (60 帧)...
+  开始采集 150 帧...
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0008/pointcloud/pointcloud_0000.ply (点数: 786432)
+    帧 0/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0008/pointcloud/pointcloud_0030.ply (点数: 786432)
+    帧 30/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0008/pointcloud/pointcloud_0060.ply (点数: 786432)
+    帧 60/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0008/pointcloud/pointcloud_0090.ply (点数: 786432)
+    帧 90/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0008/pointcloud/pointcloud_0120.ply (点数: 786432)
+    帧 120/150
+  Epoch 9 完成 -> /workspace/IsaacSim/data_gen_output/epoch_0008
+
+============================================================
+Epoch 10/30
+============================================================
+  资产: sample_tremos
+  环境: /Isaac/Environments/Simple_Room/simple_room.usd
+  物体: scale=0.86, rot=(50,177,347), mass=0.62kg
+  相机: radius=3.34m, height=0.57m, speed=0.0136
+  灯光: dome=1883, fill=1570
+  物理稳定中 (60 帧)...
+  开始采集 150 帧...
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0009/pointcloud/pointcloud_0000.ply (点数: 786432)
+    帧 0/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0009/pointcloud/pointcloud_0030.ply (点数: 786432)
+    帧 30/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0009/pointcloud/pointcloud_0060.ply (点数: 786432)
+    帧 60/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0009/pointcloud/pointcloud_0090.ply (点数: 786432)
+    帧 90/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0009/pointcloud/pointcloud_0120.ply (点数: 786432)
+    帧 120/150
+  Epoch 10 完成 -> /workspace/IsaacSim/data_gen_output/epoch_0009
+
+============================================================
+Epoch 11/30
+============================================================
+  资产: sample_tremos
+  环境: /Isaac/Environments/Simple_Room/simple_room.usd
+  物体: scale=1.12, rot=(282,295,170), mass=1.95kg
+  相机: radius=4.33m, height=0.66m, speed=0.0137
+  灯光: dome=2499, fill=684
+  物理稳定中 (60 帧)...
+  开始采集 150 帧...
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0010/pointcloud/pointcloud_0000.ply (点数: 786432)
+    帧 0/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0010/pointcloud/pointcloud_0030.ply (点数: 786432)
+    帧 30/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0010/pointcloud/pointcloud_0060.ply (点数: 786432)
+    帧 60/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0010/pointcloud/pointcloud_0090.ply (点数: 786432)
+    帧 90/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0010/pointcloud/pointcloud_0120.ply (点数: 786432)
+    帧 120/150
+  Epoch 11 完成 -> /workspace/IsaacSim/data_gen_output/epoch_0010
+
+============================================================
+Epoch 12/30
+============================================================
+  资产: sample_tremos
+  环境: /Isaac/Environments/Simple_Warehouse/warehouse.usd
+  物体: scale=1.04, rot=(335,74,314), mass=0.56kg
+  相机: radius=2.14m, height=0.51m, speed=0.0113
+  灯光: dome=2539, fill=1327
+  物理稳定中 (60 帧)...
+  开始采集 150 帧...
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0011/pointcloud/pointcloud_0000.ply (点数: 786432)
+    帧 0/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0011/pointcloud/pointcloud_0030.ply (点数: 786432)
+    帧 30/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0011/pointcloud/pointcloud_0060.ply (点数: 786432)
+    帧 60/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0011/pointcloud/pointcloud_0090.ply (点数: 786432)
+    帧 90/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0011/pointcloud/pointcloud_0120.ply (点数: 786432)
+    帧 120/150
+  Epoch 12 完成 -> /workspace/IsaacSim/data_gen_output/epoch_0011
+
+============================================================
+Epoch 13/30
+============================================================
+  资产: sample_tremos
+  环境: /Isaac/Environments/Simple_Room/simple_room.usd
+  物体: scale=1.45, rot=(262,235,149), mass=1.21kg
+  相机: radius=4.95m, height=2.16m, speed=0.0054
+  灯光: dome=1898, fill=822
+  物理稳定中 (60 帧)...
+  开始采集 150 帧...
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0012/pointcloud/pointcloud_0000.ply (点数: 786432)
+    帧 0/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0012/pointcloud/pointcloud_0030.ply (点数: 786432)
+    帧 30/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0012/pointcloud/pointcloud_0060.ply (点数: 786432)
+    帧 60/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0012/pointcloud/pointcloud_0090.ply (点数: 786432)
+    帧 90/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0012/pointcloud/pointcloud_0120.ply (点数: 786432)
+    帧 120/150
+  Epoch 13 完成 -> /workspace/IsaacSim/data_gen_output/epoch_0012
+
+============================================================
+Epoch 14/30
+============================================================
+  资产: sample_tremos
+  环境: /Isaac/Environments/Simple_Room/simple_room.usd
+  物体: scale=1.39, rot=(73,185,112), mass=0.72kg
+  相机: radius=2.07m, height=1.38m, speed=0.0065
+  灯光: dome=683, fill=1600
+  物理稳定中 (60 帧)...
+  开始采集 150 帧...
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0013/pointcloud/pointcloud_0000.ply (点数: 786432)
+    帧 0/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0013/pointcloud/pointcloud_0030.ply (点数: 786432)
+    帧 30/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0013/pointcloud/pointcloud_0060.ply (点数: 786432)
+    帧 60/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0013/pointcloud/pointcloud_0090.ply (点数: 786432)
+    帧 90/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0013/pointcloud/pointcloud_0120.ply (点数: 786432)
+    帧 120/150
+  Epoch 14 完成 -> /workspace/IsaacSim/data_gen_output/epoch_0013
+
+============================================================
+Epoch 15/30
+============================================================
+  资产: sample_tremos
+  环境: /Isaac/Environments/Simple_Warehouse/warehouse.usd
+  物体: scale=0.59, rot=(61,322,28), mass=1.58kg
+  相机: radius=2.64m, height=1.54m, speed=0.0122
+  灯光: dome=2377, fill=1857
+  物理稳定中 (60 帧)...
+  开始采集 150 帧...
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0014/pointcloud/pointcloud_0000.ply (点数: 786432)
+    帧 0/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0014/pointcloud/pointcloud_0030.ply (点数: 786432)
+    帧 30/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0014/pointcloud/pointcloud_0060.ply (点数: 786432)
+    帧 60/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0014/pointcloud/pointcloud_0090.ply (点数: 786432)
+    帧 90/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0014/pointcloud/pointcloud_0120.ply (点数: 786432)
+    帧 120/150
+  Epoch 15 完成 -> /workspace/IsaacSim/data_gen_output/epoch_0014
+
+============================================================
+Epoch 16/30
+============================================================
+  资产: sample_tremos
+  环境: /Isaac/Environments/Simple_Warehouse/warehouse.usd
+  物体: scale=1.50, rot=(247,319,199), mass=2.00kg
+  相机: radius=2.78m, height=2.46m, speed=0.0160
+  灯光: dome=719, fill=1575
+  物理稳定中 (60 帧)...
+  开始采集 150 帧...
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0015/pointcloud/pointcloud_0000.ply (点数: 786432)
+    帧 0/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0015/pointcloud/pointcloud_0030.ply (点数: 786432)
+    帧 30/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0015/pointcloud/pointcloud_0060.ply (点数: 786432)
+    帧 60/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0015/pointcloud/pointcloud_0090.ply (点数: 786432)
+    帧 90/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0015/pointcloud/pointcloud_0120.ply (点数: 786432)
+    帧 120/150
+  Epoch 16 完成 -> /workspace/IsaacSim/data_gen_output/epoch_0015
+
+============================================================
+Epoch 17/30
+============================================================
+  资产: sample_tremos
+  环境: /Isaac/Environments/Simple_Room/simple_room.usd
+  物体: scale=1.62, rot=(342,329,203), mass=1.51kg
+  相机: radius=2.74m, height=2.06m, speed=0.0178
+  灯光: dome=911, fill=969
+  物理稳定中 (60 帧)...
+  开始采集 150 帧...
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0016/pointcloud/pointcloud_0000.ply (点数: 786432)
+    帧 0/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0016/pointcloud/pointcloud_0030.ply (点数: 786432)
+    帧 30/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0016/pointcloud/pointcloud_0060.ply (点数: 786432)
+    帧 60/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0016/pointcloud/pointcloud_0090.ply (点数: 786432)
+    帧 90/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0016/pointcloud/pointcloud_0120.ply (点数: 786432)
+    帧 120/150
+  Epoch 17 完成 -> /workspace/IsaacSim/data_gen_output/epoch_0016
+
+============================================================
+Epoch 18/30
+============================================================
+  资产: sample_tremos
+  环境: /Isaac/Environments/Simple_Room/simple_room.usd
+  物体: scale=0.59, rot=(229,86,335), mass=0.24kg
+  相机: radius=3.15m, height=1.45m, speed=0.0123
+  灯光: dome=1949, fill=1387
+  物理稳定中 (60 帧)...
+  开始采集 150 帧...
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0017/pointcloud/pointcloud_0000.ply (点数: 786432)
+    帧 0/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0017/pointcloud/pointcloud_0030.ply (点数: 786432)
+    帧 30/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0017/pointcloud/pointcloud_0060.ply (点数: 786432)
+    帧 60/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0017/pointcloud/pointcloud_0090.ply (点数: 786432)
+    帧 90/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0017/pointcloud/pointcloud_0120.ply (点数: 786432)
+    帧 120/150
+  Epoch 18 完成 -> /workspace/IsaacSim/data_gen_output/epoch_0017
+
+============================================================
+Epoch 19/30
+============================================================
+  资产: sample_tremos
+  环境: /Isaac/Environments/Simple_Warehouse/warehouse.usd
+  物体: scale=1.13, rot=(252,144,191), mass=0.92kg
+  相机: radius=4.71m, height=0.97m, speed=0.0136
+  灯光: dome=1137, fill=827
+  物理稳定中 (60 帧)...
+  开始采集 150 帧...
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0018/pointcloud/pointcloud_0000.ply (点数: 786432)
+    帧 0/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0018/pointcloud/pointcloud_0030.ply (点数: 786432)
+    帧 30/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0018/pointcloud/pointcloud_0060.ply (点数: 786432)
+    帧 60/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0018/pointcloud/pointcloud_0090.ply (点数: 786432)
+    帧 90/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0018/pointcloud/pointcloud_0120.ply (点数: 786432)
+    帧 120/150
+  Epoch 19 完成 -> /workspace/IsaacSim/data_gen_output/epoch_0018
+
+============================================================
+Epoch 20/30
+============================================================
+  资产: sample_tremos
+  环境: /Isaac/Environments/Simple_Warehouse/warehouse.usd
+  物体: scale=1.08, rot=(228,165,139), mass=0.64kg
+  相机: radius=2.91m, height=2.06m, speed=0.0157
+  灯光: dome=543, fill=960
+  物理稳定中 (60 帧)...
+  开始采集 150 帧...
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0019/pointcloud/pointcloud_0000.ply (点数: 786432)
+    帧 0/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0019/pointcloud/pointcloud_0030.ply (点数: 786432)
+    帧 30/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0019/pointcloud/pointcloud_0060.ply (点数: 786432)
+    帧 60/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0019/pointcloud/pointcloud_0090.ply (点数: 786432)
+    帧 90/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0019/pointcloud/pointcloud_0120.ply (点数: 786432)
+    帧 120/150
+  Epoch 20 完成 -> /workspace/IsaacSim/data_gen_output/epoch_0019
+
+============================================================
+Epoch 21/30
+============================================================
+  资产: sample_tremos
+  环境: /Isaac/Environments/Simple_Warehouse/warehouse.usd
+  物体: scale=1.62, rot=(199,192,117), mass=1.77kg
+  相机: radius=4.26m, height=1.99m, speed=0.0173
+  灯光: dome=1865, fill=1238
+  物理稳定中 (60 帧)...
+  开始采集 150 帧...
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0020/pointcloud/pointcloud_0000.ply (点数: 786432)
+    帧 0/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0020/pointcloud/pointcloud_0030.ply (点数: 786432)
+    帧 30/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0020/pointcloud/pointcloud_0060.ply (点数: 786432)
+    帧 60/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0020/pointcloud/pointcloud_0090.ply (点数: 786432)
+    帧 90/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0020/pointcloud/pointcloud_0120.ply (点数: 786432)
+    帧 120/150
+  Epoch 21 完成 -> /workspace/IsaacSim/data_gen_output/epoch_0020
+
+============================================================
+Epoch 22/30
+============================================================
+  资产: sample_tremos
+  环境: /Isaac/Environments/Simple_Room/simple_room.usd
+  物体: scale=1.80, rot=(108,72,342), mass=0.25kg
+  相机: radius=5.82m, height=2.21m, speed=0.0144
+  灯光: dome=1797, fill=565
+  物理稳定中 (60 帧)...
+  开始采集 150 帧...
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0021/pointcloud/pointcloud_0000.ply (点数: 786432)
+    帧 0/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0021/pointcloud/pointcloud_0030.ply (点数: 786432)
+    帧 30/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0021/pointcloud/pointcloud_0060.ply (点数: 786432)
+    帧 60/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0021/pointcloud/pointcloud_0090.ply (点数: 786432)
+    帧 90/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0021/pointcloud/pointcloud_0120.ply (点数: 786432)
+    帧 120/150
+  Epoch 22 完成 -> /workspace/IsaacSim/data_gen_output/epoch_0021
+
+============================================================
+Epoch 23/30
+============================================================
+  资产: sample_tremos
+  环境: /Isaac/Environments/Simple_Room/simple_room.usd
+  物体: scale=0.61, rot=(124,254,54), mass=0.44kg
+  相机: radius=2.28m, height=1.82m, speed=0.0097
+  灯光: dome=1258, fill=419
+  物理稳定中 (60 帧)...
+  开始采集 150 帧...
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0022/pointcloud/pointcloud_0000.ply (点数: 786432)
+    帧 0/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0022/pointcloud/pointcloud_0030.ply (点数: 786432)
+    帧 30/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0022/pointcloud/pointcloud_0060.ply (点数: 786432)
+    帧 60/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0022/pointcloud/pointcloud_0090.ply (点数: 786432)
+    帧 90/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0022/pointcloud/pointcloud_0120.ply (点数: 786432)
+    帧 120/150
+  Epoch 23 完成 -> /workspace/IsaacSim/data_gen_output/epoch_0022
+
+============================================================
+Epoch 24/30
+============================================================
+  资产: sample_tremos
+  环境: /Isaac/Environments/Simple_Warehouse/warehouse.usd
+  物体: scale=1.83, rot=(158,37,321), mass=0.48kg
+  相机: radius=2.50m, height=1.24m, speed=0.0074
+  灯光: dome=1685, fill=748
+  物理稳定中 (60 帧)...
+  开始采集 150 帧...
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0023/pointcloud/pointcloud_0000.ply (点数: 786432)
+    帧 0/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0023/pointcloud/pointcloud_0030.ply (点数: 786432)
+    帧 30/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0023/pointcloud/pointcloud_0060.ply (点数: 786432)
+    帧 60/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0023/pointcloud/pointcloud_0090.ply (点数: 786432)
+    帧 90/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0023/pointcloud/pointcloud_0120.ply (点数: 786432)
+    帧 120/150
+  Epoch 24 完成 -> /workspace/IsaacSim/data_gen_output/epoch_0023
+
+============================================================
+Epoch 25/30
+============================================================
+  资产: sample_tremos
+  环境: /Isaac/Environments/Simple_Room/simple_room.usd
+  物体: scale=0.95, rot=(307,230,332), mass=1.75kg
+  相机: radius=2.03m, height=1.79m, speed=0.0109
+  灯光: dome=583, fill=880
+  物理稳定中 (60 帧)...
+  开始采集 150 帧...
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0024/pointcloud/pointcloud_0000.ply (点数: 786432)
+    帧 0/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0024/pointcloud/pointcloud_0030.ply (点数: 786432)
+    帧 30/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0024/pointcloud/pointcloud_0060.ply (点数: 786432)
+    帧 60/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0024/pointcloud/pointcloud_0090.ply (点数: 786432)
+    帧 90/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0024/pointcloud/pointcloud_0120.ply (点数: 786432)
+    帧 120/150
+  Epoch 25 完成 -> /workspace/IsaacSim/data_gen_output/epoch_0024
+
+============================================================
+Epoch 26/30
+============================================================
+  资产: sample_tremos
+  环境: /Isaac/Environments/Simple_Warehouse/warehouse.usd
+  物体: scale=1.25, rot=(26,169,64), mass=1.83kg
+  相机: radius=4.63m, height=1.56m, speed=0.0155
+  灯光: dome=769, fill=844
+  物理稳定中 (60 帧)...
+  开始采集 150 帧...
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0025/pointcloud/pointcloud_0000.ply (点数: 786432)
+    帧 0/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0025/pointcloud/pointcloud_0030.ply (点数: 786432)
+    帧 30/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0025/pointcloud/pointcloud_0060.ply (点数: 786432)
+    帧 60/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0025/pointcloud/pointcloud_0090.ply (点数: 786432)
+    帧 90/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0025/pointcloud/pointcloud_0120.ply (点数: 786432)
+    帧 120/150
+  Epoch 26 完成 -> /workspace/IsaacSim/data_gen_output/epoch_0025
+
+============================================================
+Epoch 27/30
+============================================================
+  资产: sample_tremos
+  环境: /Isaac/Environments/Simple_Warehouse/warehouse.usd
+  物体: scale=0.96, rot=(91,77,40), mass=1.20kg
+  相机: radius=3.96m, height=2.39m, speed=0.0064
+  灯光: dome=2257, fill=644
+  物理稳定中 (60 帧)...
+  开始采集 150 帧...
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0026/pointcloud/pointcloud_0000.ply (点数: 786432)
+    帧 0/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0026/pointcloud/pointcloud_0030.ply (点数: 786432)
+    帧 30/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0026/pointcloud/pointcloud_0060.ply (点数: 786432)
+    帧 60/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0026/pointcloud/pointcloud_0090.ply (点数: 786432)
+    帧 90/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0026/pointcloud/pointcloud_0120.ply (点数: 786432)
+    帧 120/150
+  Epoch 27 完成 -> /workspace/IsaacSim/data_gen_output/epoch_0026
+
+============================================================
+Epoch 28/30
+============================================================
+  资产: sample_tremos
+  环境: /Isaac/Environments/Simple_Room/simple_room.usd
+  物体: scale=1.56, rot=(246,89,94), mass=0.85kg
+  相机: radius=3.02m, height=1.78m, speed=0.0182
+  灯光: dome=1869, fill=1590
+  物理稳定中 (60 帧)...
+  开始采集 150 帧...
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0027/pointcloud/pointcloud_0000.ply (点数: 786432)
+    帧 0/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0027/pointcloud/pointcloud_0030.ply (点数: 786432)
+    帧 30/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0027/pointcloud/pointcloud_0060.ply (点数: 786432)
+    帧 60/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0027/pointcloud/pointcloud_0090.ply (点数: 786432)
+    帧 90/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0027/pointcloud/pointcloud_0120.ply (点数: 786432)
+    帧 120/150
+  Epoch 28 完成 -> /workspace/IsaacSim/data_gen_output/epoch_0027
+
+============================================================
+Epoch 29/30
+============================================================
+  资产: sample_tremos
+  环境: /Isaac/Environments/Simple_Room/simple_room.usd
+  物体: scale=0.94, rot=(120,334,123), mass=1.22kg
+  相机: radius=4.40m, height=2.06m, speed=0.0193
+  灯光: dome=507, fill=975
+  物理稳定中 (60 帧)...
+  开始采集 150 帧...
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0028/pointcloud/pointcloud_0000.ply (点数: 786432)
+    帧 0/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0028/pointcloud/pointcloud_0030.ply (点数: 786432)
+    帧 30/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0028/pointcloud/pointcloud_0060.ply (点数: 786432)
+    帧 60/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0028/pointcloud/pointcloud_0090.ply (点数: 786432)
+    帧 90/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0028/pointcloud/pointcloud_0120.ply (点数: 786432)
+    帧 120/150
+  Epoch 29 完成 -> /workspace/IsaacSim/data_gen_output/epoch_0028
+
+============================================================
+Epoch 30/30
+============================================================
+  资产: sample_tremos
+  环境: /Isaac/Environments/Simple_Room/simple_room.usd
+  物体: scale=1.06, rot=(80,53,174), mass=1.05kg
+  相机: radius=3.54m, height=1.31m, speed=0.0088
+  灯光: dome=1863, fill=1587
+  物理稳定中 (60 帧)...
+  开始采集 150 帧...
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0029/pointcloud/pointcloud_0000.ply (点数: 786432)
+    帧 0/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0029/pointcloud/pointcloud_0030.ply (点数: 786432)
+    帧 30/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0029/pointcloud/pointcloud_0060.ply (点数: 786432)
+    帧 60/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0029/pointcloud/pointcloud_0090.ply (点数: 786432)
+    帧 90/150
+    点云保存: /workspace/IsaacSim/data_gen_output/epoch_0029/pointcloud/pointcloud_0120.ply (点数: 786432)
+    帧 120/150
+  Epoch 30 完成 -> /workspace/IsaacSim/data_gen_output/epoch_0029
+
+============================================================
+全部 30 轮数据泛化完成！
+输出目录: /workspace/IsaacSim/data_gen_output
+============================================================
