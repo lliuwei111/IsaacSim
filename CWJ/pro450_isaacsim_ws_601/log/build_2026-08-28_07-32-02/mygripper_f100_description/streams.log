@@ -1,0 +1,61 @@
+[0.050s] Invoking command in '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mygripper_f100_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaacsim:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaac_moveit2_control:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/mycobot_description:/opt/ros/jazzy /usr/bin/cmake /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/src/mycobot450_isaacsim-6.0.1/robots_description/mygripper_f100_description -DCMAKE_INSTALL_PREFIX=/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description
+[1.315s] -- The C compiler identification is GNU 13.3.0
+[2.038s] -- The CXX compiler identification is GNU 13.3.0
+[2.171s] -- Detecting C compiler ABI info
+[2.431s] -- Detecting C compiler ABI info - done
+[2.458s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.459s] -- Detecting C compile features
+[2.459s] -- Detecting C compile features - done
+[2.487s] -- Detecting CXX compiler ABI info
+[2.732s] -- Detecting CXX compiler ABI info - done
+[2.750s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.751s] -- Detecting CXX compile features
+[2.751s] -- Detecting CXX compile features - done
+[2.813s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[3.201s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[3.780s] -- Found urdf: 2.10.1 (/opt/ros/jazzy/share/urdf/cmake)
+[4.144s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[4.220s] -- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[4.603s] -- Added test 'flake8' to check Python code syntax and style conventions
+[4.604s] -- Configured 'flake8' exclude dirs and/or files: 
+[4.605s] -- Added test 'lint_cmake' to check CMake code style
+[4.608s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[4.623s] -- Added test 'xmllint' to check XML markup files
+[4.636s] -- Configuring done (4.4s)
+[4.649s] -- Generating done (0.0s)
+[4.658s] -- Build files have been written to: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mygripper_f100_description
+[4.693s] Invoked command in '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mygripper_f100_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaacsim:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaac_moveit2_control:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/mycobot_description:/opt/ros/jazzy /usr/bin/cmake /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/src/mycobot450_isaacsim-6.0.1/robots_description/mygripper_f100_description -DCMAKE_INSTALL_PREFIX=/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description
+[4.697s] Invoking command in '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mygripper_f100_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaacsim:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaac_moveit2_control:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/mycobot_description:/opt/ros/jazzy /usr/bin/cmake --build /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mygripper_f100_description -- -j16 -l16
+[4.773s] Invoked command in '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mygripper_f100_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaacsim:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaac_moveit2_control:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/mycobot_description:/opt/ros/jazzy /usr/bin/cmake --build /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mygripper_f100_description -- -j16 -l16
+[4.802s] Invoking command in '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mygripper_f100_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaacsim:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaac_moveit2_control:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/mycobot_description:/opt/ros/jazzy /usr/bin/cmake --install /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mygripper_f100_description
+[4.817s] -- Install configuration: ""
+[4.818s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/mygripper_f100_description/meshes
+[4.818s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/mygripper_f100_description/meshes/J1_L_Link.STL
+[4.821s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/mygripper_f100_description/meshes/J3_L_Link.STL
+[4.824s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/mygripper_f100_description/meshes/J1_R_Link.STL
+[4.824s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/mygripper_f100_description/meshes/J2_R_Link.STL
+[4.825s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/mygripper_f100_description/meshes/J2_L_Link.STL
+[4.827s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/mygripper_f100_description/meshes/f100_base_link.STL
+[4.827s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/mygripper_f100_description/meshes/J3_R_Link.STL
+[4.828s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/mygripper_f100_description/urdf
+[4.829s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/mygripper_f100_description/urdf/mygripper_f100.urdf
+[4.830s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/mygripper_f100_description/launch
+[4.830s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/mygripper_f100_description/launch/mygripper_f100_display.launch.py
+[4.831s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/mygripper_f100_description/rviz
+[4.831s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/mygripper_f100_description/rviz/mygripper_f100_display.rviz
+[4.832s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/ament_index/resource_index/package_run_dependencies/mygripper_f100_description
+[4.833s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/ament_index/resource_index/parent_prefix_path/mygripper_f100_description
+[4.834s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/mygripper_f100_description/environment/ament_prefix_path.sh
+[4.834s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/mygripper_f100_description/environment/ament_prefix_path.dsv
+[4.834s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/mygripper_f100_description/environment/path.sh
+[4.834s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/mygripper_f100_description/environment/path.dsv
+[4.834s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/mygripper_f100_description/local_setup.bash
+[4.835s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/mygripper_f100_description/local_setup.sh
+[4.835s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/mygripper_f100_description/local_setup.zsh
+[4.835s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/mygripper_f100_description/local_setup.dsv
+[4.835s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/mygripper_f100_description/package.dsv
+[4.836s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/ament_index/resource_index/packages/mygripper_f100_description
+[4.836s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/mygripper_f100_description/cmake/mygripper_f100_descriptionConfig.cmake
+[4.836s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/mygripper_f100_description/cmake/mygripper_f100_descriptionConfig-version.cmake
+[4.836s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/mygripper_f100_description/package.xml
+[4.841s] Invoked command in '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mygripper_f100_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaacsim:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaac_moveit2_control:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/mycobot_description:/opt/ros/jazzy /usr/bin/cmake --install /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mygripper_f100_description

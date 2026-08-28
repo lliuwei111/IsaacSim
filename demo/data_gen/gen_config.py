@@ -5,7 +5,7 @@ INPUT_GLB_PATH = "/workspace/IsaacSim/demo/asset/data_gen/sample_tremos.glb"
 USD_ASSETS_DIR = "/workspace/IsaacSim"
 DATASET_OUTPUT_DIR = "/workspace/IsaacSim/data_gen_output"
 
-NUM_EPOCHS = 30
+NUM_EPOCHS = 10
 FRAMES_PER_EPOCH = 150
 POINTCLOUD_SAMPLE_INTERVAL = 30
 IMAGE_SAVE_INTERVAL = 10
@@ -32,6 +32,10 @@ ENVIRONMENTS = [
 ]
 
 PHYSICS_SETTLE_FRAMES = 60
+
+ENABLE_DEPTH_VIS = True
+ENABLE_POINTCLOUD_VIS = True
+DEPTH_VIS_SAMPLE_COUNT = 50000
 
 SEED = None
 

@@ -1,0 +1,426 @@
+[0.189s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.189s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x787fccb3c9b0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x787fccb3c7d0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x787fccb3c7d0>>)
+[0.266s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.267s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.267s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.267s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.267s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.268s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.268s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601'
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1) by extensions ['ignore', 'ignore_ament_install']
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1) by extension 'ignore'
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1) by extension 'ignore_ament_install'
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1) by extensions ['colcon_pkg']
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1) by extension 'colcon_pkg'
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1) by extensions ['colcon_meta']
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1) by extension 'colcon_meta'
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1) by extensions ['ros']
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1) by extension 'ros'
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1) by extensions ['cmake', 'python']
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1) by extension 'cmake'
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1) by extension 'python'
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1) by extensions ['python_setup_py']
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1) by extension 'python_setup_py'
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD) by extensions ['ignore', 'ignore_ament_install']
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD) by extension 'ignore'
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD) by extension 'ignore_ament_install'
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD) by extensions ['colcon_pkg']
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD) by extension 'colcon_pkg'
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD) by extensions ['colcon_meta']
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD) by extension 'colcon_meta'
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD) by extensions ['ros']
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD) by extension 'ros'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD) by extensions ['cmake', 'python']
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD) by extension 'cmake'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD) by extension 'python'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD) by extensions ['python_setup_py']
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD) by extension 'python_setup_py'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mycobot_pro_450) by extensions ['ignore', 'ignore_ament_install']
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mycobot_pro_450) by extension 'ignore'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mycobot_pro_450) by extension 'ignore_ament_install'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mycobot_pro_450) by extensions ['colcon_pkg']
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mycobot_pro_450) by extension 'colcon_pkg'
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mycobot_pro_450) by extensions ['colcon_meta']
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mycobot_pro_450) by extension 'colcon_meta'
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mycobot_pro_450) by extensions ['ros']
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mycobot_pro_450) by extension 'ros'
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mycobot_pro_450) by extensions ['cmake', 'python']
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mycobot_pro_450) by extension 'cmake'
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mycobot_pro_450) by extension 'python'
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mycobot_pro_450) by extensions ['python_setup_py']
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mycobot_pro_450) by extension 'python_setup_py'
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mycobot_pro_450/payloads) by extensions ['ignore', 'ignore_ament_install']
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mycobot_pro_450/payloads) by extension 'ignore'
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mycobot_pro_450/payloads) by extension 'ignore_ament_install'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mycobot_pro_450/payloads) by extensions ['colcon_pkg']
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mycobot_pro_450/payloads) by extension 'colcon_pkg'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mycobot_pro_450/payloads) by extensions ['colcon_meta']
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mycobot_pro_450/payloads) by extension 'colcon_meta'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mycobot_pro_450/payloads) by extensions ['ros']
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mycobot_pro_450/payloads) by extension 'ros'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mycobot_pro_450/payloads) by extensions ['cmake', 'python']
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mycobot_pro_450/payloads) by extension 'cmake'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mycobot_pro_450/payloads) by extension 'python'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mycobot_pro_450/payloads) by extensions ['python_setup_py']
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mycobot_pro_450/payloads) by extension 'python_setup_py'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mycobot_pro_450/payloads/Physics) by extensions ['ignore', 'ignore_ament_install']
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mycobot_pro_450/payloads/Physics) by extension 'ignore'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mycobot_pro_450/payloads/Physics) by extension 'ignore_ament_install'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mycobot_pro_450/payloads/Physics) by extensions ['colcon_pkg']
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mycobot_pro_450/payloads/Physics) by extension 'colcon_pkg'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mycobot_pro_450/payloads/Physics) by extensions ['colcon_meta']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mycobot_pro_450/payloads/Physics) by extension 'colcon_meta'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mycobot_pro_450/payloads/Physics) by extensions ['ros']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mycobot_pro_450/payloads/Physics) by extension 'ros'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mycobot_pro_450/payloads/Physics) by extensions ['cmake', 'python']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mycobot_pro_450/payloads/Physics) by extension 'cmake'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mycobot_pro_450/payloads/Physics) by extension 'python'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mycobot_pro_450/payloads/Physics) by extensions ['python_setup_py']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mycobot_pro_450/payloads/Physics) by extension 'python_setup_py'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mygripper_f100) by extensions ['ignore', 'ignore_ament_install']
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mygripper_f100) by extension 'ignore'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mygripper_f100) by extension 'ignore_ament_install'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mygripper_f100) by extensions ['colcon_pkg']
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mygripper_f100) by extension 'colcon_pkg'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mygripper_f100) by extensions ['colcon_meta']
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mygripper_f100) by extension 'colcon_meta'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mygripper_f100) by extensions ['ros']
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mygripper_f100) by extension 'ros'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mygripper_f100) by extensions ['cmake', 'python']
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mygripper_f100) by extension 'cmake'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mygripper_f100) by extension 'python'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mygripper_f100) by extensions ['python_setup_py']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mygripper_f100) by extension 'python_setup_py'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mygripper_f100/payloads) by extensions ['ignore', 'ignore_ament_install']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mygripper_f100/payloads) by extension 'ignore'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mygripper_f100/payloads) by extension 'ignore_ament_install'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mygripper_f100/payloads) by extensions ['colcon_pkg']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mygripper_f100/payloads) by extension 'colcon_pkg'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mygripper_f100/payloads) by extensions ['colcon_meta']
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mygripper_f100/payloads) by extension 'colcon_meta'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mygripper_f100/payloads) by extensions ['ros']
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mygripper_f100/payloads) by extension 'ros'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mygripper_f100/payloads) by extensions ['cmake', 'python']
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mygripper_f100/payloads) by extension 'cmake'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mygripper_f100/payloads) by extension 'python'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mygripper_f100/payloads) by extensions ['python_setup_py']
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mygripper_f100/payloads) by extension 'python_setup_py'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mygripper_f100/payloads/Physics) by extensions ['ignore', 'ignore_ament_install']
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mygripper_f100/payloads/Physics) by extension 'ignore'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mygripper_f100/payloads/Physics) by extension 'ignore_ament_install'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mygripper_f100/payloads/Physics) by extensions ['colcon_pkg']
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mygripper_f100/payloads/Physics) by extension 'colcon_pkg'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mygripper_f100/payloads/Physics) by extensions ['colcon_meta']
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mygripper_f100/payloads/Physics) by extension 'colcon_meta'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mygripper_f100/payloads/Physics) by extensions ['ros']
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mygripper_f100/payloads/Physics) by extension 'ros'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mygripper_f100/payloads/Physics) by extensions ['cmake', 'python']
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mygripper_f100/payloads/Physics) by extension 'cmake'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mygripper_f100/payloads/Physics) by extension 'python'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mygripper_f100/payloads/Physics) by extensions ['python_setup_py']
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/mygripper_f100/payloads/Physics) by extension 'python_setup_py'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/sim_450_f100) by extensions ['ignore', 'ignore_ament_install']
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/sim_450_f100) by extension 'ignore'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/sim_450_f100) by extension 'ignore_ament_install'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/sim_450_f100) by extensions ['colcon_pkg']
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/sim_450_f100) by extension 'colcon_pkg'
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/sim_450_f100) by extensions ['colcon_meta']
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/sim_450_f100) by extension 'colcon_meta'
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/sim_450_f100) by extensions ['ros']
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/sim_450_f100) by extension 'ros'
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/sim_450_f100) by extensions ['cmake', 'python']
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/sim_450_f100) by extension 'cmake'
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/sim_450_f100) by extension 'python'
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/sim_450_f100) by extensions ['python_setup_py']
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/sim_450_f100) by extension 'python_setup_py'
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/sim_450_f100/payloads) by extensions ['ignore', 'ignore_ament_install']
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/sim_450_f100/payloads) by extension 'ignore'
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/sim_450_f100/payloads) by extension 'ignore_ament_install'
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/sim_450_f100/payloads) by extensions ['colcon_pkg']
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/sim_450_f100/payloads) by extension 'colcon_pkg'
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/sim_450_f100/payloads) by extensions ['colcon_meta']
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/sim_450_f100/payloads) by extension 'colcon_meta'
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/sim_450_f100/payloads) by extensions ['ros']
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/sim_450_f100/payloads) by extension 'ros'
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/sim_450_f100/payloads) by extensions ['cmake', 'python']
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/sim_450_f100/payloads) by extension 'cmake'
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/sim_450_f100/payloads) by extension 'python'
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/sim_450_f100/payloads) by extensions ['python_setup_py']
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/sim_450_f100/payloads) by extension 'python_setup_py'
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/sim_450_f100/payloads/Gripper) by extensions ['ignore', 'ignore_ament_install']
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/sim_450_f100/payloads/Gripper) by extension 'ignore'
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/sim_450_f100/payloads/Gripper) by extension 'ignore_ament_install'
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/sim_450_f100/payloads/Gripper) by extensions ['colcon_pkg']
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/sim_450_f100/payloads/Gripper) by extension 'colcon_pkg'
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/sim_450_f100/payloads/Gripper) by extensions ['colcon_meta']
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/sim_450_f100/payloads/Gripper) by extension 'colcon_meta'
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/sim_450_f100/payloads/Gripper) by extensions ['ros']
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/sim_450_f100/payloads/Gripper) by extension 'ros'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/sim_450_f100/payloads/Gripper) by extensions ['cmake', 'python']
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/sim_450_f100/payloads/Gripper) by extension 'cmake'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/sim_450_f100/payloads/Gripper) by extension 'python'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/sim_450_f100/payloads/Gripper) by extensions ['python_setup_py']
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/USD/sim_450_f100/payloads/Gripper) by extension 'python_setup_py'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/pro450_isaacsim) by extensions ['ignore', 'ignore_ament_install']
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/pro450_isaacsim) by extension 'ignore'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/pro450_isaacsim) by extension 'ignore_ament_install'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/pro450_isaacsim) by extensions ['colcon_pkg']
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/pro450_isaacsim) by extension 'colcon_pkg'
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/pro450_isaacsim) by extensions ['colcon_meta']
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/pro450_isaacsim) by extension 'colcon_meta'
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/pro450_isaacsim) by extensions ['ros']
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/pro450_isaacsim) by extension 'ros'
+[0.356s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mycobot450_isaacsim-6.0.1/pro450_isaacsim' with type 'ros.ament_python' and name 'pro450_isaacsim'
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/robots_description) by extensions ['ignore', 'ignore_ament_install']
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/robots_description) by extension 'ignore'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/robots_description) by extension 'ignore_ament_install'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/robots_description) by extensions ['colcon_pkg']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/robots_description) by extension 'colcon_pkg'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/robots_description) by extensions ['colcon_meta']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/robots_description) by extension 'colcon_meta'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/robots_description) by extensions ['ros']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/robots_description) by extension 'ros'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/robots_description) by extensions ['cmake', 'python']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/robots_description) by extension 'cmake'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/robots_description) by extension 'python'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/robots_description) by extensions ['python_setup_py']
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/robots_description) by extension 'python_setup_py'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/robots_description/mycobot_pro_450_description) by extensions ['ignore', 'ignore_ament_install']
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/robots_description/mycobot_pro_450_description) by extension 'ignore'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/robots_description/mycobot_pro_450_description) by extension 'ignore_ament_install'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/robots_description/mycobot_pro_450_description) by extensions ['colcon_pkg']
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/robots_description/mycobot_pro_450_description) by extension 'colcon_pkg'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/robots_description/mycobot_pro_450_description) by extensions ['colcon_meta']
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/robots_description/mycobot_pro_450_description) by extension 'colcon_meta'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/robots_description/mycobot_pro_450_description) by extensions ['ros']
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/robots_description/mycobot_pro_450_description) by extension 'ros'
+[0.359s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mycobot450_isaacsim-6.0.1/robots_description/mycobot_pro_450_description' with type 'ros.ament_cmake' and name 'mycobot_pro_450_description'
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/robots_description/mygripper_f100_description) by extensions ['ignore', 'ignore_ament_install']
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/robots_description/mygripper_f100_description) by extension 'ignore'
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/robots_description/mygripper_f100_description) by extension 'ignore_ament_install'
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/robots_description/mygripper_f100_description) by extensions ['colcon_pkg']
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/robots_description/mygripper_f100_description) by extension 'colcon_pkg'
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/robots_description/mygripper_f100_description) by extensions ['colcon_meta']
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/robots_description/mygripper_f100_description) by extension 'colcon_meta'
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/robots_description/mygripper_f100_description) by extensions ['ros']
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(src/mycobot450_isaacsim-6.0.1/robots_description/mygripper_f100_description) by extension 'ros'
+[0.361s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mycobot450_isaacsim-6.0.1/robots_description/mygripper_f100_description' with type 'ros.ament_cmake' and name 'mygripper_f100_description'
+[0.361s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.361s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.361s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.361s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.361s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.392s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.392s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.396s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 4 installed packages in /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install
+[0.400s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 287 installed packages in /opt/ros/jazzy
+[0.401s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.475s] Level 5:colcon.colcon_core.verb:set package 'mycobot_pro_450_description' build argument 'cmake_args' from command line to 'None'
+[0.475s] Level 5:colcon.colcon_core.verb:set package 'mycobot_pro_450_description' build argument 'cmake_target' from command line to 'None'
+[0.476s] Level 5:colcon.colcon_core.verb:set package 'mycobot_pro_450_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.476s] Level 5:colcon.colcon_core.verb:set package 'mycobot_pro_450_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.476s] Level 5:colcon.colcon_core.verb:set package 'mycobot_pro_450_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.476s] Level 5:colcon.colcon_core.verb:set package 'mycobot_pro_450_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.476s] Level 5:colcon.colcon_core.verb:set package 'mycobot_pro_450_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.476s] Level 5:colcon.colcon_core.verb:set package 'mycobot_pro_450_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.476s] Level 5:colcon.colcon_core.verb:set package 'mycobot_pro_450_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.476s] DEBUG:colcon.colcon_core.verb:Building package 'mycobot_pro_450_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mycobot_pro_450_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description', 'merge_install': False, 'path': '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/src/mycobot450_isaacsim-6.0.1/robots_description/mycobot_pro_450_description', 'symlink_install': False, 'test_result_base': None}
+[0.477s] Level 5:colcon.colcon_core.verb:set package 'mygripper_f100_description' build argument 'cmake_args' from command line to 'None'
+[0.477s] Level 5:colcon.colcon_core.verb:set package 'mygripper_f100_description' build argument 'cmake_target' from command line to 'None'
+[0.477s] Level 5:colcon.colcon_core.verb:set package 'mygripper_f100_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.477s] Level 5:colcon.colcon_core.verb:set package 'mygripper_f100_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.477s] Level 5:colcon.colcon_core.verb:set package 'mygripper_f100_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.477s] Level 5:colcon.colcon_core.verb:set package 'mygripper_f100_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.477s] Level 5:colcon.colcon_core.verb:set package 'mygripper_f100_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.477s] Level 5:colcon.colcon_core.verb:set package 'mygripper_f100_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.477s] Level 5:colcon.colcon_core.verb:set package 'mygripper_f100_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.477s] DEBUG:colcon.colcon_core.verb:Building package 'mygripper_f100_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mygripper_f100_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description', 'merge_install': False, 'path': '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/src/mycobot450_isaacsim-6.0.1/robots_description/mygripper_f100_description', 'symlink_install': False, 'test_result_base': None}
+[0.477s] Level 5:colcon.colcon_core.verb:set package 'pro450_isaacsim' build argument 'cmake_args' from command line to 'None'
+[0.478s] Level 5:colcon.colcon_core.verb:set package 'pro450_isaacsim' build argument 'cmake_target' from command line to 'None'
+[0.478s] Level 5:colcon.colcon_core.verb:set package 'pro450_isaacsim' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.478s] Level 5:colcon.colcon_core.verb:set package 'pro450_isaacsim' build argument 'cmake_clean_cache' from command line to 'False'
+[0.478s] Level 5:colcon.colcon_core.verb:set package 'pro450_isaacsim' build argument 'cmake_clean_first' from command line to 'False'
+[0.478s] Level 5:colcon.colcon_core.verb:set package 'pro450_isaacsim' build argument 'cmake_force_configure' from command line to 'False'
+[0.478s] Level 5:colcon.colcon_core.verb:set package 'pro450_isaacsim' build argument 'ament_cmake_args' from command line to 'None'
+[0.478s] Level 5:colcon.colcon_core.verb:set package 'pro450_isaacsim' build argument 'catkin_cmake_args' from command line to 'None'
+[0.478s] Level 5:colcon.colcon_core.verb:set package 'pro450_isaacsim' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.478s] DEBUG:colcon.colcon_core.verb:Building package 'pro450_isaacsim' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/pro450_isaacsim', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/pro450_isaacsim', 'merge_install': False, 'path': '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/src/mycobot450_isaacsim-6.0.1/pro450_isaacsim', 'symlink_install': False, 'test_result_base': None}
+[0.478s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.479s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.480s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/src/mycobot450_isaacsim-6.0.1/robots_description/mycobot_pro_450_description' with build type 'ament_cmake'
+[0.481s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/src/mycobot450_isaacsim-6.0.1/robots_description/mycobot_pro_450_description'
+[0.511s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.511s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.511s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.526s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/src/mycobot450_isaacsim-6.0.1/robots_description/mygripper_f100_description' with build type 'ament_cmake'
+[0.527s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/src/mycobot450_isaacsim-6.0.1/robots_description/mygripper_f100_description'
+[0.527s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.527s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.534s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/src/mycobot450_isaacsim-6.0.1/pro450_isaacsim' with build type 'ament_python'
+[0.534s] Level 1:colcon.colcon_core.shell:create_environment_hook('pro450_isaacsim', 'ament_prefix_path')
+[0.535s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/pro450_isaacsim/share/pro450_isaacsim/hook/ament_prefix_path.ps1'
+[0.539s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/pro450_isaacsim/share/pro450_isaacsim/hook/ament_prefix_path.dsv'
+[0.545s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/pro450_isaacsim/share/pro450_isaacsim/hook/ament_prefix_path.sh'
+[0.548s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.548s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.565s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mycobot_pro_450_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaacsim:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaac_moveit2_control:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/mycobot_description:/opt/ros/jazzy /usr/bin/cmake /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/src/mycobot450_isaacsim-6.0.1/robots_description/mycobot_pro_450_description -DCMAKE_INSTALL_PREFIX=/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description
+[0.577s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mygripper_f100_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaacsim:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaac_moveit2_control:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/mycobot_description:/opt/ros/jazzy /usr/bin/cmake /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/src/mycobot450_isaacsim-6.0.1/robots_description/mygripper_f100_description -DCMAKE_INSTALL_PREFIX=/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description
+[1.026s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/src/mycobot450_isaacsim-6.0.1/pro450_isaacsim'
+[1.028s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.029s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[5.138s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: build_ext, clean, alias, build_scripts, install_data, bdist_egg, symlink_data, easy_install, register, update_catalog, build, upload, editable_wheel, bdist_rpm, install_headers, install, egg_info, install_egg_info, build_clib, extract_messages, rotate, init_catalog, install_scripts, check, upload_docs, bdist_dumb, install_lib, bdist, develop, bdist_wheel, build_py, test, saveopts, setopt, compile_catalog, dist_info, sdist
+[5.148s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/src/mycobot450_isaacsim-6.0.1/pro450_isaacsim': PYTHONPATH=/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/pro450_isaacsim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/pro450_isaacsim/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/pro450_isaacsim build --build-base /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/pro450_isaacsim/build install --record /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/pro450_isaacsim/install.log --install-scripts $base/lib/pro450_isaacsim --single-version-externally-managed install_data
+[5.214s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mycobot_pro_450_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaacsim:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaac_moveit2_control:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/mycobot_description:/opt/ros/jazzy /usr/bin/cmake /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/src/mycobot450_isaacsim-6.0.1/robots_description/mycobot_pro_450_description -DCMAKE_INSTALL_PREFIX=/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description
+[5.216s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mycobot_pro_450_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaacsim:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaac_moveit2_control:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/mycobot_description:/opt/ros/jazzy /usr/bin/cmake --build /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mycobot_pro_450_description -- -j16 -l16
+[5.219s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mygripper_f100_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaacsim:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaac_moveit2_control:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/mycobot_description:/opt/ros/jazzy /usr/bin/cmake /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/src/mycobot450_isaacsim-6.0.1/robots_description/mygripper_f100_description -DCMAKE_INSTALL_PREFIX=/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description
+[5.224s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mygripper_f100_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaacsim:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaac_moveit2_control:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/mycobot_description:/opt/ros/jazzy /usr/bin/cmake --build /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mygripper_f100_description -- -j16 -l16
+[5.300s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mygripper_f100_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaacsim:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaac_moveit2_control:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/mycobot_description:/opt/ros/jazzy /usr/bin/cmake --build /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mygripper_f100_description -- -j16 -l16
+[5.329s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mygripper_f100_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaacsim:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaac_moveit2_control:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/mycobot_description:/opt/ros/jazzy /usr/bin/cmake --install /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mygripper_f100_description
+[5.333s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mycobot_pro_450_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaacsim:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaac_moveit2_control:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/mycobot_description:/opt/ros/jazzy /usr/bin/cmake --build /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mycobot_pro_450_description -- -j16 -l16
+[5.336s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mycobot_pro_450_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaacsim:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaac_moveit2_control:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/mycobot_description:/opt/ros/jazzy /usr/bin/cmake --install /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mycobot_pro_450_description
+[5.366s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mygripper_f100_description)
+[5.368s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mygripper_f100_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaacsim:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaac_moveit2_control:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/mycobot_description:/opt/ros/jazzy /usr/bin/cmake --install /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mygripper_f100_description
+[5.417s] Level 1:colcon.colcon_core.environment:checking '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description' for CMake module files
+[5.418s] Level 1:colcon.colcon_core.environment:checking '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description' for CMake config files
+[5.418s] Level 1:colcon.colcon_core.shell:create_environment_hook('mygripper_f100_description', 'cmake_prefix_path')
+[5.419s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/mygripper_f100_description/hook/cmake_prefix_path.ps1'
+[5.421s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/mygripper_f100_description/hook/cmake_prefix_path.dsv'
+[5.422s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/mygripper_f100_description/hook/cmake_prefix_path.sh'
+[5.425s] Level 1:colcon.colcon_core.environment:checking '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/bin'
+[5.426s] Level 1:colcon.colcon_core.environment:checking '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/lib/pkgconfig/mygripper_f100_description.pc'
+[5.426s] Level 1:colcon.colcon_core.environment:checking '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/lib/python3.12/site-packages'
+[5.434s] Level 1:colcon.colcon_core.environment:checking '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/bin'
+[5.435s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/mygripper_f100_description/package.ps1'
+[5.455s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/mygripper_f100_description/package.dsv'
+[5.457s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/mygripper_f100_description/package.sh'
+[5.459s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/mygripper_f100_description/package.bash'
+[5.462s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/mygripper_f100_description/package.zsh'
+[5.479s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/colcon-core/packages/mygripper_f100_description)
+[5.482s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mygripper_f100_description)
+[5.484s] Level 1:colcon.colcon_core.environment:checking '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description' for CMake module files
+[5.486s] Level 1:colcon.colcon_core.environment:checking '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description' for CMake config files
+[5.489s] Level 1:colcon.colcon_core.shell:create_environment_hook('mygripper_f100_description', 'cmake_prefix_path')
+[5.492s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/mygripper_f100_description/hook/cmake_prefix_path.ps1'
+[5.494s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/mygripper_f100_description/hook/cmake_prefix_path.dsv'
+[5.496s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/mygripper_f100_description/hook/cmake_prefix_path.sh'
+[5.499s] Level 1:colcon.colcon_core.environment:checking '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/bin'
+[5.500s] Level 1:colcon.colcon_core.environment:checking '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/lib/pkgconfig/mygripper_f100_description.pc'
+[5.501s] Level 1:colcon.colcon_core.environment:checking '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/lib/python3.12/site-packages'
+[5.502s] Level 1:colcon.colcon_core.environment:checking '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/bin'
+[5.504s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/mygripper_f100_description/package.ps1'
+[5.507s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/mygripper_f100_description/package.dsv'
+[5.509s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/mygripper_f100_description/package.sh'
+[5.510s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/mygripper_f100_description/package.bash'
+[5.514s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/mygripper_f100_description/package.zsh'
+[5.515s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mygripper_f100_description/share/colcon-core/packages/mygripper_f100_description)
+[5.518s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mycobot_pro_450_description)
+[5.519s] Level 1:colcon.colcon_core.environment:checking '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description' for CMake module files
+[5.520s] Level 1:colcon.colcon_core.environment:checking '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description' for CMake config files
+[5.519s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mycobot_pro_450_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaacsim:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaac_moveit2_control:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/mycobot_description:/opt/ros/jazzy /usr/bin/cmake --install /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mycobot_pro_450_description
+[5.521s] Level 1:colcon.colcon_core.shell:create_environment_hook('mycobot_pro_450_description', 'cmake_prefix_path')
+[5.521s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/mycobot_pro_450_description/hook/cmake_prefix_path.ps1'
+[5.522s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/mycobot_pro_450_description/hook/cmake_prefix_path.dsv'
+[5.523s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/mycobot_pro_450_description/hook/cmake_prefix_path.sh'
+[5.524s] Level 1:colcon.colcon_core.environment:checking '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/bin'
+[5.524s] Level 1:colcon.colcon_core.environment:checking '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/lib/pkgconfig/mycobot_pro_450_description.pc'
+[5.525s] Level 1:colcon.colcon_core.environment:checking '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/lib/python3.12/site-packages'
+[5.526s] Level 1:colcon.colcon_core.environment:checking '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/bin'
+[5.526s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/mycobot_pro_450_description/package.ps1'
+[5.527s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/mycobot_pro_450_description/package.dsv'
+[5.528s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/mycobot_pro_450_description/package.sh'
+[5.529s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/mycobot_pro_450_description/package.bash'
+[5.530s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/mycobot_pro_450_description/package.zsh'
+[5.531s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/colcon-core/packages/mycobot_pro_450_description)
+[5.532s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mycobot_pro_450_description)
+[5.533s] Level 1:colcon.colcon_core.environment:checking '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description' for CMake module files
+[5.534s] Level 1:colcon.colcon_core.environment:checking '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description' for CMake config files
+[5.534s] Level 1:colcon.colcon_core.shell:create_environment_hook('mycobot_pro_450_description', 'cmake_prefix_path')
+[5.535s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/mycobot_pro_450_description/hook/cmake_prefix_path.ps1'
+[5.536s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/mycobot_pro_450_description/hook/cmake_prefix_path.dsv'
+[5.537s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/mycobot_pro_450_description/hook/cmake_prefix_path.sh'
+[5.538s] Level 1:colcon.colcon_core.environment:checking '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/bin'
+[5.538s] Level 1:colcon.colcon_core.environment:checking '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/lib/pkgconfig/mycobot_pro_450_description.pc'
+[5.539s] Level 1:colcon.colcon_core.environment:checking '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/lib/python3.12/site-packages'
+[5.539s] Level 1:colcon.colcon_core.environment:checking '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/bin'
+[5.540s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/mycobot_pro_450_description/package.ps1'
+[5.542s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/mycobot_pro_450_description/package.dsv'
+[5.543s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/mycobot_pro_450_description/package.sh'
+[5.544s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/mycobot_pro_450_description/package.bash'
+[5.545s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/mycobot_pro_450_description/package.zsh'
+[5.546s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/colcon-core/packages/mycobot_pro_450_description)
+[6.185s] Level 1:colcon.colcon_core.environment:checking '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/pro450_isaacsim' for CMake module files
+[6.187s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/src/mycobot450_isaacsim-6.0.1/pro450_isaacsim' returned '0': PYTHONPATH=/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/pro450_isaacsim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/pro450_isaacsim/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/pro450_isaacsim build --build-base /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/pro450_isaacsim/build install --record /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/pro450_isaacsim/install.log --install-scripts $base/lib/pro450_isaacsim --single-version-externally-managed install_data
+[6.187s] Level 1:colcon.colcon_core.environment:checking '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/pro450_isaacsim' for CMake config files
+[6.188s] Level 1:colcon.colcon_core.environment:checking '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/pro450_isaacsim/lib'
+[6.189s] Level 1:colcon.colcon_core.environment:checking '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/pro450_isaacsim/bin'
+[6.189s] Level 1:colcon.colcon_core.environment:checking '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/pro450_isaacsim/lib/pkgconfig/pro450_isaacsim.pc'
+[6.190s] Level 1:colcon.colcon_core.environment:checking '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/pro450_isaacsim/lib/python3.12/site-packages'
+[6.191s] Level 1:colcon.colcon_core.shell:create_environment_hook('pro450_isaacsim', 'pythonpath')
+[6.191s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/pro450_isaacsim/share/pro450_isaacsim/hook/pythonpath.ps1'
+[6.192s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/pro450_isaacsim/share/pro450_isaacsim/hook/pythonpath.dsv'
+[6.193s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/pro450_isaacsim/share/pro450_isaacsim/hook/pythonpath.sh'
+[6.194s] Level 1:colcon.colcon_core.environment:checking '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/pro450_isaacsim/bin'
+[6.195s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(pro450_isaacsim)
+[6.195s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/pro450_isaacsim/share/pro450_isaacsim/package.ps1'
+[6.198s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/pro450_isaacsim/share/pro450_isaacsim/package.dsv'
+[6.201s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/pro450_isaacsim/share/pro450_isaacsim/package.sh'
+[6.203s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/pro450_isaacsim/share/pro450_isaacsim/package.bash'
+[6.205s] INFO:colcon.colcon_core.shell:Creating package script '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/pro450_isaacsim/share/pro450_isaacsim/package.zsh'
+[6.205s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/pro450_isaacsim/share/colcon-core/packages/pro450_isaacsim)
+[6.206s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[6.207s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[6.207s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[6.207s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[6.301s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[6.302s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[6.303s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[6.303s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[6.303s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.NotSupported: Unable to autolaunch a dbus-daemon without a $DISPLAY for X11
+[6.303s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[6.304s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/local_setup.ps1'
+[6.316s] INFO:colcon.colcon_core.shell:Creating prefix util module '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/_local_setup_util_ps1.py'
+[6.324s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/setup.ps1'
+[6.335s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/local_setup.sh'
+[6.338s] INFO:colcon.colcon_core.shell:Creating prefix util module '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/_local_setup_util_sh.py'
+[6.340s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/setup.sh'
+[6.356s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/local_setup.bash'
+[6.359s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/setup.bash'
+[6.366s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/local_setup.zsh'
+[6.372s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/setup.zsh'

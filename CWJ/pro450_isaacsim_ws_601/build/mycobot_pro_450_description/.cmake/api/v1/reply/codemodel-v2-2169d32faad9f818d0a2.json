@@ -1,0 +1,70 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-a25e0bdcaef8df824b39.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "mycobot_pro_450_description",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "mycobot_pro_450_description_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-mycobot_pro_450_description_uninstall-22a551abe5ff9de8b2fe.json",
+					"name" : "mycobot_pro_450_description_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-c499de0264aed2822873.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mycobot_pro_450_description",
+		"source" : "/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/src/mycobot450_isaacsim-6.0.1/robots_description/mycobot_pro_450_description"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

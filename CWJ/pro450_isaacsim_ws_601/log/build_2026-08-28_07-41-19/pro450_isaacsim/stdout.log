@@ -1,0 +1,26 @@
+running egg_info
+writing ../../../build/pro450_isaacsim/pro450_isaacsim.egg-info/PKG-INFO
+writing dependency_links to ../../../build/pro450_isaacsim/pro450_isaacsim.egg-info/dependency_links.txt
+writing entry points to ../../../build/pro450_isaacsim/pro450_isaacsim.egg-info/entry_points.txt
+writing requirements to ../../../build/pro450_isaacsim/pro450_isaacsim.egg-info/requires.txt
+writing top-level names to ../../../build/pro450_isaacsim/pro450_isaacsim.egg-info/top_level.txt
+reading manifest file '../../../build/pro450_isaacsim/pro450_isaacsim.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../../build/pro450_isaacsim/pro450_isaacsim.egg-info/SOURCES.txt'
+running build
+running build_py
+copying pro450_isaacsim/pick_and_place_menu.py -> /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/pro450_isaacsim/build/lib/pro450_isaacsim
+running install
+running install_lib
+copying /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/pro450_isaacsim/build/lib/pro450_isaacsim/pick_and_place_menu.py -> /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/pro450_isaacsim/lib/python3.12/site-packages/pro450_isaacsim
+byte-compiling /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/pro450_isaacsim/lib/python3.12/site-packages/pro450_isaacsim/pick_and_place_menu.py to pick_and_place_menu.cpython-312.pyc
+running install_data
+running install_egg_info
+removing '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/pro450_isaacsim/lib/python3.12/site-packages/pro450_isaacsim-0.0.0-py3.12.egg-info' (and everything under it)
+Copying ../../../build/pro450_isaacsim/pro450_isaacsim.egg-info to /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/pro450_isaacsim/lib/python3.12/site-packages/pro450_isaacsim-0.0.0-py3.12.egg-info
+running install_scripts
+Installing follow_display script to /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/pro450_isaacsim/lib/pro450_isaacsim
+Installing pick_and_place_menu script to /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/pro450_isaacsim/lib/pro450_isaacsim
+Installing slider_control script to /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/pro450_isaacsim/lib/pro450_isaacsim
+Installing slider_control1 script to /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/pro450_isaacsim/lib/pro450_isaacsim
+writing list of installed files to '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/pro450_isaacsim/install.log'

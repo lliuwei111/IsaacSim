@@ -1,0 +1,7 @@
+[console_scripts]
+follow_display = pro450_isaacsim.follow_display:main
+pick_and_place_fenjian = pro450_isaacsim.pick_and_place_fenjian:main
+pick_and_place_maduo = pro450_isaacsim.pick_and_place_maduo:main
+pick_and_place_menu = pro450_isaacsim.pick_and_place_menu:main
+slider_control = pro450_isaacsim.slider_control:main
+slider_control1 = pro450_isaacsim.slider_control1:main

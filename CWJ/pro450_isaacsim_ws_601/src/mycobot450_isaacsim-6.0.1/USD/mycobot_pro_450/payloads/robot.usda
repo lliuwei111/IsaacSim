@@ -1,0 +1,128 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.1.3"
+    }
+    defaultPrim = "mycobot_pro450"
+    doc = """Generated from Composed Stage of root layer /tmp/tmpnfhc_0fh/mycobot_pro450.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_mycobot_pro_450_vumyilfi/usdex_mycobot_pro_450/mycobot_pro450.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_mycobot_pro_450_vumyilfi/temp_mycobot_pro_450/mycobot_pro_450.usd
+"""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+over "mycobot_pro450" (
+    prepend apiSchemas = ["IsaacRobotAPI"]
+)
+{
+    prepend rel isaac:physics:robotJoints = [
+        </mycobot_pro450/Physics/root_joint>,
+        </mycobot_pro450/Physics/joint1>,
+        </mycobot_pro450/Physics/joint2>,
+        </mycobot_pro450/Physics/joint3>,
+        </mycobot_pro450/Physics/joint4>,
+        </mycobot_pro450/Physics/joint5>,
+        </mycobot_pro450/Physics/joint6>,
+    ]
+    prepend rel isaac:physics:robotLinks = [
+        </mycobot_pro450/Geometry/base_link>,
+        </mycobot_pro450/Geometry/base_link/Link1>,
+        </mycobot_pro450/Geometry/base_link/Link1/Link2>,
+        </mycobot_pro450/Geometry/base_link/Link1/Link2/Link3>,
+        </mycobot_pro450/Geometry/base_link/Link1/Link2/Link3/Link4>,
+        </mycobot_pro450/Geometry/base_link/Link1/Link2/Link3/Link4/Link5>,
+        </mycobot_pro450/Geometry/base_link/Link1/Link2/Link3/Link4/Link5/Link6>,
+    ]
+    token isaac:robotType = "Manipulator"
+
+    over "Geometry"
+    {
+        over "base_link" (
+            prepend apiSchemas = ["IsaacLinkAPI"]
+        )
+        {
+            over "Link1" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                over "Link2" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                    over "Link3" (
+                        prepend apiSchemas = ["IsaacLinkAPI"]
+                    )
+                    {
+                        over "Link4" (
+                            prepend apiSchemas = ["IsaacLinkAPI"]
+                        )
+                        {
+                            over "Link5" (
+                                prepend apiSchemas = ["IsaacLinkAPI"]
+                            )
+                            {
+                                over "Link6" (
+                                    prepend apiSchemas = ["IsaacLinkAPI"]
+                                )
+                                {
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    over "Physics"
+    {
+        over "root_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "joint1" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "joint2" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "joint3" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "joint4" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "joint5" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "joint6" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+    }
+}
+

@@ -1,0 +1,124 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.1.3"
+    }
+    defaultPrim = "mygripper_f100"
+    doc = """Generated from Composed Stage of root layer /tmp/tmpwiprm2fu/mygripper_f100.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_mygripper_f100_n2nz5pur/usdex_mygripper_f100/mygripper_f100.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_mygripper_f100_n2nz5pur/temp_mygripper_f100/mygripper_f100.usd
+"""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+over "mygripper_f100" (
+    prepend apiSchemas = ["IsaacRobotAPI"]
+)
+{
+    prepend rel isaac:physics:robotJoints = [
+        </mygripper_f100/Physics/joint2_left_joint>,
+        </mygripper_f100/Physics/joint1_left_joint>,
+        </mygripper_f100/Physics/joint2_right_joint>,
+        </mygripper_f100/Physics/joint1_right_joint>,
+        </mygripper_f100/Physics/joint3_left_joint>,
+        </mygripper_f100/Physics/joint3_right_joint>,
+    ]
+    prepend rel isaac:physics:robotLinks = [
+        </mygripper_f100/Geometry/f100_base_link>,
+        </mygripper_f100/Geometry/f100_base_link/joint2_left_link>,
+        </mygripper_f100/Geometry/f100_base_link/joint2_left_link/joint3_left_link>,
+        </mygripper_f100/Geometry/f100_base_link/joint1_left_link>,
+        </mygripper_f100/Geometry/f100_base_link/joint2_right_link>,
+        </mygripper_f100/Geometry/f100_base_link/joint2_right_link/joint3_right_link>,
+        </mygripper_f100/Geometry/f100_base_link/joint1_right_link>,
+    ]
+    token isaac:robotType = "End Effector"
+
+    over "Geometry"
+    {
+        over "f100_base_link" (
+            prepend apiSchemas = ["IsaacLinkAPI"]
+        )
+        {
+            over "joint2_left_link" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                over "joint3_left_link" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                }
+            }
+
+            over "joint1_left_link" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+            }
+
+            over "joint2_right_link" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+                over "joint3_right_link" (
+                    prepend apiSchemas = ["IsaacLinkAPI"]
+                )
+                {
+                }
+            }
+
+            over "joint1_right_link" (
+                prepend apiSchemas = ["IsaacLinkAPI"]
+            )
+            {
+            }
+        }
+    }
+
+    over "Physics"
+    {
+        over "joint2_left_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "joint3_left_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "joint1_left_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "joint2_right_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "joint3_right_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+
+        over "joint1_right_joint" (
+            prepend apiSchemas = ["IsaacJointAPI"]
+        )
+        {
+        }
+    }
+}
+

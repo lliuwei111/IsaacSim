@@ -50,10 +50,11 @@ from gen_config import (
     NUM_EPOCHS, FRAMES_PER_EPOCH, POINTCLOUD_SAMPLE_INTERVAL,
     IMAGE_SAVE_INTERVAL, IMAGE_WIDTH, IMAGE_HEIGHT, VIDEO_FPS,
     PHYSICS_SETTLE_FRAMES,
+    ENABLE_DEPTH_VIS, ENABLE_POINTCLOUD_VIS, DEPTH_VIS_SAMPLE_COUNT,
     get_random_object_config, get_random_camera_config,
     get_random_light_config, get_random_environment,
 )
-from gen_utils import save_ply, ensure_usd_asset, convert_glb_if_needed
+from gen_utils import save_ply, ensure_usd_asset, convert_glb_if_needed, visualize_depth, visualize_pointcloud
 
 viewport_api = get_active_viewport()
 while viewport_api is None:
@@ -261,6 +262,8 @@ print(f"  输入资产: {asset_name}")
 print(f"  总轮次: {NUM_EPOCHS}")
 print(f"  每轮帧数: {FRAMES_PER_EPOCH}")
 print(f"  输出目录: {DATASET_OUTPUT_DIR}")
+print(f"  深度可视化: {'开启' if ENABLE_DEPTH_VIS else '关闭'}")
+print(f"  点云可视化: {'开启' if ENABLE_POINTCLOUD_VIS else '关闭'}")
 print("=" * 60)
 
 world = World(stage_units_in_meters=1.0)
@@ -366,6 +369,12 @@ for epoch in range(NUM_EPOCHS):
     cam_rp.destroy()
 
     world.stop()
+
+    if ENABLE_DEPTH_VIS:
+        visualize_depth(epoch_dir)
+
+    if ENABLE_POINTCLOUD_VIS:
+        visualize_pointcloud(epoch_dir, sample_count=DEPTH_VIS_SAMPLE_COUNT)
 
     print(f"  Epoch {epoch + 1} 完成 -> {epoch_dir}")
 

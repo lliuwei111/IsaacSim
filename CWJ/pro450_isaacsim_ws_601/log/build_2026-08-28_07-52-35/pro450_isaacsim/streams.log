@@ -1,0 +1,33 @@
+[1.470s] Invoking command in '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/src/mycobot450_isaacsim-6.0.1/pro450_isaacsim': PYTHONPATH=/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/pro450_isaacsim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/pro450_isaacsim/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/pro450_isaacsim build --build-base /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/pro450_isaacsim/build install --record /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/pro450_isaacsim/install.log --install-scripts $base/lib/pro450_isaacsim --single-version-externally-managed install_data
+[1.912s] running egg_info
+[1.942s] writing ../../../build/pro450_isaacsim/pro450_isaacsim.egg-info/PKG-INFO
+[1.942s] writing dependency_links to ../../../build/pro450_isaacsim/pro450_isaacsim.egg-info/dependency_links.txt
+[1.943s] writing entry points to ../../../build/pro450_isaacsim/pro450_isaacsim.egg-info/entry_points.txt
+[1.945s] writing requirements to ../../../build/pro450_isaacsim/pro450_isaacsim.egg-info/requires.txt
+[1.945s] writing top-level names to ../../../build/pro450_isaacsim/pro450_isaacsim.egg-info/top_level.txt
+[2.144s] reading manifest file '../../../build/pro450_isaacsim/pro450_isaacsim.egg-info/SOURCES.txt'
+[2.145s] adding license file 'LICENSE'
+[2.145s] writing manifest file '../../../build/pro450_isaacsim/pro450_isaacsim.egg-info/SOURCES.txt'
+[2.145s] running build
+[2.147s] running build_py
+[2.148s] copying pro450_isaacsim/pick_and_place_maduo.py -> /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/pro450_isaacsim/build/lib/pro450_isaacsim
+[2.148s] copying pro450_isaacsim/pick_and_place_fenjian.py -> /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/pro450_isaacsim/build/lib/pro450_isaacsim
+[2.149s] running install
+[2.158s] running install_lib
+[2.200s] copying /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/pro450_isaacsim/build/lib/pro450_isaacsim/pick_and_place_maduo.py -> /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/pro450_isaacsim/lib/python3.12/site-packages/pro450_isaacsim
+[2.200s] copying /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/pro450_isaacsim/build/lib/pro450_isaacsim/pick_and_place_fenjian.py -> /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/pro450_isaacsim/lib/python3.12/site-packages/pro450_isaacsim
+[2.202s] byte-compiling /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/pro450_isaacsim/lib/python3.12/site-packages/pro450_isaacsim/pick_and_place_maduo.py to pick_and_place_maduo.cpython-312.pyc
+[2.215s] byte-compiling /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/pro450_isaacsim/lib/python3.12/site-packages/pro450_isaacsim/pick_and_place_fenjian.py to pick_and_place_fenjian.cpython-312.pyc
+[2.224s] running install_data
+[2.224s] running install_egg_info
+[2.271s] removing '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/pro450_isaacsim/lib/python3.12/site-packages/pro450_isaacsim-0.0.0-py3.12.egg-info' (and everything under it)
+[2.287s] Copying ../../../build/pro450_isaacsim/pro450_isaacsim.egg-info to /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/pro450_isaacsim/lib/python3.12/site-packages/pro450_isaacsim-0.0.0-py3.12.egg-info
+[2.289s] running install_scripts
+[2.398s] Installing follow_display script to /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/pro450_isaacsim/lib/pro450_isaacsim
+[2.399s] Installing pick_and_place_fenjian script to /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/pro450_isaacsim/lib/pro450_isaacsim
+[2.399s] Installing pick_and_place_maduo script to /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/pro450_isaacsim/lib/pro450_isaacsim
+[2.400s] Installing pick_and_place_menu script to /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/pro450_isaacsim/lib/pro450_isaacsim
+[2.400s] Installing slider_control script to /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/pro450_isaacsim/lib/pro450_isaacsim
+[2.401s] Installing slider_control1 script to /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/pro450_isaacsim/lib/pro450_isaacsim
+[2.401s] writing list of installed files to '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/pro450_isaacsim/install.log'
+[2.462s] Invoked command in '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/src/mycobot450_isaacsim-6.0.1/pro450_isaacsim' returned '0': PYTHONPATH=/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/pro450_isaacsim/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/pro450_isaacsim/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/pro450_isaacsim build --build-base /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/pro450_isaacsim/build install --record /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/pro450_isaacsim/install.log --install-scripts $base/lib/pro450_isaacsim --single-version-externally-managed install_data

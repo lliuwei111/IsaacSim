@@ -1,0 +1,61 @@
+[0.084s] Invoking command in '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mycobot_pro_450_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaacsim:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaac_moveit2_control:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/mycobot_description:/opt/ros/jazzy /usr/bin/cmake /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/src/mycobot450_isaacsim-6.0.1/robots_description/mycobot_pro_450_description -DCMAKE_INSTALL_PREFIX=/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description
+[1.364s] -- The C compiler identification is GNU 13.3.0
+[2.089s] -- The CXX compiler identification is GNU 13.3.0
+[2.217s] -- Detecting C compiler ABI info
+[2.472s] -- Detecting C compiler ABI info - done
+[2.497s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.499s] -- Detecting C compile features
+[2.502s] -- Detecting C compile features - done
+[2.533s] -- Detecting CXX compiler ABI info
+[2.786s] -- Detecting CXX compiler ABI info - done
+[2.815s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.816s] -- Detecting CXX compile features
+[2.817s] -- Detecting CXX compile features - done
+[2.860s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[3.273s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[3.828s] -- Found urdf: 2.10.1 (/opt/ros/jazzy/share/urdf/cmake)
+[4.191s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[4.269s] -- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[4.649s] -- Added test 'flake8' to check Python code syntax and style conventions
+[4.649s] -- Configured 'flake8' exclude dirs and/or files: 
+[4.650s] -- Added test 'lint_cmake' to check CMake code style
+[4.653s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[4.659s] -- Added test 'xmllint' to check XML markup files
+[4.682s] -- Configuring done (4.4s)
+[4.701s] -- Generating done (0.0s)
+[4.706s] -- Build files have been written to: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mycobot_pro_450_description
+[4.733s] Invoked command in '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mycobot_pro_450_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaacsim:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaac_moveit2_control:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/mycobot_description:/opt/ros/jazzy /usr/bin/cmake /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/src/mycobot450_isaacsim-6.0.1/robots_description/mycobot_pro_450_description -DCMAKE_INSTALL_PREFIX=/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description
+[4.735s] Invoking command in '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mycobot_pro_450_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaacsim:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaac_moveit2_control:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/mycobot_description:/opt/ros/jazzy /usr/bin/cmake --build /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mycobot_pro_450_description -- -j16 -l16
+[4.851s] Invoked command in '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mycobot_pro_450_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaacsim:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaac_moveit2_control:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/mycobot_description:/opt/ros/jazzy /usr/bin/cmake --build /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mycobot_pro_450_description -- -j16 -l16
+[4.855s] Invoking command in '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mycobot_pro_450_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaacsim:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaac_moveit2_control:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/mycobot_description:/opt/ros/jazzy /usr/bin/cmake --install /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mycobot_pro_450_description
+[4.869s] -- Install configuration: ""
+[4.869s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/mycobot_pro_450_description/meshes
+[4.869s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/mycobot_pro_450_description/meshes/Link3.STL
+[4.878s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/mycobot_pro_450_description/meshes/Link4.STL
+[4.887s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/mycobot_pro_450_description/meshes/Link2.STL
+[4.893s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/mycobot_pro_450_description/meshes/Link5.STL
+[4.901s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/mycobot_pro_450_description/meshes/base_link.STL
+[4.942s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/mycobot_pro_450_description/meshes/Link1.STL
+[5.000s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/mycobot_pro_450_description/meshes/Link6.STL
+[5.000s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/mycobot_pro_450_description/urdf
+[5.002s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/mycobot_pro_450_description/urdf/mycobot_pro_450.urdf
+[5.002s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/mycobot_pro_450_description/launch
+[5.003s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/mycobot_pro_450_description/launch/mycobot_450_display.launch.py
+[5.003s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/mycobot_pro_450_description/rviz
+[5.007s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/mycobot_pro_450_description/rviz/mycobot_pro_450_display.rviz
+[5.009s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/ament_index/resource_index/package_run_dependencies/mycobot_pro_450_description
+[5.010s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/ament_index/resource_index/parent_prefix_path/mycobot_pro_450_description
+[5.010s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/mycobot_pro_450_description/environment/ament_prefix_path.sh
+[5.011s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/mycobot_pro_450_description/environment/ament_prefix_path.dsv
+[5.013s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/mycobot_pro_450_description/environment/path.sh
+[5.016s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/mycobot_pro_450_description/environment/path.dsv
+[5.019s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/mycobot_pro_450_description/local_setup.bash
+[5.023s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/mycobot_pro_450_description/local_setup.sh
+[5.027s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/mycobot_pro_450_description/local_setup.zsh
+[5.027s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/mycobot_pro_450_description/local_setup.dsv
+[5.028s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/mycobot_pro_450_description/package.dsv
+[5.029s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/ament_index/resource_index/packages/mycobot_pro_450_description
+[5.030s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/mycobot_pro_450_description/cmake/mycobot_pro_450_descriptionConfig.cmake
+[5.031s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/mycobot_pro_450_description/cmake/mycobot_pro_450_descriptionConfig-version.cmake
+[5.034s] -- Installing: /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/install/mycobot_pro_450_description/share/mycobot_pro_450_description/package.xml
+[5.039s] Invoked command in '/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mycobot_pro_450_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaacsim:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/pro450_isaac_moveit2_control:/workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws/install/mycobot_description:/opt/ros/jazzy /usr/bin/cmake --install /workspace/dev/IsaacSim/CWJ/pro450_isaacsim_ws_601/build/mycobot_pro_450_description

@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="mygripper_f100">
+  <link
+    name="f100_base_link">
+    <inertial>
+      <origin
+        xyz="0.0439 0.001507 0.014638"
+        rpy="0 0 0" />
+      <mass
+        value="0.251" />
+      <inertia
+        ixx="0.00024"
+        ixy="2E-05"
+        ixz="0.000144"
+        iyy="0.000729"
+        iyz="4.678E-06"
+        izz="0.00071" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mygripper_f100_description/meshes/f100_base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.69804 0.69804 0.69804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mygripper_f100_description/meshes/f100_base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="joint2_left_link">
+    <inertial>
+      <origin
+        xyz="0.016477 -0.000609 5.1E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.015" />
+      <inertia
+        ixx="2E-06"
+        ixy="-9.61E-07"
+        ixz="0"
+        iyy="1.1E-05"
+        iyz="0"
+        izz="1.26E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mygripper_f100_description/meshes/J2_L_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.69804 0.69804 0.69804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mygripper_f100_description/meshes/J2_L_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint2_left_joint"
+    type="revolute">
+    <origin
+      xyz="0.056064 0.017111 0"
+      rpy="0 0 0.00036257" />
+    <parent
+      link="f100_base_link" />
+    <child
+      link="joint2_left_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.012"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="joint3_left_link">
+    <inertial>
+      <origin
+        xyz="0.004031 0.00831 -0.000115"
+        rpy="0 0 0" />
+      <mass
+        value="0.017" />
+      <inertia
+        ixx="3.579E-06"
+        ixy="-2E-06"
+        ixz="2E-08"
+        iyy="6.6E-06"
+        iyz="-2.3E-08"
+        izz="9.273E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mygripper_f100_description/meshes/J3_L_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.69804 0.69804 0.69804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mygripper_f100_description/meshes/J3_L_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint3_left_joint"
+    type="revolute">
+    <origin
+      xyz="0.059996 -0.0097778 -0.0005"
+      rpy="0 0 0" />
+    <parent
+      link="joint2_left_link" />
+    <child
+      link="joint3_left_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.012"
+      upper="1.012"
+      effort="0"
+      velocity="0" />
+    <mimic
+      joint="joint2_left_joint"
+      multiplier="-1"
+      offset="0" />
+  </joint>
+  <link
+    name="joint1_left_link">
+    <inertial>
+      <origin
+        xyz="0.032595 -0.003043 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.006" />
+      <inertia
+        ixx="2.84E-07"
+        ixy="-1.059E-06"
+        ixz="0"
+        iyy="8.28E-06"
+        iyz="0"
+        izz="8.52E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mygripper_f100_description/meshes/J1_L_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.69804 0.69804 0.69804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mygripper_f100_description/meshes/J1_L_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1_left_joint"
+    type="revolute">
+    <origin
+      xyz="0.033748 0.043203 0"
+      rpy="0 0 0.00036257" />
+    <parent
+      link="f100_base_link" />
+    <child
+      link="joint1_left_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.012"
+      upper="1.012"
+      effort="0"
+      velocity="0" />
+    <mimic
+      joint="joint2_left_joint"
+      multiplier="1"
+      offset="0" />
+  </joint>
+  <link
+    name="joint2_right_link">
+    <inertial>
+      <origin
+        xyz="0.019829 0.000952 -0.000143"
+        rpy="0 0 0" />
+      <mass
+        value="0.013" />
+      <inertia
+        ixx="1.239E-06"
+        ixy="9.88E-07"
+        ixz="0"
+        iyy="1.1158E-05"
+        iyz="0"
+        izz="1.2285E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mygripper_f100_description/meshes/J2_R_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.69804 0.69804 0.69804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mygripper_f100_description/meshes/J2_R_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint2_right_joint"
+    type="revolute">
+    <origin
+      xyz="0.056064 -0.019509 0"
+      rpy="0 0 0" />
+    <parent
+      link="f100_base_link" />
+    <child
+      link="joint2_right_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.012"
+      upper="1.012"
+      effort="0"
+      velocity="0" />
+    <mimic
+      joint="joint2_left_joint"
+      multiplier="-1"
+      offset="0" />
+  </joint>
+  <link
+    name="joint3_right_link">
+    <inertial>
+      <origin
+        xyz="0.004379 -0.008394 -7.5E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.018" />
+      <inertia
+        ixx="3.659E-06"
+        ixy="1.93E-06"
+        ixz="1.1E-08"
+        iyy="6.726E-06"
+        iyz="1.2E-08"
+        izz="9.479E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mygripper_f100_description/meshes/J3_R_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.69804 0.69804 0.69804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mygripper_f100_description/meshes/J3_R_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint3_right_joint"
+    type="revolute">
+    <origin
+      xyz="0.06 0.009756 0"
+      rpy="0 0 0" />
+    <parent
+      link="joint2_right_link" />
+    <child
+      link="joint3_right_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.012"
+      upper="1.012"
+      effort="0"
+      velocity="0" />
+    <mimic
+      joint="joint2_left_joint"
+      multiplier="1"
+      offset="0" />
+  </joint>
+  <link
+    name="joint1_right_link">
+    <inertial>
+      <origin
+        xyz="0.032592 0.003077 5E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.006" />
+      <inertia
+        ixx="2.87E-07"
+        ixy="1.067E-06"
+        ixz="1E-08"
+        iyy="8.278E-06"
+        iyz="1E-09"
+        izz="8.52E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mygripper_f100_description/meshes/SL_R_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.69804 0.69804 0.69804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mygripper_f100_description/meshes/SL_R_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1_right_joint"
+    type="revolute">
+    <origin
+      xyz="0.033748 -0.045581 0"
+      rpy="0 0 0" />
+    <parent
+      link="f100_base_link" />
+    <child
+      link="joint1_right_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.012"
+      upper="1.012"
+      effort="0"
+      velocity="0" />
+    <mimic
+      joint="joint2_left_joint"
+      multiplier="-1"
+      offset="0" />
+  </joint>
+</robot>

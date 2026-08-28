@@ -1,0 +1,4 @@
+source;share/mygripper_f100_description/local_setup.bash
+source;share/mygripper_f100_description/local_setup.dsv
+source;share/mygripper_f100_description/local_setup.sh
+source;share/mygripper_f100_description/local_setup.zsh
